@@ -1,0 +1,6 @@
+{
+  "type": "origins:particle",
+  "hidden": true,
+  "particle": "minecraft:witch",
+  "frequency": 4
+}

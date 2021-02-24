@@ -1,0 +1,21 @@
+{
+  "type": "origins:action_over_time",
+  "hidden": true,
+  "entity_action": {
+    "type": "origins:apply_effect",
+    "effect": {
+      "effect": "minecraft:slowness",
+      "duration": 200,
+      "amplifier": 0
+    }
+  },
+  "interval": 20,
+  "condition": {
+    "inverted": true,
+    "type":"origins:on_block",
+    "block_condition":{
+      "type":"origins:block",
+      "block":"minecraft:lava"
+    }
+  }
+}

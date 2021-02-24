@@ -1,0 +1,20 @@
+{
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "moborigins:summon_slime"
+      },
+      {
+        "type": "origins:exhaust",
+        "amount": 10
+      }
+    ]
+  },
+  "cooldown": 600,
+  "hud_render": {
+    "sprite_location": "moborigins:textures/gui/ability_bars.png",
+    "bar_index": "2"
+  }
+}

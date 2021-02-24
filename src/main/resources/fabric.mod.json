@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "moborigins",
+  "version": "${version}",
+  "name": "Mob Origins",
+  "description": "Adds more origins based off of mobs in the game!",
+  "authors": [
+    "Ultra"
+  ],
+  "contact": {
+    "repo": "https://github.com/UltrusBot/MobOrigins"
+  },
+  "license": "MIT",
+  "icon": "assets/moborigins/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.ultrusbot.moborigins.client.MobOriginsClient"
+    ],
+    "main": [
+      "io.github.ultrusbot.moborigins.MobOriginsMod"
+    ]
+  },
+  "mixins": [
+    "moborigins.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.1",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}

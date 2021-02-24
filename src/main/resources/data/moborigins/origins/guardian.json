@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "moborigins:monument_spawn",
+    "moborigins:guardian_spikes",
+    "origins:aquatic",
+    "origins:water_breathing",
+    "origins:like_water"
+  ],
+  "icon": "minecraft:prismarine_shard",
+  "order": 6,
+  "impact": 3
+}

@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "origins:water_vulnerability",
+    "moborigins:heat_weakness",
+    "moborigins:stronger_snowballs",
+    "moborigins:snow_trail",
+    "moborigins:frigid_strength"
+  ],
+  "icon": "minecraft:snowball",
+  "order": 4,
+  "impact": 3
+}
