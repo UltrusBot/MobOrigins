@@ -1,5 +1,7 @@
 {
   "enchantment.moborigins.heat_protection": "Heat Protection",
+  "death.attack.split": "%1$s split himself into nothing.",
+  "death.attack.split.player": "%1$s split whilst trying to escape %2$s.",
 
   "origin.moborigins.snowgolem.name": "Snow Golem",
   "origin.moborigins.snowgolem.description": "Golems made from snow, and weak to anything that might melt them",

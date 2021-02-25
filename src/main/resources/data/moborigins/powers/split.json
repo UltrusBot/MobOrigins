@@ -7,8 +7,12 @@
         "type": "moborigins:summon_slime"
       },
       {
-        "type": "origins:exhaust",
-        "amount": 10
+        "type": "origins:damage",
+        "amount": 8,
+        "source": {
+          "name": "split",
+          "bypasses_armor": true
+        }
       }
     ]
   },
