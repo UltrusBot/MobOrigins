@@ -1,14 +1,11 @@
 {
-  "type": "origins:action_over_time",
-  "entity_action": {
-    "type": "origins:apply_effect",
-    "effect": {
-      "effect": "minecraft:speed",
-      "duration": 200,
-      "amplifier": 1
-    }
+  "type": "origins:conditioned_attribute",
+  "modifier": {
+    "attribute": "generic.movement_speed",
+    "operation": "addition",
+    "value": 0.145,
+    "name": "strider lava bonus"
   },
-  "interval": 20,
   "condition": {
     "type":"origins:on_block",
     "block_condition":{
