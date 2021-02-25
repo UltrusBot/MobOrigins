@@ -1,0 +1,15 @@
+{
+  "powers": [
+    "moborigins:monument_spawn",
+    "moborigins:elder_spikes",
+    "moborigins:elder_magic",
+    "moborigins:mining_fatigue_immune",
+    "origins:aquatic",
+    "origins:water_breathing",
+    "origins:like_water"
+  ],
+  "unchoosable": true,
+  "icon": "minecraft:prismarine_crystals",
+  "order": 6,
+  "impact": 3
+}

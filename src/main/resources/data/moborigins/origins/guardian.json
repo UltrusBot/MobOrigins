@@ -6,6 +6,13 @@
     "origins:water_breathing",
     "origins:like_water"
   ],
+  "upgrades": [
+    {
+      "condition": "moborigins:killed_elder",
+      "origin": "moborigins:elder_guardian",
+      "announcement": "text.moborigins.become_elder"
+    }
+  ],
   "icon": "minecraft:prismarine_shard",
   "order": 6,
   "impact": 3

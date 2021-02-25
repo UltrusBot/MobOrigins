@@ -2,6 +2,7 @@
   "enchantment.moborigins.heat_protection": "Heat Protection",
   "death.attack.split": "%1$s split himself into nothing.",
   "death.attack.split.player": "%1$s split whilst trying to escape %2$s.",
+  "text.moborigins.become_elder": "You have grown into an Elder Guardian!",
 
   "origin.moborigins.snowgolem.name": "Snow Golem",
   "origin.moborigins.snowgolem.description": "Golems made from snow, and weak to anything that might melt them",
@@ -55,13 +56,25 @@
   "power.moborigins.lower_totem_chance.description": "Totems have a 10% not to break on use",
 
   "origin.moborigins.guardian.name": "Guardian",
-  "origin.moborigins.guardian.description": "Master of Magic, and a collector of Totems.",
+  "origin.moborigins.guardian.description": "Guardians are known for protecting their Monuments and the treasured sponges within. Some are known for evolving into Elder Guardians.",
 
   "power.moborigins.guardian_spikes.name": "Guardian Spikes",
   "power.moborigins.guardian_spikes.description": "Spikes that have a chance to damage attackers!",
 
   "power.moborigins.monument_spawn.name": "Monument Home",
   "power.moborigins.monument_spawn.description": "You spawn at a Ocean Monument",
+
+  "origin.moborigins.elder_guardian.name": "Elder Guardian",
+  "origin.moborigins.elder_guardian.description": "Elder Guardians are the leaders of monuments, and wield more power than normal guardians",
+
+  "power.moborigins.elder_magic.name": "Elder Magic",
+  "power.moborigins.elder_magic.description": "Summon a effect cloud of mining fatigue",
+
+  "power.moborigins.mining_fatigue_immune.name": "Elder Immunity",
+  "power.moborigins.mining_fatigue_immune.description": "Immune to getting Mining Fatigue ",
+
+  "power.moborigins.elder_spikes.name": "Elder Spikes",
+  "power.moborigins.elder_spikes.description": "Stronger Spikes that have a chance to damage attackers!",
 
   "origin.moborigins.slime.name": "Slime",
   "origin.moborigins.slime.description": "Green blobs of Jello, that bounce all around!",
@@ -71,6 +84,9 @@
 
   "power.moborigins.split.name": "Split Ability",
   "power.moborigins.split.description": "Turn your food points into a small slime to defend you!",
+
+  "power.moborigins.small_weak.name": "Small Weakness",
+  "power.moborigins.small_weak.description": "When at less than 2 hearts, you deal almost no damage, but your attacks have stronger knockback!",
 
   "origin.moborigins.wolf.name": "Wolf",
   "origin.moborigins.wolf.description": "Strong and Fast, Wolves are creatures that have strength in numbers.",
