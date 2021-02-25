@@ -51,7 +51,10 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
         super(EntityRegistry.ORIGIN_SLIME, world);
         this.moveControl = new OriginSlimeEntity.SlimeMoveControl(this);
     }
-
+    public OriginSlimeEntity(World world, double x, double y, double z) {
+        this(EntityRegistry.ORIGIN_SLIME, world);
+        this.updatePosition(x, y, z);
+    }
     protected void initGoals() {
         this.goalSelector.add(1, new OriginSlimeEntity.SwimmingGoal(this));
         this.goalSelector.add(2, new OriginSlimeEntity.FaceTowardTargetGoal(this));

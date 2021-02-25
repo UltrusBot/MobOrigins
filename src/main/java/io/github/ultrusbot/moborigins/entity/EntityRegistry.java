@@ -14,7 +14,7 @@ public class EntityRegistry {
         ORIGIN_SLIME = Registry.register(
                 Registry.ENTITY_TYPE,
                 new Identifier(MobOriginsMod.MOD_ID, "origin_slime"),
-                FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, OriginSlimeEntity::new).dimensions(EntityDimensions.fixed(1F, 1F)).trackRangeBlocks(10).build()
+                FabricEntityTypeBuilder.<OriginSlimeEntity>create(SpawnGroup.CREATURE, OriginSlimeEntity::new).dimensions(EntityDimensions.fixed(1F, 1F)).trackRangeBlocks(10).build()
         );
     }
 }

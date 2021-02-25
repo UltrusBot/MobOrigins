@@ -25,11 +25,10 @@ public class CustomEntityActions {
 
         register(new ActionFactory<>(new Identifier(MOD_ID, "summon_slime"), new SerializableData(),
                 (data, entity) -> {
-                    OriginSlimeEntity originSlimeEntity = EntityRegistry.ORIGIN_SLIME.create(entity.world);
-                    originSlimeEntity.refreshPositionAfterTeleport(entity.getX(), entity.getY(), entity.getZ());
+                    OriginSlimeEntity originSlimeEntity = new OriginSlimeEntity(entity.world, entity.getX(), entity.getY(), entity.getZ());
                     originSlimeEntity.setOwner((PlayerEntity)entity);
                     originSlimeEntity.setSize(2, true);
-                    originSlimeEntity.setCustomName(entity.getName().copy().append(Text.of("'s slime")));
+                    originSlimeEntity.setCustomName(((PlayerEntity)entity).getDisplayName());
                     entity.world.spawnEntity(originSlimeEntity);
 
                 }));
