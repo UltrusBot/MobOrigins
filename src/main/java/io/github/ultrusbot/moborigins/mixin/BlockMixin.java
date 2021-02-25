@@ -15,7 +15,7 @@ public class BlockMixin {
     @Inject(method = "onEntityLand", at = @At("HEAD"), cancellable = true)
     public void onEntityLand(BlockView world, Entity entity, CallbackInfo ci) {
         if (MobOriginsPowers.BOUNCY.isActive(entity) && !entity.bypassesLandingEffects()) {
-            entity.setVelocity(entity.getVelocity().multiply(1.0F, -0.8, 1.0F));
+            entity.setVelocity(entity.getVelocity().multiply(1.0F, -0.85, 1.0F));
             ci.cancel();
             return;
         }
