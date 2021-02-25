@@ -41,7 +41,7 @@
   "power.moborigins.lava_walk.description": "You have the ability to walk on lava source blocks!",
 
   "power.moborigins.lava_speed.name": "Lava Adept",
-  "power.moborigins.lava_speed.description": "You get speed II while on lava, but slowness I when not on it.",
+  "power.moborigins.lava_speed.description": "You are slower by default, but get a lot of more speed on lava",
 
   "power.moborigins.rideable_creature.name": "Rideable Creature",
   "power.moborigins.rideable_creature.description": "Other players can ride you!",
