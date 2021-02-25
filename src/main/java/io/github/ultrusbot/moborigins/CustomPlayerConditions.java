@@ -17,6 +17,9 @@ public class CustomPlayerConditions {
                 .add("comparison", SerializableDataType.COMPARISON)
                 .add("compare_to", SerializableDataType.FLOAT),
                 (data, player) -> ((Comparison)data.get("comparison")).compare(player.world.getBiome(player.getBlockPos()).getTemperature(), data.getFloat("compare_to"))));
+
+        register(new ConditionFactory<>(new Identifier(MOD_ID, "is_full_moon"), new SerializableData(), (data, player) -> player.world.getMoonSize() == 1.0));
+
     }
 
 

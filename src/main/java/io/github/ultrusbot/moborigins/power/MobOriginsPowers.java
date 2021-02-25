@@ -12,6 +12,7 @@ public class MobOriginsPowers {
     public static final PowerType<Power> BETTER_POTIONS = new PowerTypeReference(new Identifier("moborigins", "better_potions"));
     public static final PowerType<Power> RIDEABLE_CREATURE = new PowerTypeReference(new Identifier("moborigins", "rideable_creature"));
     public static final PowerType<Power> BOUNCY = new PowerTypeReference(new Identifier("moborigins", "bouncy"));
+    public static final PowerType<Power> ALPHA_WOLF = new PowerTypeReference(new Identifier("moborigins", "alpha_wolf"));
 
 
 

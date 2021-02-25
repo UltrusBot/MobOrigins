@@ -10,7 +10,8 @@
     "PlayerEntityMixin",
     "PotionItemMixin",
     "SnowBallEntityMixin",
-    "VillagerMixin"
+    "VillagerMixin",
+    "WolfEntityMixin"
   ],
   "client": [
   ],
