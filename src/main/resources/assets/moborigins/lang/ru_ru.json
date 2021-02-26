@@ -1,5 +1,5 @@
 {
-  "enchantment.moborigins.heat_protection": "Защита от тепла",
+  "enchantment.moborigins.heat_protection": "Тепловая защита",
   "death.attack.split": "%1$s разделился в ничто.",
   "death.attack.split.player": "%1$s разделился, пока пытался сбежать от %2$s.",
   "text.moborigins.become_elder": "Вы превратились в Древнего Стража!",
@@ -14,7 +14,7 @@
   "power.moborigins.greater_golems.description": "Снеговики сделанные тобой более сильные.",
 
   "power.moborigins.stronger_snowballs.name": "Мощные снежки",
-  "power.moborigins.stronger_snowballs.description": "Брошенные вами снежки, набиты льдом, наносят 1 урон!",
+  "power.moborigins.stronger_snowballs.description": "Брошенные вами снежки, набитые льдом, наносят 1 урон!",
 
   "power.moborigins.snow_trail.name": "Снежный след",
   "power.moborigins.snow_trail.description": "Вы оставляете след из снега.",
@@ -28,7 +28,7 @@
   "power.moborigins.potion_action.name": "Идеальные зелья",
   "power.moborigins.potion_action.description": "Получите случайный эффект зелья в зависимости от ситуации, в которой вы находитесь.",
 
-  "power.moborigins.pillager_aligned.name": "Признанный разбойниками",
+  "power.moborigins.pillager_aligned.name": "Признан разбойниками",
   "power.moborigins.pillager_aligned.description": "Крестьяне тебя ненавидят, но ты нравишься разбойникам!",
 
   "power.moborigins.better_potions.name": "Улучшенные зелья",
@@ -80,7 +80,7 @@
   "power.moborigins.elder_spikes.description": "Более сильные шипы, у которых есть шанс нанести урон атакующим!",
 
   "origin.moborigins.slime.name": "Слизень",
-  "origin.moborigins.slime.description": "Зеленые капли желе, которые подпрыгивают вокруг!",
+  "origin.moborigins.slime.description": "Зеленые капли желе, что прыгают вокруг!",
 
   "power.moborigins.bouncy.name": "Упругий",
   "power.moborigins.bouncy.description": "Все блоки действуют как блоки слизи.",
@@ -100,7 +100,7 @@
   "power.moborigins.full_moon.name": "Подобие оборотня",
   "power.moborigins.full_moon.description": "Когда восходит полная луна, вы становитесь быстрее, сильнее и живучие.",
 
-  "power.moborigins.wolf_body.name": "Тело волка",
+  "power.moborigins.wolf_body.name": "Волкоподобный",
   "power.moborigins.wolf_body.description": "У вас на 2 сердца меньше, чем у людей."
 
 
