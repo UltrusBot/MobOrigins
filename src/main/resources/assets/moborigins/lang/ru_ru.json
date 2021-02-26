@@ -1,0 +1,107 @@
+{
+  "enchantment.moborigins.heat_protection": "Защита от тепла",
+  "death.attack.split": "%1$s разделился в ничто.",
+  "death.attack.split.player": "%1$s разделился, пока пытался сбежать от %2$s.",
+  "text.moborigins.become_elder": "Вы превратились в Древнего Стража!",
+
+  "origin.moborigins.snowgolem.name": "Снежный голем",
+  "origin.moborigins.snowgolem.description": "Големы созданные из снега. Слабы ко всему, что может их растопить.",
+
+  "power.moborigins.heat_weakness.name": "Тепловая слабость",
+  "power.moborigins.heat_weakness.description": "Вы получаете урон в жарких биомах.",
+
+  "power.moborigins.greater_golems.name": "Великий голем",
+  "power.moborigins.greater_golems.description": "Снеговики сделанные тобой более сильные.",
+
+  "power.moborigins.stronger_snowballs.name": "Мощные снежки",
+  "power.moborigins.stronger_snowballs.description": "Брошенные вами снежки, набиты льдом, наносят 1 урон!",
+
+  "power.moborigins.snow_trail.name": "Снежный след",
+  "power.moborigins.snow_trail.description": "Вы оставляете след из снега.",
+
+  "power.moborigins.frigid_strength.name": "Сила холода",
+  "power.moborigins.frigid_strength.description": "Наносите больше урона в холодных биомах.",
+
+  "origin.moborigins.witch.name": "Ведьма",
+  "origin.moborigins.witch.description": "Жестокие и бухтящие. Ведьмы - мастера зельеварения и прекрасно владеют магией.",
+
+  "power.moborigins.potion_action.name": "Идеальные зелья",
+  "power.moborigins.potion_action.description": "Получите случайный эффект зелья в зависимости от ситуации, в которой вы находитесь.",
+
+  "power.moborigins.pillager_aligned.name": "Признанный разбойниками",
+  "power.moborigins.pillager_aligned.description": "Крестьяне тебя ненавидят, но ты нравишься разбойникам!",
+
+  "power.moborigins.better_potions.name": "Улучшенные зелья",
+  "power.moborigins.better_potions.description": "Вы употребляете зелья лучше, чем большинство, поэтому они прослужат дольше, когда выпьете их.",
+
+  "origin.moborigins.strider.name": "Лавомерка",
+  "origin.moborigins.strider.description": "Путешествуете по бескрайним океанам лавы со скоростью лавомерки.",
+
+  "power.moborigins.lava_walk.name": "Ходящий по лаве",
+  "power.moborigins.lava_walk.description": "У вас есть возможность ходить по источникам лавы!",
+
+  "power.moborigins.lava_speed.name": "Адепт лавы",
+  "power.moborigins.lava_speed.description": "Обычно вы медленный, но развиваете огромную скорость на лаве.",
+
+  "power.moborigins.rideable_creature.name": "Ездовое существо",
+  "power.moborigins.rideable_creature.description": "Другие игроки могут кататься на вас!",
+
+  "origin.moborigins.evoker.name": "Заклинатель",
+  "origin.moborigins.evoker.description": "Мастера магии и коллекционеры тотемов.",
+
+  "power.moborigins.summon_fangs.name": "Вызыватель",
+  "power.moborigins.summon_fangs.description": "Мы можете вызывать других заклинателей!",
+
+  "power.moborigins.lower_totem_chance.name": "Чародейские тотемы",
+  "power.moborigins.lower_totem_chance.description": "Тотемы имеют 10% шанс не сломаться.",
+
+  "origin.moborigins.guardian.name": "Страж",
+  "origin.moborigins.guardian.description": "Стражи известны тем, что защищают свои крепости и драгоценные губки внутри. Некоторые известны тем, что превратились в Древних Старших.",
+
+  "power.moborigins.guardian_spikes.name": "Шипы стража",
+  "power.moborigins.guardian_spikes.description": "Шипы, у которых есть шанс нанести урон атакующим!",
+
+  "power.moborigins.guardian_ally.name": "Союзник стражей",
+  "power.moborigins.guardian_ally.description": "Стражи не атакуют тебя!",
+
+  "power.moborigins.monument_spawn.name": "Крепость ваш дом",
+  "power.moborigins.monument_spawn.description": "Вы появляетесь в подводной крепости.",
+
+  "origin.moborigins.elder_guardian.name": "Древний Страж",
+  "origin.moborigins.elder_guardian.description": "Древние стражы - лидеры в крепостях. Они более могущественны, чем обычные сражи.",
+
+  "power.moborigins.elder_magic.name": "Древняя магия",
+  "power.moborigins.elder_magic.description": "Вызывайте облако с эффектом усталости.",
+
+  "power.moborigins.mining_fatigue_immune.name": "Иммунитет древних",
+  "power.moborigins.mining_fatigue_immune.description": "У вас иммунитет к усталости.",
+
+  "power.moborigins.elder_spikes.name": "Шипы древних",
+  "power.moborigins.elder_spikes.description": "Более сильные шипы, у которых есть шанс нанести урон атакующим!",
+
+  "origin.moborigins.slime.name": "Слизень",
+  "origin.moborigins.slime.description": "Зеленые капли желе, которые подпрыгивают вокруг!",
+
+  "power.moborigins.bouncy.name": "Упругий",
+  "power.moborigins.bouncy.description": "Все блоки действуют как блоки слизи.",
+
+  "power.moborigins.split.name": "Способность разделения",
+  "power.moborigins.split.description": "Обменивайте свои очки здоровья на призыв маленькой слизи, что защитит вас!",
+
+  "power.moborigins.small_weak.name": "Слабость низких",
+  "power.moborigins.small_weak.description": "Когда вы теряете больше 2 сердец, вы больше не наносите урона, но ваши атаки сильнее отбрасывают!",
+
+  "origin.moborigins.wolf.name": "Волк",
+  "origin.moborigins.wolf.description": "Сильные и быстрые. Волки - существа, чья сила в их количестве.",
+
+  "power.moborigins.alpha_wolf.name": "Вожак стаи",
+  "power.moborigins.alpha_wolf.description": "Прирученные тобою волки более сильные!",
+
+  "power.moborigins.full_moon.name": "Подобие оборотня",
+  "power.moborigins.full_moon.description": "Когда восходит полная луна, вы становитесь быстрее, сильнее и живучие.",
+
+  "power.moborigins.wolf_body.name": "Тело волка",
+  "power.moborigins.wolf_body.description": "У вас на 2 сердца меньше, чем у людей."
+
+
+}
