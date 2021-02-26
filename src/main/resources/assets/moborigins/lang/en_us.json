@@ -61,6 +61,9 @@
   "power.moborigins.guardian_spikes.name": "Guardian Spikes",
   "power.moborigins.guardian_spikes.description": "Spikes that have a chance to damage attackers!",
 
+  "power.moborigins.guardian_ally.name": "Guardian Ally",
+  "power.moborigins.guardian_ally.description": "Guardians don't attack you!",
+
   "power.moborigins.monument_spawn.name": "Monument Home",
   "power.moborigins.monument_spawn.description": "You spawn at a Ocean Monument",
 

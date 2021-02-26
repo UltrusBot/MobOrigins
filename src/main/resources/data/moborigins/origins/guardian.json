@@ -2,6 +2,7 @@
   "powers": [
     "moborigins:monument_spawn",
     "moborigins:guardian_spikes",
+    "moborigins:guardian_ally",
     "origins:aquatic",
     "origins:water_breathing",
     "origins:like_water"
