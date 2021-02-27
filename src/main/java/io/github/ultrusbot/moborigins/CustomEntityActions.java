@@ -1,15 +1,12 @@
 package io.github.ultrusbot.moborigins;
 
-import io.github.apace100.origins.Origins;
 import io.github.apace100.origins.power.factory.action.ActionFactory;
 import io.github.apace100.origins.registry.ModRegistries;
 import io.github.apace100.origins.util.SerializableData;
-import io.github.ultrusbot.moborigins.entity.EntityRegistry;
-import io.github.ultrusbot.moborigins.entity.OriginSlimeEntity;
+import io.github.ultrusbot.moborigins.entity.slime.OriginSlimeEntity;
 import io.github.ultrusbot.moborigins.origins.EvokerSummonFangs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 

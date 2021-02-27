@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "moborigins:stinger",
+    "moborigins:flower_power",
+    "moborigins:queen_bee",
+    "moborigins:small_bug",
+    "moborigins:bee_wings",
+    "origins:vegetarian"
+  ],
+  "icon": "minecraft:honeycomb",
+  "order": 4,
+  "impact": 2
+}

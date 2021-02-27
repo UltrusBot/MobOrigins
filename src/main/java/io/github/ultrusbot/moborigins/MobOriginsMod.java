@@ -2,7 +2,6 @@ package io.github.ultrusbot.moborigins;
 
 import io.github.ultrusbot.moborigins.enchantment.HeatProtectionEnchantment;
 import io.github.ultrusbot.moborigins.entity.EntityRegistry;
-import io.github.ultrusbot.moborigins.entity.OriginSlimeEntity;
 import io.github.ultrusbot.moborigins.power.MobOriginPowerFactories;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;

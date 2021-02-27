@@ -3,7 +3,7 @@
   "death.attack.split": "%1$s split himself into nothing.",
   "death.attack.split.player": "%1$s split whilst trying to escape %2$s.",
   "text.moborigins.become_elder": "You have grown into an Elder Guardian!",
-
+  "text.moborigins.mystery_meat": "Mystery Meat",
   "origin.moborigins.snowgolem.name": "Snow Golem",
   "origin.moborigins.snowgolem.description": "Golems made from snow, and weak to anything that might melt them",
 
@@ -74,7 +74,7 @@
   "power.moborigins.elder_magic.description": "Summon a effect cloud of mining fatigue",
 
   "power.moborigins.mining_fatigue_immune.name": "Elder Immunity",
-  "power.moborigins.mining_fatigue_immune.description": "Immune to getting Mining Fatigue ",
+  "power.moborigins.mining_fatigue_immune.description": "Immune to getting Mining Fatigue",
 
   "power.moborigins.elder_spikes.name": "Elder Spikes",
   "power.moborigins.elder_spikes.description": "Stronger Spikes that have a chance to damage attackers!",
@@ -101,7 +101,24 @@
   "power.moborigins.full_moon.description": "During a full moon, you get Faster, Stronger, and Healthier",
 
   "power.moborigins.wolf_body.name": "Wolf Body",
-  "power.moborigins.wolf_body.description": "You have 2 less hearts of health than humans."
+  "power.moborigins.wolf_body.description": "You have 2 less hearts of health than humans.",
 
+  "origin.moborigins.bee.name": "Bee",
+  "origin.moborigins.bee.description": "A flying insect that pollinates the world, spreading flowers and honey all around.",
+
+  "power.moborigins.stinger.name": "Stinger",
+  "power.moborigins.stinger.description": "When you punch someone with your fist, you poison them for a few seconds",
+
+  "power.moborigins.flower_power.name": "Flower Power",
+  "power.moborigins.flower_power.description": "When near multiple flowers, you gain regeneration.",
+
+  "power.moborigins.queen_bee.name": "Queen Bee",
+  "power.moborigins.queen_bee.description": "When you collect honey, the bees won't try to attack you.",
+
+  "power.moborigins.small_bug.name": "Small Bug",
+  "power.moborigins.small_bug.description": "You have 2 less hearts of health than humans.",
+
+  "power.moborigins.bee_wings.name": "Bee Wings",
+  "power.moborigins.bee_wings.description": "You can use your tiny bee wings to descend slower as an ability"
 
 }

@@ -4,6 +4,7 @@
   "package": "io.github.ultrusbot.moborigins.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BeehiveBlockEntityMixin",
     "BlockMixin",
     "GuardianMixin",
     "IronGolemEntityMixin",
