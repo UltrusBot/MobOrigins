@@ -7,10 +7,10 @@
   "origin.moborigins.snowgolem.name": "Снежный голем",
   "origin.moborigins.snowgolem.description": "Големы созданные из снега. Слабы ко всему, что может их растопить.",
 
-  "power.moborigins.heat_weakness.name": "Тепловая слабость",
+  "power.moborigins.heat_weakness.name": "Таяние",
   "power.moborigins.heat_weakness.description": "Вы получаете урон в жарких биомах.",
 
-  "power.moborigins.greater_golems.name": "Великий голем",
+  "power.moborigins.greater_golems.name": "Усиленные големы",
   "power.moborigins.greater_golems.description": "Снеговики сделанные тобой более сильные.",
 
   "power.moborigins.stronger_snowballs.name": "Мощные снежки",
