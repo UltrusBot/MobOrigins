@@ -1,0 +1,15 @@
+{
+  "type": "origins:conditioned_attribute",
+  "modifier": {
+    "attribute": "generic.movement_speed",
+    "operation": "addition",
+    "value": 2,
+    "name": "true phantom bonus"
+  },
+  "condition": {
+    "type":"moborigins:time_since_rest",
+    "comparison": ">",
+    "compare_to": 72000.0
+
+  }
+}
