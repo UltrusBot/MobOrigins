@@ -1,5 +1,6 @@
-package io.github.ultrusbot.moborigins.entity;
+package io.github.ultrusbot.moborigins.entity.slime;
 
+import io.github.ultrusbot.moborigins.entity.EntityRegistry;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.*;

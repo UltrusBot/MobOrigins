@@ -1,6 +1,7 @@
 package io.github.ultrusbot.moborigins.entity;
 
 import io.github.ultrusbot.moborigins.MobOriginsMod;
+import io.github.ultrusbot.moborigins.entity.slime.OriginSlimeEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;

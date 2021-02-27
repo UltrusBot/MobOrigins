@@ -1,17 +1,13 @@
 package io.github.ultrusbot.moborigins.client.entity.render;
 
 import io.github.ultrusbot.moborigins.client.entity.model.OriginSlimeModel;
-import io.github.ultrusbot.moborigins.entity.OriginSlimeEntity;
+import io.github.ultrusbot.moborigins.entity.slime.OriginSlimeEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.render.entity.feature.SlimeOverlayFeatureRenderer;
-import net.minecraft.client.render.entity.model.SlimeEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.SlimeEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 

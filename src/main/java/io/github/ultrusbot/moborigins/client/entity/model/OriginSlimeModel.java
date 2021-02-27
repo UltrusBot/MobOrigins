@@ -1,15 +1,11 @@
 package io.github.ultrusbot.moborigins.client.entity.model;
 
 import com.google.common.collect.ImmutableList;
-import io.github.ultrusbot.moborigins.entity.OriginSlimeEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.CompositeEntityModel;
-import net.minecraft.client.render.entity.model.SlimeEntityModel;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.TameableEntity;
 
 @Environment(EnvType.CLIENT)
 public class OriginSlimeModel<T extends Entity> extends CompositeEntityModel<T> {

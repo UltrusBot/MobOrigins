@@ -1,4 +1,4 @@
-package io.github.ultrusbot.moborigins.entity;
+package io.github.ultrusbot.moborigins.entity.slime;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;

@@ -1,10 +1,9 @@
-package io.github.ultrusbot.moborigins.entity;
+package io.github.ultrusbot.moborigins.entity.slime;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.TrackTargetGoal;
-import net.minecraft.entity.passive.TameableEntity;
 
 import java.util.EnumSet;
 
