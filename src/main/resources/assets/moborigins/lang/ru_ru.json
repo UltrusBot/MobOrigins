@@ -67,6 +67,9 @@
 
   "power.moborigins.monument_spawn.name": "Крепость ваш дом",
   "power.moborigins.monument_spawn.description": "Вы появляетесь в подводной крепости.",
+  
+  "power.moborigins.land_slowness.name": "Зыбучая земля",
+  "power.moborigins.land_slowness.description": "Ты медленный, когда на земле.",
 
   "origin.moborigins.elder_guardian.name": "Древний Страж",
   "origin.moborigins.elder_guardian.description": "Древние стражы - лидеры в крепостях. Они более могущественны, чем обычные сражи.",
