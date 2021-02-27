@@ -3,6 +3,7 @@
   "death.attack.split": "%1$s разделился на ничто.",
   "death.attack.split.player": "%1$s разделился, пока пытался сбежать от %2$s.",
   "text.moborigins.become_elder": "Вы превратились в Древнего Стража!",
+  "text.moborigins.mystery_meat": "Странное мясо",
 
   "origin.moborigins.snowgolem.name": "Снежный голем",
   "origin.moborigins.snowgolem.description": "Големы созданные из снега. Слабы ко всему, что может их растопить.",
@@ -102,6 +103,25 @@
 
   "power.moborigins.wolf_body.name": "Волкоподобный",
   "power.moborigins.wolf_body.description": "У вас на 2 сердца меньше, чем у людей."
+  
+  "origin.moborigins.bee.name": "Пчела",
+  "origin.moborigins.bee.description": "Опыляющий мир летающее насекомое, что разносит цветы и мед повсюду.",
+
+  "power.moborigins.stinger.name": "Жало",
+  "power.moborigins.stinger.description": "Когда вы бьёте кого-либо рукой, вы  отравляешь на несколько секунд.",
+
+  "power.moborigins.flower_power.name": "Сила цветов",
+  "power.moborigins.flower_power.description": "Когда рядом много цветов, ты регенируешь здоровье.",
+
+  "power.moborigins.queen_bee.name": "Королева пчёл",
+  "power.moborigins.queen_bee.description": "Когда ты собираешь мёд, пчёлы не будут пытаться атаковать тебя.",
+
+  "power.moborigins.small_bug.name": "Малый жук",
+  "power.moborigins.small_bug.description": "У вас на 2 сердца меньше, чем у людей.",
+
+  "power.moborigins.bee_wings.name": "Пчелинные крылья",
+  "power.moborigins.bee_wings.description": "Вы можете использовать свои крошечные пчелиные крылышки, как способность, чтобы спускаться медленнее."
+
 
 
 }
