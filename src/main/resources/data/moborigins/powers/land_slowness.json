@@ -1,0 +1,14 @@
+{
+  "type": "origins:conditioned_attribute",
+  "modifier": {
+    "attribute": "generic.movement_speed",
+    "operation": "multiply_total",
+    "value": -0.4,
+    "name": "guardian land slowness"
+  },
+  "condition": {
+    "type": "origins:submerged_in",
+    "inverted": true,
+    "fluid": "minecraft:water"
+  }
+}

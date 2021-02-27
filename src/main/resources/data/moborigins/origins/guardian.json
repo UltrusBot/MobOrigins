@@ -1,11 +1,13 @@
 {
   "powers": [
-    "moborigins:monument_spawn",
     "moborigins:guardian_spikes",
     "moborigins:guardian_ally",
+    "moborigins:land_slowness",
     "origins:aquatic",
     "origins:water_breathing",
-    "origins:like_water"
+    "origins:like_water",
+    "origins:water_vision",
+    "origins:aqua_affinity"
   ],
   "upgrades": [
     {

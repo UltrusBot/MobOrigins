@@ -1,13 +1,15 @@
 {
   "powers": [
-    "moborigins:monument_spawn",
     "moborigins:elder_spikes",
     "moborigins:elder_magic",
     "moborigins:mining_fatigue_immune",
     "moborigins:guardian_ally",
+    "moborigins:land_slowness",
     "origins:aquatic",
     "origins:water_breathing",
-    "origins:like_water"
+    "origins:like_water",
+    "origins:water_vision",
+    "origins:aqua_affinity"
   ],
   "unchoosable": true,
   "icon": "minecraft:prismarine_crystals",
