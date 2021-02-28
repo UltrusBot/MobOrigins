@@ -21,7 +21,7 @@
   "power.moborigins.snow_trail.description": "Ты оставляешь след из снега.",
 
   "power.moborigins.frigid_strength.name": "Сила холода",
-  "power.moborigins.frigid_strength.description": "Наносите больше урона в холодных биомах.",
+  "power.moborigins.frigid_strength.description": "Ты наносишь больше урона, находясь в холодном биоме.",
 
   "origin.moborigins.witch.name": "Ведьма",
   "origin.moborigins.witch.description": "Жестокие и бухтящие. Ведьмы - мастера зельеварения и прекрасно владеют магией.",
@@ -57,7 +57,7 @@
   "power.moborigins.lower_totem_chance.description": "Тотемы имеют 10% шанс не сломаться.",
 
   "origin.moborigins.guardian.name": "Страж",
-  "origin.moborigins.guardian.description": "Стражи известны тем, что защищают свои крепости и драгоценные губки внутри. Некоторые известны тем, что превратились в Древних Старших.",
+  "origin.moborigins.guardian.description": "Стражи известны тем, что защищают свои крепости и драгоценные губки внутри. Некоторые известны тем, что превратились в Древних Стражей.",
 
   "power.moborigins.guardian_spikes.name": "Шипы стража",
   "power.moborigins.guardian_spikes.description": "Шипы, у которых есть шанс нанести урон атакующим!",
@@ -87,7 +87,7 @@
   "origin.moborigins.slime.description": "Зеленые капли желе, что прыгают вокруг!",
 
   "power.moborigins.bouncy.name": "Упругий",
-  "power.moborigins.bouncy.description": "Все блоки действуют как блоки слизи.",
+  "power.moborigins.bouncy.description": "Все блоки действуют, как блоки слизи.",
 
   "power.moborigins.split.name": "Способность разделения",
   "power.moborigins.split.description": "Обменивайте свои очки здоровья на призыв маленькой слизи, что защитит тебя!",
@@ -122,7 +122,7 @@
   "power.moborigins.small_bug.name": "Маленький жук",
   "power.moborigins.small_bug.description": "У тебя на 2 сердца меньше, чем у людей.",
 
-  "power.moborigins.bee_wings.name": "Пчелинные крылья",
+  "power.moborigins.bee_wings.name": "Пчелиные крылья",
   "power.moborigins.bee_wings.description": "Ты можешь использовать свои крошечные пчелиные крылья, как способность, чтобы спускаться медленнее."
 
 
