@@ -50,8 +50,8 @@
   "origin.moborigins.evoker.name": "Заклинатель",
   "origin.moborigins.evoker.description": "Мастера магии и коллекционеры тотемов.",
 
-  "power.moborigins.summon_fangs.name": "Вызыватель",
-  "power.moborigins.summon_fangs.description": "Ты можешь вызывать других заклинателей!",
+  "power.moborigins.summon_fangs.name": "Челюсти",
+  "power.moborigins.summon_fangs.description": "Ты можешь вызывать челюсти заклинателя!",
 
   "power.moborigins.lower_totem_chance.name": "Чародейские тотемы",
   "power.moborigins.lower_totem_chance.description": "Тотемы имеют 10% шанс не сломаться.",
