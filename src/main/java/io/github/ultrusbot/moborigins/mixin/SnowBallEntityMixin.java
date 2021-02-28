@@ -17,7 +17,7 @@ public class SnowBallEntityMixin {
     public void onEntityHit$MobOrigins(EntityHitResult entityHitResult, CallbackInfo ci) {
         if (MobOriginsPowers.STRONGER_SNOWBALLS.isActive(((SnowballEntity)(Object)this).getOwner())) {
             Entity entity = entityHitResult.getEntity();
-            entity.damage(DamageSource.thrownProjectile(((SnowballEntity) (Object) this), ((SnowballEntity) (Object) this).getOwner()), 1);
+            entity.damage(DamageSource.thrownProjectile(((SnowballEntity) (Object) this), ((SnowballEntity) (Object) this).getOwner()), 3);
             return;
         }
     }
