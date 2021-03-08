@@ -43,11 +43,23 @@
           }
         },
         "else_action": {
-          "type": "origins:apply_effect",
-          "effect": {
-            "effect": "minecraft:speed",
-            "duration": 200,
-            "amplifier": 0
+          "type": "origins:if_else",
+          "condition": {
+            "type": "origins:sprinting"
+          },
+          "if_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+              "effect": "minecraft:speed"
+            },
+            "else_action": {
+              "type": "origins:apply_effect",
+              "effect": {
+               "effect": "minecraft:slow_falling",
+               "duration": 200,
+               "amplifier": 0
+              }
+            }
           }
         }
       }
