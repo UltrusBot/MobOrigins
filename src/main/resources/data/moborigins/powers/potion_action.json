@@ -11,11 +11,11 @@
           "compare_to": 0.5
         },
         {
-          "type": "origins:status_effect"
+          "type": "origins:status_effect",
           "effect": "minecraft:poison"
         },
         {
-          "type": "origins:status_effect"
+          "type": "origins:status_effect",
           "effect": "minecraft:wither"
         }
       ]
