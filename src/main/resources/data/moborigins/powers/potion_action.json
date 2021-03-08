@@ -3,9 +3,22 @@
   "entity_action": {
     "type": "origins:if_else",
     "condition": {
-      "type": "origins:relative_health",
-      "comparison": "<",
-      "compare_to": 0.5
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:relative_health",
+          "comparison": "<",
+          "compare_to": 0.5
+        },
+        {
+          "type": "origins:status_effect"
+          "effect": "minecraft:poison"
+        },
+        {
+          "type": "origins:status_effect"
+          "effect": "minecraft:wither"
+        }
+      ]
     },
     "if_action": {
       "type": "origins:apply_effect",
