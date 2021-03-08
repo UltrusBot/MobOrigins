@@ -122,6 +122,31 @@
   "power.moborigins.small_bug.description": "You have 2 less hearts of health than humans.",
 
   "power.moborigins.bee_wings.name": "Bee Wings",
-  "power.moborigins.bee_wings.description": "You can use your tiny bee wings to descend slower as an ability"
+  "power.moborigins.bee_wings.description": "You can use your tiny bee wings to descend slower as an ability",
+
+  "origin.moborigins.fox.name": "Fox",
+  "origin.moborigins.fox.description": "Sly and cunning, foxes are timid animals who enjoy eating berries, and stealing items.",
+
+  "power.moborigins.timid_creature.name": "Timid Creature",
+  "power.moborigins.timid_creature.description": "Your speed increases when you are around more than 3 other players.",
+
+  "power.moborigins.better_berries.name": "Better Berries",
+  "power.moborigins.better_berries.description": "Sweet Berries taste extra delicious to you!",
+
+  "power.moborigins.careful_gatherer.name": "Careful Gatherer",
+  "power.moborigins.careful_gatherer.description": "Sweet Berry Bushes don't hurt you at all.",
+
+  "power.moborigins.item_collector.name": "Item Collector",
+  "power.moborigins.item_collector.description": "You have a larger item pickup radius.",
+
+  "power.moborigins.sly.name": "Sly",
+  "power.moborigins.sly.description": "You are quicker.",
+
+  "power.moborigins.small_fox.name": "Small Fox",
+  "power.moborigins.small_fox.description": "You have 2 less hearts of health than humans."
+
+
+
+
 
 }

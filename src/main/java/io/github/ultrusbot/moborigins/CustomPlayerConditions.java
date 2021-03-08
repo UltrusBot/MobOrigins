@@ -6,6 +6,7 @@ import io.github.apace100.origins.registry.ModRegistries;
 import io.github.apace100.origins.util.Comparison;
 import io.github.apace100.origins.util.SerializableData;
 import io.github.apace100.origins.util.SerializableDataType;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
@@ -27,6 +28,23 @@ public class CustomPlayerConditions {
                 .add("comparison", SerializableDataType.COMPARISON)
                 .add("compare_to", SerializableDataType.INT),
                 (data, player) -> ((Comparison)data.get("comparison")).compare(MathHelper.clamp(((ServerPlayerEntity)player).getStatHandler().getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, Integer.MAX_VALUE), data.getInt("compare_to"))));
+
+        register(new ConditionFactory<>(new Identifier(MOD_ID, "nearby_entities"), new SerializableData()
+                .add("entity_type", SerializableDataType.ENTITY_TYPE)
+                .add("player_box_multiplier", SerializableDataType.FLOAT)
+                .add("comparison", SerializableDataType.COMPARISON)
+                .add("compare_to", SerializableDataType.INT),
+                (data, player) -> {
+                    EntityType<?> entityType = (EntityType<?>)data.get("entity_type");
+                    Float playerBoxMultiplier = (Float)data.get("player_box_multiplier");
+                    int amount = player.world.getOtherEntities(player, player.getBoundingBox().expand(playerBoxMultiplier), entity -> {
+                        return entity.getType() == entityType;
+                    }).size();
+                    Comparison comparison = ((Comparison)data.get("comparison"));
+                    int compareTo = data.getInt("compare_to");
+
+                    return comparison.compare(amount, compareTo);
+                }));
 
 
     }

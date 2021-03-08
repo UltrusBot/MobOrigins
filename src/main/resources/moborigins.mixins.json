@@ -12,6 +12,7 @@
     "PlayerEntityMixin",
     "PotionItemMixin",
     "SnowBallEntityMixin",
+    "SweetBerryBushBlockMixin",
     "VillagerMixin",
     "WolfEntityMixin"
   ],

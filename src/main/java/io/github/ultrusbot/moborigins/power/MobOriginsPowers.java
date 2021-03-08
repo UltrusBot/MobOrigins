@@ -15,6 +15,8 @@ public class MobOriginsPowers {
     public static final PowerType<Power> ALPHA_WOLF = new PowerTypeReference(new Identifier("moborigins", "alpha_wolf"));
     public static final PowerType<Power> GUARDIAN_ALLY = new PowerTypeReference(new Identifier("moborigins", "guardian_ally"));
     public static final PowerType<Power> QUEEN_BEE = new PowerTypeReference(new Identifier("moborigins", "queen_bee"));
+    public static final PowerType<Power> ITEM_COLLECTOR = new PowerTypeReference(new Identifier("moborigins", "item_collector"));
+    public static final PowerType<Power> CAREFUL_GATHERER = new PowerTypeReference(new Identifier("moborigins", "careful_gatherer"));
 
 
 

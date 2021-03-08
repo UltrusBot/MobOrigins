@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "moborigins:timid_creature",
+    "moborigins:better_berries",
+    "moborigins:careful_gatherer",
+    "moborigins:item_collector",
+    "moborigins:sly",
+    "moborigins:small_fox"
+  ],
+  "icon": "minecraft:sweet_berries",
+  "order": 2,
+  "impact": 1
+}

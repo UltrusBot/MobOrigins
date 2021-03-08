@@ -15,12 +15,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
@@ -74,5 +77,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             }
         }
     }
-
+    @ModifyVariable(method = "tickMovement", at = @At("STORE"), name = "box2")
+    public Box tickMovement$MobOrigins(Box box2) {
+        if (MobOriginsPowers.ITEM_COLLECTOR.isActive(((PlayerEntity)(Object)this))) {
+            return box2.expand(2);
+        }
+        return box2;
+    }
 }

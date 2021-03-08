@@ -1,0 +1,9 @@
+{
+  "type": "origins:attribute",
+  "modifier":  {
+      "attribute": "generic.movement_speed",
+      "operation": "addition",
+      "value": 0.06,
+      "name": "fox sly bonus"
+    }
+}
