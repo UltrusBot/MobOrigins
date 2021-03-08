@@ -1,6 +1,9 @@
 {
   "type": "origins:active_self",
   "entity_action": {
+    "type": "origins:and",
+    "actions": [
+  {
     "type": "origins:if_else",
     "condition": {
       "type": "origins:or",
@@ -77,6 +80,13 @@
         }
       }
     }
+  },
+  {
+    "type": "origins:execute_command",
+    "command": "playsound minecraft:entity.witch.drink voice @s",
+    "permission_level": 4
+  }
+   ]
   },
   "cooldown": 200,
   "hud_render": {
