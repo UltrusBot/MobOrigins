@@ -67,6 +67,8 @@
             "type": "origins:apply_effect",
             "effect": {
               "effect": "minecraft:speed"
+              "duration": 200,
+              "amplifier": 0
             },
             "else_action": {
               "type": "origins:apply_effect",
