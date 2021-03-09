@@ -1,0 +1,59 @@
+{
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "clear @s minecraft:emerald 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "give @s minecraft:blaze_powder 1",
+        "permission_level": 4
+      },
+      {
+	"type": "origins:execute_command",
+	"command": "playsound minecraft:entity.item.pickup voice @s",
+	"permission_level": 4
+      }
+    ]
+  },
+  "item_action": {
+    "type": "origins:consume",
+    "amount": 1
+  },
+  "hud_render": {
+    "should_render": false
+  },
+  "cooldown": 1,
+  "condition": {
+	"type": "origins:or",
+	"conditions": [
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": { 
+		"item": "minecraft:emerald" 
+	  }
+        }
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": { 
+		"item": "minecraft:emerald" 
+	  }
+        }
+      }
+    ]
+  },
+  "key": "secondary",
+  "name": "Potion Makers Secrets",
+  "description": "You can transmute Emeralds into Blaze Powder with the secondary power."
+}
