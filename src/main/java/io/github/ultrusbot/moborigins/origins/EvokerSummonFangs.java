@@ -1,6 +1,7 @@
 package io.github.ultrusbot.moborigins.origins;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.EvokerEntity;
@@ -11,6 +12,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 
 public class EvokerSummonFangs {
@@ -19,18 +21,29 @@ public class EvokerSummonFangs {
 //        double d = Math.min(livingEntity.getY(), EvokerEntity.this.getY());
 //        double e = Math.max(livingEntity.getY(), EvokerEntity.this.getY()) + 1.0D;
 //        float f = (float)MathHelper.atan2(livingEntity.getZ() - EvokerEntity.this.getZ(), livingEntity.getX() - EvokerEntity.this.getX());
+//        double d = entity.getY();
+//        double e = entity.getY() + 1;
+//        float f = entity.yaw;
+//        float h;
+//        for(int j = 0; j < 5; ++j) {
+//            h = f + (float)j * 3.1415927F * 0.4F;
+//            conjureFangs(entity, entity.getX() + (double) MathHelper.cos(h) * 1.5D, entity.getZ() + (double)MathHelper.sin(h) * 1.5D, d, e, h, 0);
+//        }
+//
+//        for(int j = 0; j < 8; ++j) {
+//            h = f + (float)j * 3.1415927F * 2.0F / 8.0F + 1.2566371F;
+//            conjureFangs(entity, entity.getX() + (double)MathHelper.cos(h) * 2.5D, entity.getZ() + (double)MathHelper.sin(h) * 2.5D, d, e, h, 3);
+//        }
+
+//        LivingEntity livingEntity = EvokerEntity.this.getTarget();
         double d = entity.getY();
         double e = entity.getY() + 1;
-        float f = entity.yaw;
-        float h;
-        for(int j = 0; j < 5; ++j) {
-            h = f + (float)j * 3.1415927F * 0.4F;
-            conjureFangs(entity, entity.getX() + (double) MathHelper.cos(h) * 1.5D, entity.getZ() + (double)MathHelper.sin(h) * 1.5D, d, e, h, 0);
-        }
-
-        for(int j = 0; j < 8; ++j) {
-            h = f + (float)j * 3.1415927F * 2.0F / 8.0F + 1.2566371F;
-            conjureFangs(entity, entity.getX() + (double)MathHelper.cos(h) * 2.5D, entity.getZ() + (double)MathHelper.sin(h) * 2.5D, d, e, h, 3);
+        float f = entity.getHeadYaw() + 180;
+        Vec3d vector3f = Vec3d.fromPolar(entity.getPitch(0.0f), entity.getHeadYaw());
+        int j;
+        for(j = 0; j < 16; ++j) {
+            double l = 1.25D * (double)(j + 1);
+            conjureFangs(entity, entity.getX() + vector3f.getX() * l, entity.getZ() + vector3f.getZ() * l, d, e, f, j);
         }
     }
     private static void conjureFangs(Entity entity, double x, double z, double maxY, double y, float yaw, int warmup) {
