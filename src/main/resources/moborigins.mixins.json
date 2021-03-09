@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BeehiveBlockEntityMixin",
+    "BeehiveBlockMixin",
     "BlockMixin",
     "GuardianMixin",
     "IronGolemEntityMixin",
