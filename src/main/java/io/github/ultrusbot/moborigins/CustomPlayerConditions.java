@@ -7,6 +7,7 @@ import io.github.apace100.origins.util.Comparison;
 import io.github.apace100.origins.util.SerializableData;
 import io.github.apace100.origins.util.SerializableDataType;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
@@ -50,8 +51,8 @@ public class CustomPlayerConditions {
     }
 
 
-    private static void register(ConditionFactory<PlayerEntity> conditionFactory) {
-        Registry.register(ModRegistries.PLAYER_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
+    private static void register(ConditionFactory<LivingEntity> conditionFactory) {
+        Registry.register(ModRegistries.ENTITY_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
     }
     
 }
