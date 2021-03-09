@@ -77,7 +77,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             }
         }
     }
-    @ModifyVariable(method = "tickMovement", at = @At("STORE"), name = "box2")
+    @ModifyVariable(method = "tickMovement", at = @At("STORE"), index = 2)
     public Box tickMovement$MobOrigins(Box box2) {
         if (MobOriginsPowers.ITEM_COLLECTOR.isActive(((PlayerEntity)(Object)this))) {
             return box2.expand(2);
