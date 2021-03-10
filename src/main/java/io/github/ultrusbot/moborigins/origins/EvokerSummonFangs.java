@@ -39,7 +39,7 @@ public class EvokerSummonFangs {
         double d = entity.getY();
         double e = entity.getY() + 1;
         float f = entity.getHeadYaw() + 180;
-        Vec3d vector3f = Vec3d.fromPolar(entity.getPitch(0.0f), entity.getHeadYaw());
+        Vec3d vector3f = fromPolar(entity.getPitch(0.0f), entity.getHeadYaw());
         int j;
         for(j = 0; j < 16; ++j) {
             double l = 1.25D * (double)(j + 1);
@@ -74,5 +74,12 @@ public class EvokerSummonFangs {
             entity.world.spawnEntity(new EvokerFangsEntity(entity.world, x, (double)blockPos.getY() + d, z, yaw, warmup, (LivingEntity) entity));
         }
 
+    }
+    public static Vec3d fromPolar(float pitch, float yaw) {
+        float f = MathHelper.cos(-yaw * 0.017453292F - 3.1415927F);
+        float g = MathHelper.sin(-yaw * 0.017453292F - 3.1415927F);
+        float h = -MathHelper.cos(-pitch * 0.017453292F);
+        float i = MathHelper.sin(-pitch * 0.017453292F);
+        return new Vec3d((double)(g * h), (double)i, (double)(f * h));
     }
 }
