@@ -1,11 +1,27 @@
 {
   "type": "origins:active_self",
   "entity_action": {
+    "type": "origins:and",
+    "actions": [
+  {
     "type": "origins:if_else",
     "condition": {
-      "type": "origins:relative_health",
-      "comparison": "<",
-      "compare_to": 0.5
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:relative_health",
+          "comparison": "<",
+          "compare_to": 0.5
+        },
+        {
+          "type": "origins:status_effect",
+          "effect": "minecraft:poison"
+        },
+        {
+          "type": "origins:status_effect",
+          "effect": "minecraft:wither"
+        }
+      ]
     },
     "if_action": {
       "type": "origins:apply_effect",
@@ -43,15 +59,36 @@
           }
         },
         "else_action": {
-          "type": "origins:apply_effect",
-          "effect": {
-            "effect": "minecraft:speed",
-            "duration": 200,
-            "amplifier": 0
+          "type": "origins:if_else",
+          "condition": {
+            "type": "origins:sprinting"
+          },
+          "if_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+              "effect": "minecraft:speed",
+              "duration": 200,
+              "amplifier": 0
+            },
+            "else_action": {
+              "type": "origins:apply_effect",
+              "effect": {
+               "effect": "minecraft:slow_falling",
+               "duration": 200,
+               "amplifier": 0
+              }
+            }
           }
         }
       }
     }
+  },
+  {
+    "type": "origins:execute_command",
+    "command": "playsound minecraft:entity.witch.drink voice @s",
+    "permission_level": 4
+  }
+   ]
   },
   "cooldown": 200,
   "hud_render": {
