@@ -15,7 +15,7 @@
   "power.moborigins.greater_golems.description": "Снеговики сделанные тобой более сильные.",
 
   "power.moborigins.stronger_snowballs.name": "Обледенелые снежки",
-  "power.moborigins.stronger_snowballs.description": "Брошенные тобою снежки - набитые льдом, поэтому наносят 1 урон!",
+  "power.moborigins.stronger_snowballs.description": "Брошенные тобою снежки - набитые льдом, поэтому наносят 1,5 урона!",
 
   "power.moborigins.snow_trail.name": "Снежный след",
   "power.moborigins.snow_trail.description": "Ты оставляешь след из снега.",
@@ -123,8 +123,29 @@
   "power.moborigins.small_bug.description": "У тебя на 2 сердца меньше, чем у людей.",
 
   "power.moborigins.bee_wings.name": "Пчелиные крылья",
-  "power.moborigins.bee_wings.description": "Ты можешь использовать свои крошечные пчелиные крылья, чтобы медленнее падать."
+  "power.moborigins.bee_wings.description": "Ты можешь использовать свои крошечные пчелиные крылья, чтобы медленнее падать.",
+
+  "origin.moborigins.fox.name": "Лиса",
+  "origin.moborigins.fox.description": "Милые и хитрые. Лисы - робкие существа, что любят поедать ягоды и воровать предметы.",
+
+  "power.moborigins.timid_creature.name": "Робкое существо",
+  "power.moborigins.timid_creature.description": "Твоя скорость увеличивается, когда вокруг тебя более 3 игроков.",
+
+  "power.moborigins.better_berries.name": "Спелые ягоды",
+  "power.moborigins.better_berries.description": "Сладкие ягоды для вас особенно вкусны!",
+
+  "power.moborigins.careful_gatherer.name": "Осторожный собиратель",
+  "power.moborigins.careful_gatherer.description": "Кусты сладких ягод не наносят урона.",
+
+  "power.moborigins.item_collector.name": "Коллекционер предметов",
+  "power.moborigins.item_collector.description": "Радиус подбирания предметов увеличен.",
+
+  "power.moborigins.sly.name": "Пронырливый",
+  "power.moborigins.sly.description": "Ты быстрый.",
+
+  "power.moborigins.small_fox.name": "Маленькая лиса",
+  "power.moborigins.small_fox.description": "У тебя на 2 сердца меньше, чем у людей."
 
 
-
+ 
 }
