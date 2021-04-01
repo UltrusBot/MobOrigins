@@ -15,6 +15,7 @@
     "RavagerEntityMixin",
     "SnowBallEntityMixin",
     "SweetBerryBushBlockMixin",
+    "VexEntityMixin",
     "VillagerMixin",
     "WolfEntityMixin"
   ],
