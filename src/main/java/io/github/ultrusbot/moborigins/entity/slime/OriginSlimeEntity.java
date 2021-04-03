@@ -3,7 +3,7 @@ package io.github.ultrusbot.moborigins.entity.slime;
 import io.github.ultrusbot.moborigins.entity.EntityRegistry;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.control.MoveControl;
-import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -14,7 +14,9 @@ import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.Monster;
-import net.minecraft.entity.passive.*;
+import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.loot.LootTables;
 import net.minecraft.nbt.CompoundTag;
@@ -25,8 +27,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
@@ -86,14 +86,6 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
         this.experiencePoints = 0;
     }
 
-    @Override
-    protected ActionResult interactMob(PlayerEntity player, Hand hand) {
-        if (!this.world.isClient) {
-            this.setOwner(player);
-            return ActionResult.SUCCESS;
-        }
-        return ActionResult.PASS;
-    }
 
     public int getSize() {
         return (Integer)this.dataTracker.get(SLIME_SIZE);
