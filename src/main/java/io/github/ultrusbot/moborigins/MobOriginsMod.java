@@ -1,5 +1,6 @@
 package io.github.ultrusbot.moborigins;
 
+import io.github.ultrusbot.moborigins.effect.EffectRegistry;
 import io.github.ultrusbot.moborigins.enchantment.HeatProtectionEnchantment;
 import io.github.ultrusbot.moborigins.entity.EntityRegistry;
 import io.github.ultrusbot.moborigins.power.MobOriginPowerFactories;
@@ -19,6 +20,7 @@ public class MobOriginsMod implements ModInitializer {
         CustomEntityActions.register();
         MobOriginPowerFactories.register();
         EntityRegistry.register();
+        EffectRegistry.register();
         FabricDefaultAttributeRegistry.register(EntityRegistry.ORIGIN_SLIME, HostileEntity.createHostileAttributes());
 
         Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "heat_protection"), HEAT_PROTECTION);
