@@ -90,7 +90,7 @@
   }
    ]
   },
-  "cooldown": 200,
+  "cooldown": 400,
   "hud_render": {
     "sprite_location": "moborigins:textures/gui/ability_bars.png",
     "bar_index": "0"
