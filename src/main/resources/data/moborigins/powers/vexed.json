@@ -1,0 +1,27 @@
+{
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "moborigins:vexed",
+          "duration": 200,
+          "amplifier": 0,
+          "show_particles": false,
+          "show_icon": false
+        }
+      },
+      {
+        "type": "origins:exhaust",
+        "amount": 10
+      }
+    ]
+  },
+  "cooldown": 400,
+  "hud_render": {
+    "sprite_location": "moborigins:textures/gui/ability_bars.png",
+    "bar_index": "5"
+  }
+}

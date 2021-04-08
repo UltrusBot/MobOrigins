@@ -1,0 +1,11 @@
+{
+  "powers": [
+    "moborigins:vexed",
+    "moborigins:vex_power",
+    "moborigins:pillager_aligned",
+    "moborigins:illager"
+  ],
+  "icon": "minecraft:iron_sword",
+  "order": 6,
+  "impact": 3
+}
