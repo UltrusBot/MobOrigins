@@ -1,5 +1,8 @@
 {
   "type": "origins:active_self",
+  "key": {
+    "key": "key.origins.secondary_active"
+  },
   "entity_action": {
     "type": "origins:spawn_effect_cloud",
     "radius": 8.0,
