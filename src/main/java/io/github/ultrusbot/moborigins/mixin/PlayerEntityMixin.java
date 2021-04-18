@@ -1,6 +1,7 @@
 package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.apace100.origins.component.OriginComponent;
+import io.github.ultrusbot.moborigins.entity.PlayerEntityMixinInterface;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import io.github.ultrusbot.moborigins.power.SpikedPower;
 import net.minecraft.block.BlockState;
@@ -27,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 
 @Mixin(PlayerEntity.class)
-public abstract class PlayerEntityMixin extends LivingEntity {
+public abstract class PlayerEntityMixin extends LivingEntity implements PlayerEntityMixinInterface {
     @Shadow public abstract boolean isSpectator();
 
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
@@ -80,4 +81,15 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
         return box2;
     }
+
+//    @Nullable
+//    @Override
+//    public LivingEntity getNearestBeamTarget() {
+//        LivingEntity user = (LivingEntity)(Object)this;
+//        if (MobOriginsPowers.GUARDIAN_BEAM.isActive(user)) {
+//            return user.world.getClosestEntity(LivingEntity.class, new TargetPredicate().setBaseMaxDistance(20d), this,  this.getX(), this.getY(), this.getZ(), this.getBoundingBox().expand(10D));
+//        } else {
+//            return null;
+//        }
+//    }
 }

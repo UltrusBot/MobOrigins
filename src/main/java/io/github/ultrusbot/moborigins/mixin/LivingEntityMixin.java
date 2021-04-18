@@ -1,8 +1,10 @@
 package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.apace100.origins.component.OriginComponent;
-import io.github.apace100.origins.power.ModelColorPower;
+import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import io.github.ultrusbot.moborigins.power.TotemChancePower;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -13,9 +15,9 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-
 
 import java.util.List;
 
@@ -27,15 +29,26 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "tryUseTotem", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"), locals = LocalCapture.CAPTURE_FAILSOFT)
-    public void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir, ItemStack itemStack, ItemStack itemStack2, Hand var4[], int var5, int var6, Hand hand) {
+    public void tryUseTotem$MobOrigins(DamageSource source, CallbackInfoReturnable<Boolean> cir, ItemStack itemStack, ItemStack itemStack2, Hand var4[], int var5, int var6, Hand hand) {
         List<TotemChancePower> totemChancePowers = OriginComponent.getPowers((LivingEntity)(Object)this, TotemChancePower.class);
         if (totemChancePowers.size() > 0) {
             float chance = totemChancePowers.stream().map(TotemChancePower::getBreakChance).reduce(Float::sum).get();
             if (((LivingEntity)(Object)this).getRandom().nextFloat() < chance) {
                 itemStack2.increment(1);
             }
-
         }
     }
+    @ModifyVariable(
+            method = "travel",
+            at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/block/Block;getSlipperiness()F")
+    )
+    public float changeSlipperiness$MobOrigins(float t) {
+        int level = EnchantmentHelper.getEquipmentLevel(Enchantments.FROST_WALKER, (LivingEntity) (Object)this);
 
+        if (MobOriginsPowers.SLIPPERY.isActive(this) && level == 0) {
+            return 0.98f;
+        } else {
+            return t;
+        }
+    }
 }
