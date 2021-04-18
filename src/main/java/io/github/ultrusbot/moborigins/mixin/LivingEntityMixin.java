@@ -1,10 +1,10 @@
 package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.apace100.origins.component.OriginComponent;
+import io.github.ultrusbot.moborigins.MobOriginsMod;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import io.github.ultrusbot.moborigins.power.TotemChancePower;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -43,7 +43,7 @@ public abstract class LivingEntityMixin extends Entity {
             at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/block/Block;getSlipperiness()F")
     )
     public float changeSlipperiness$MobOrigins(float t) {
-        int level = EnchantmentHelper.getEquipmentLevel(Enchantments.FROST_WALKER, (LivingEntity) (Object)this);
+        int level = EnchantmentHelper.getEquipmentLevel(MobOriginsMod.GROUND_SPIKES, (LivingEntity) (Object)this);
 
         if (MobOriginsPowers.SLIPPERY.isActive(this) && level == 0) {
             return 0.98f;
