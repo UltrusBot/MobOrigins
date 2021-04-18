@@ -289,7 +289,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
     }
 
     public void onPlayerCollision(PlayerEntity player) {
-        if (this.canAttack()) {
+        if (this.canAttack() && !isOwner(player)) {
             this.damage(player);
         }
 
