@@ -12,8 +12,11 @@
   "protection_enchantment": "moborigins:heat_protection",
   "protection_effectiveness": 1.0,
   "condition": {
-      "type": "moborigins:biome_temperature",
+    "type": "origins:biome",
+    "condition": {
+      "type": "origins:temperature",
       "comparison": ">",
       "compare_to": 1.0
+    }
   }
 }
