@@ -1,9 +1,12 @@
 {
   "type": "origins:modify_damage_dealt",
   "condition": {
-    "type": "moborigins:biome_temperature",
-    "comparison": "<",
-    "compare_to": 0.15
+    "type": "origins:biome",
+    "condition": {
+      "type": "origins:temperature",
+      "comparison": "<",
+      "compare_to": 0.15
+    }
   },
   "modifier": {
     "value": 3,
