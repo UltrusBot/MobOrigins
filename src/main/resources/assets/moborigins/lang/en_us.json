@@ -150,10 +150,13 @@
   "power.moborigins.sly.description": "You are quicker.",
 
   "power.moborigins.small_fox.name": "Small Fox",
-  "power.moborigins.small_fox.description": "You have 2 less hearts of health than humans."
+  "power.moborigins.small_fox.description": "You have 2 less hearts of health than humans.",
 
+  "power.moborigins.wolf_howl.name": "Howl",
+  "power.moborigins.wolf_howl.description": "You can use your active ability key to howl, and give speed and strength to nearby wolves and yourself.",
 
-
+  "power.moborigins.wolf_pack.name": "Wolf Pack",
+  "power.moborigins.wolf_pack.description": "When you are near at least 4 wolves, you gain speed and attack damage."
 
 
 }
