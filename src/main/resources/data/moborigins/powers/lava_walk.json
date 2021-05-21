@@ -1,10 +1,30 @@
 {
-  "type": "origins:walk_on_fluid",
-  "fluid": "minecraft:lava",
-  "condition": {
-    "type": "origins:fluid_height",
+  "type": "origins:multiple",
+  "lava_walking": {
+    "type": "origins:walk_on_fluid",
     "fluid": "minecraft:lava",
-    "comparison": "<=",
-    "compare_to": 0.4
+    "condition": {
+      "type": "origins:fluid_height",
+      "fluid": "minecraft:lava",
+      "comparison": "<=",
+      "compare_to": 0.4
+    }
+  },
+  "no_lava_fall_damage": {
+    "type": "origins:invulnerability",
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "fall"
+    },
+    "condition": {
+      "type": "origins:in_block",
+      "block_condition": {
+        "type": "origins:fluid",
+        "fluid_condition": {
+          "type": "origins:in_tag",
+          "tag": "minecraft:lava"
+        }
+      }
+    }
   }
 }
