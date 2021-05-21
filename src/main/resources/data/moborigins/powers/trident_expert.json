@@ -1,0 +1,37 @@
+{
+  "type": "origins:multiple",
+  "trident_melee": {
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "item": "minecraft:trident"
+        }
+      }
+    },
+    "modifier": {
+      "name": "Extra Trident Damage",
+      "operation": "addition",
+      "value": 2.0
+    }
+  },
+  "trident_thrown": {
+    "type": "origins:modify_damage_dealt",
+    "damage_condition": {
+      "type": "origins:projectile",
+      "projectile": "minecraft:trident"
+    },
+    "modifier": {
+      "name": "Extra Trident Damage",
+      "operation": "addition",
+      "value": 2.0
+    }
+  },
+  "riptide_power": {
+    "type": "moborigins:riptide_override",
+    "trident_damage": "10"
+  }
+}

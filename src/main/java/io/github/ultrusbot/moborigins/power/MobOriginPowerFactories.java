@@ -1,7 +1,5 @@
 package io.github.ultrusbot.moborigins.power;
 
-import io.github.apace100.origins.Origins;
-import io.github.apace100.origins.power.ModelColorPower;
 import io.github.apace100.origins.power.factory.PowerFactory;
 import io.github.apace100.origins.registry.ModRegistries;
 import io.github.apace100.origins.util.SerializableData;
@@ -26,7 +24,13 @@ public class MobOriginPowerFactories {
                         (type, player) ->
                                 new SpikedPower(type, player, data.getInt("spike_damage")))
                 .allowCondition());
-
+        register(new PowerFactory<>(new Identifier("moborigins", "riptide_override"),
+                new SerializableData()
+                        .add("trident_damage", SerializableDataType.INT, 1),
+                data ->
+                        (type, player) ->
+                                new RiptideOverridePower(type, player, data.getInt("trident_damage")))
+        .allowCondition());
     }
 
 

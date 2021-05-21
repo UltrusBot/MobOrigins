@@ -18,6 +18,8 @@ public class MobOriginsPowers {
     public static final PowerType<Power> ITEM_COLLECTOR = new PowerTypeReference(new Identifier("moborigins", "item_collector"));
     public static final PowerType<Power> CAREFUL_GATHERER = new PowerTypeReference(new Identifier("moborigins", "careful_gatherer"));
     public static final PowerType<Power> SLIPPERY = new PowerTypeReference(new Identifier("moborigins", "slippery"));
+    public static final PowerType<Power> SEAS_STORM = new PowerTypeReference(new Identifier("moborigins", "seas_storm"));
+
 
 //    public static final PowerType<CooldownPower> GUARDIAN_BEAM = new PowerTypeReference(new Identifier("moborigins", "guardian_beam"));
 

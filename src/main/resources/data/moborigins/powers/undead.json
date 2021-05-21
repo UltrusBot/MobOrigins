@@ -1,0 +1,42 @@
+{
+  "type": "origins:multiple",
+  "daylight_burn": {
+    "type": "origins:burn",
+    "interval": 20,
+    "burn_duration": 6,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:exposed_to_sun"
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "helmet_damage_daylight": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "moborigins:damage_equipment",
+      "equipment_slot": "head",
+        "amount": 1
+    },
+    "interval": 20,
+    "condition": {
+      "type": "origins:exposed_to_sun"
+    }
+  },
+  "undead": {
+    "type": "origins:entity_group",
+    "group": "undead"
+  }
+}
