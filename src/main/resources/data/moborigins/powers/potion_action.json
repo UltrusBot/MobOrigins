@@ -3,92 +3,59 @@
   "entity_action": {
     "type": "origins:and",
     "actions": [
-  {
-    "type": "origins:if_else",
-    "condition": {
-      "type": "origins:or",
-      "conditions": [
-        {
-          "type": "origins:relative_health",
-          "comparison": "<",
-          "compare_to": 0.5
-        },
-        {
-          "type": "origins:status_effect",
-          "effect": "minecraft:poison"
-        },
-        {
-          "type": "origins:status_effect",
-          "effect": "minecraft:wither"
-        }
-      ]
-    },
-    "if_action": {
-      "type": "origins:apply_effect",
-      "effect": {
-        "effect": "minecraft:regeneration",
-        "duration": 150,
-        "amplifier": 0
-      }
-    },
-    "else_action": {
-      "type": "origins:if_else",
-      "condition": {
-        "type": "origins:on_fire"
-      },
-      "if_action": {
-        "type": "origins:apply_effect",
-        "effect": {
-          "effect": "minecraft:fire_resistance",
-          "duration": 200,
-          "amplifier": 0
-        }
-      },
-      "else_action": {
-        "type": "origins:if_else",
-        "condition": {
-          "type": "origins:submerged_in",
-          "fluid": "minecraft:water"
-        },
-        "if_action": {
-          "type": "origins:apply_effect",
-          "effect": {
-            "effect": "minecraft:water_breathing",
-            "duration": 200,
-            "amplifier": 0
-          }
-        },
-        "else_action": {
-          "type": "origins:if_else",
-          "condition": {
-            "type": "origins:sprinting"
-          },
-          "if_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-              "effect": "minecraft:speed",
-              "duration": 200,
-              "amplifier": 0
+      {
+        "type": "origins:if_else_list",
+        "actions": [
+          {
+            "condition": {
+              "type": "origins:on_fire"
             },
-            "else_action": {
+            "action": {
               "type": "origins:apply_effect",
               "effect": {
-               "effect": "minecraft:slow_falling",
-               "duration": 200,
-               "amplifier": 0
+                "effect": "minecraft:fire_resistance",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:fall_distance",
+              "comparison": ">=",
+              "compare_to": 4
+            },
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:water_breathing",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:submerged_in",
+              "fluid": "minecraft:water"
+            },
+            "action": {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:slow_falling",
+                "duration": 200,
+                "amplifier": 0
               }
             }
           }
-        }
+        ]
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "playsound minecraft:entity.witch.drink voice @s",
+        "permission_level": 4
       }
-    }
-  },
-  {
-    "type": "origins:execute_command",
-    "command": "playsound minecraft:entity.witch.drink voice @s",
-    "permission_level": 4
-  }
-   ]
+    ]
   },
   "cooldown": 400,
   "hud_render": {
