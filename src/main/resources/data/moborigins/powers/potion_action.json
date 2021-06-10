@@ -1,17 +1,17 @@
 {
-  "type": "origins:active_self",
+  "type": "apoli:active_self",
   "entity_action": {
-    "type": "origins:and",
+    "type": "apoli:and",
     "actions": [
       {
-        "type": "origins:if_else_list",
+        "type": "apoli:if_else_list",
         "actions": [
           {
             "condition": {
-              "type": "origins:on_fire"
+              "type": "apoli:on_fire"
             },
             "action": {
-              "type": "origins:apply_effect",
+              "type": "apoli:apply_effect",
               "effect": {
                 "effect": "minecraft:fire_resistance",
                 "duration": 200,
@@ -21,12 +21,12 @@
           },
           {
             "condition": {
-              "type": "origins:fall_distance",
+              "type": "apoli:fall_distance",
               "comparison": ">=",
               "compare_to": 4
             },
             "action": {
-              "type": "origins:apply_effect",
+              "type": "apoli:apply_effect",
               "effect": {
                 "effect": "minecraft:water_breathing",
                 "duration": 200,
@@ -36,11 +36,11 @@
           },
           {
             "condition": {
-              "type": "origins:submerged_in",
+              "type": "apoli:submerged_in",
               "fluid": "minecraft:water"
             },
             "action": {
-              "type": "origins:apply_effect",
+              "type": "apoli:apply_effect",
               "effect": {
                 "effect": "minecraft:slow_falling",
                 "duration": 200,
@@ -51,7 +51,7 @@
         ]
       },
       {
-        "type": "origins:execute_command",
+        "type": "apoli:execute_command",
         "command": "playsound minecraft:entity.witch.drink voice @s",
         "permission_level": 4
       }

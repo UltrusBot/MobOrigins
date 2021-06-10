@@ -1,5 +1,5 @@
 {
-  "type": "origins:modify_exhaustion",
+  "type": "apoli:modify_exhaustion",
   "modifier": {
     "name": "Zombie Hunger",
     "operation": "multiply_base",

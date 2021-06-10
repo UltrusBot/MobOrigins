@@ -1,9 +1,9 @@
 package io.github.ultrusbot.moborigins;
 
-import io.github.apace100.origins.power.factory.action.ActionFactory;
-import io.github.apace100.origins.registry.ModRegistries;
-import io.github.apace100.origins.util.SerializableData;
-import io.github.apace100.origins.util.SerializableDataType;
+import io.github.apace100.apoli.power.factory.action.ActionFactory;
+import io.github.apace100.apoli.registry.ApoliRegistries;
+import io.github.apace100.calio.data.SerializableData;
+import io.github.apace100.calio.data.SerializableDataTypes;
 import io.github.ultrusbot.moborigins.entity.slime.OriginSlimeEntity;
 import io.github.ultrusbot.moborigins.origins.EvokerSummonFangs;
 import net.minecraft.entity.Entity;
@@ -34,8 +34,8 @@ public class CustomEntityActions {
 
                 }));
         register(new ActionFactory<>(new Identifier(MOD_ID, "damage_equipment"), new SerializableData()
-                .add("equipment_slot", SerializableDataType.EQUIPMENT_SLOT)
-                .add("amount", SerializableDataType.INT),
+                .add("equipment_slot", SerializableDataTypes.EQUIPMENT_SLOT)
+                .add("amount", SerializableDataTypes.INT),
                 (data, entity) -> {
                     if (entity instanceof LivingEntity) {
                         LivingEntity livingEntity = (LivingEntity)entity;
@@ -52,6 +52,6 @@ public class CustomEntityActions {
     }
 
     private static void register(ActionFactory<Entity> actionFactory) {
-        Registry.register(ModRegistries.ENTITY_ACTION, actionFactory.getSerializerId(), actionFactory);
+        Registry.register(ApoliRegistries.ENTITY_ACTION, actionFactory.getSerializerId(), actionFactory);
     }
 }

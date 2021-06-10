@@ -1,5 +1,5 @@
 {
-  "type": "origins:stacking_status_effect",
+  "type": "apoli:stacking_status_effect",
   "min_stacks": 1,
   "max_stacks": 1,
   "duration_per_stack": 60,
@@ -12,7 +12,7 @@
     }
   ],
   "condition": {
-    "type": "origins:submerged_in",
+    "type": "apoli:submerged_in",
     "inverted": true,
     "fluid": "minecraft:water"
   }

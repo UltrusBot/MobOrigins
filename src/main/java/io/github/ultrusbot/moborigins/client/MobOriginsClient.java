@@ -11,6 +11,6 @@ import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 public class MobOriginsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.INSTANCE.register(EntityRegistry.ORIGIN_SLIME, (dispatcher, context) -> new OriginSlimeRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityRegistry.ORIGIN_SLIME, (OriginSlimeRenderer::new));
     }
 }

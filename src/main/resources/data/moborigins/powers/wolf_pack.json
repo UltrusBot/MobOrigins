@@ -1,5 +1,5 @@
 {
-  "type": "origins:conditioned_attribute",
+  "type": "apoli:conditioned_attribute",
   "modifiers":[
     {
       "attribute": "minecraft:generic.movement_speed",

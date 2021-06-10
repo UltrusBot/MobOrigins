@@ -1,12 +1,12 @@
 {
-  "type": "origins:multiple",
+  "type": "apoli:multiple",
   "trident_melee": {
-    "type": "origins:modify_damage_dealt",
+    "type": "apoli:modify_damage_dealt",
     "condition": {
-      "type": "origins:equipped_item",
+      "type": "apoli:equipped_item",
       "equipment_slot": "mainhand",
       "item_condition": {
-        "type": "origins:ingredient",
+        "type": "apoli:ingredient",
         "ingredient": {
           "item": "minecraft:trident"
         }
@@ -19,9 +19,9 @@
     }
   },
   "trident_thrown": {
-    "type": "origins:modify_damage_dealt",
+    "type": "apoli:modify_damage_dealt",
     "damage_condition": {
-      "type": "origins:projectile",
+      "type": "apoli:projectile",
       "projectile": "minecraft:trident"
     },
     "modifier": {

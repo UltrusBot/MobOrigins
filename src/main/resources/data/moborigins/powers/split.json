@@ -1,13 +1,13 @@
 {
-  "type": "origins:active_self",
+  "type": "apoli:active_self",
   "entity_action": {
-    "type": "origins:and",
+    "type": "apoli:and",
     "actions": [
       {
         "type": "moborigins:summon_slime"
       },
       {
-        "type": "origins:damage",
+        "type": "apoli:damage",
         "amount": 8,
         "source": {
           "name": "split",

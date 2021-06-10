@@ -1,45 +1,45 @@
 {
-  "type": "origins:action_over_time",
+  "type": "apoli:action_over_time",
   "interval": 20,
   "entity_action": {
-    "type": "origins:if_else_list",
+    "type": "apoli:if_else_list",
     "actions": [
       {
         "condition": {
-          "type": "origins:or",
+          "type": "apoli:or",
           "conditions": [
             {
-              "type": "origins:biome",
+              "type": "apoli:biome",
               "condition": {
-                "type": "origins:temperature",
+                "type": "apoli:temperature",
                 "comparison": "<",
                 "compare_to": 1.0
               }
             },
             {
-              "type": "origins:on_block",
+              "type": "apoli:on_block",
               "block_condition": {
-                "type": "origins:in_tag",
+                "type": "apoli:in_tag",
                 "tag": "minecraft:ice"
               }
             }
           ]
         },
         "action": {
-          "type": "origins:change_resource",
+          "type": "apoli:change_resource",
           "resource": "moborigins:temperature",
           "change": -1
         }
       },
       {
         "condition": {
-          "type": "origins:resource",
+          "type": "apoli:resource",
           "resource": "moborigins:temperature",
           "comparison": ">=",
           "compare_to": 99
         },
         "action": {
-          "type": "origins:damage",
+          "type": "apoli:damage",
           "amount": 3,
           "source": {
             "name": "onFire",
@@ -50,15 +50,15 @@
       },
       {
         "condition": {
-          "type": "origins:biome",
+          "type": "apoli:biome",
           "condition": {
-            "type": "origins:temperature",
+            "type": "apoli:temperature",
             "comparison": ">=",
             "compare_to": 1.0
           }
         },
         "action": {
-          "type": "origins:change_resource",
+          "type": "apoli:change_resource",
           "resource": "moborigins:temperature",
           "change": 1
         }

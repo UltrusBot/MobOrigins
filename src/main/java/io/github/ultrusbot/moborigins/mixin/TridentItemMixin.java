@@ -1,7 +1,7 @@
 package io.github.ultrusbot.moborigins.mixin;
 
-import io.github.apace100.origins.component.OriginComponent;
-import io.github.apace100.origins.power.Power;
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import io.github.apace100.apoli.power.Power;
 import io.github.ultrusbot.moborigins.power.RiptideOverridePower;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
@@ -32,7 +32,7 @@ public class TridentItemMixin {
     @Inject(method = "onStoppedUsing", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentHelper;getRiptide(Lnet/minecraft/item/ItemStack;)I", shift = At.Shift.AFTER))
     public void tridentStoppedUsing$MobOrigins(ItemStack stack, World world, LivingEntity user, int remainingUseTicks, CallbackInfo ci) {
         PlayerEntity playerEntity = (PlayerEntity)user;
-        List<RiptideOverridePower> riptideOverridePowers = OriginComponent.getPowers(playerEntity, RiptideOverridePower.class);
+        List<RiptideOverridePower> riptideOverridePowers = PowerHolderComponent.getPowers(playerEntity, RiptideOverridePower.class);
         if (riptideOverridePowers.size() <= 0) {
             return;
         }
@@ -45,8 +45,8 @@ public class TridentItemMixin {
                     p.sendToolBreakStatus(user.getActiveHand());
                 }));
             }
-            float f = playerEntity.yaw;
-            float g = playerEntity.pitch;
+            float f = playerEntity.getYaw();
+            float g = playerEntity.getPitch();
             float h = -MathHelper.sin(f * 0.017453292F) * MathHelper.cos(g * 0.017453292F);
             float k = -MathHelper.sin(g * 0.017453292F);
             float l = MathHelper.cos(f * 0.017453292F) * MathHelper.cos(g * 0.017453292F);
@@ -78,7 +78,7 @@ public class TridentItemMixin {
 
     @Redirect(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isTouchingWaterOrRain()Z"))
     public boolean isTouchingWaterOrRain$UseMobOrigins(PlayerEntity playerEntity) {
-        List<RiptideOverridePower> riptideOverridePowers = OriginComponent.getPowers(playerEntity, RiptideOverridePower.class);
+        List<RiptideOverridePower> riptideOverridePowers = PowerHolderComponent.getPowers(playerEntity, RiptideOverridePower.class);
         if (riptideOverridePowers.size() > 0) {
             boolean active = riptideOverridePowers.stream().anyMatch((Power::isActive));
             if (active) {

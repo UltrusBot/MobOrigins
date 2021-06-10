@@ -41,7 +41,7 @@ public abstract class VillagerMixin extends Entity {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }
-    @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;method_30958()V"), cancellable = true)
+    @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;releaseAllTickets()V"), cancellable = true)
     public void onDeath(DamageSource source, CallbackInfo ci) {
         if (source.getAttacker() instanceof PlayerEntity && MobOriginsPowers.PILLAGER_ALIGNED.isActive(source.getAttacker())) {
             PlayerEntity player = (PlayerEntity) source.getAttacker();

@@ -1,9 +1,9 @@
 {
-  "type": "origins:modify_damage_dealt",
+  "type": "apoli:modify_damage_dealt",
   "condition": {
-    "type": "origins:biome",
+    "type": "apoli:biome",
     "condition": {
-      "type": "origins:temperature",
+      "type": "apoli:temperature",
       "comparison": "<",
       "compare_to": 0.15
     }

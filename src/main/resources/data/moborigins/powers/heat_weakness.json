@@ -1,5 +1,5 @@
 {
-  "type": "origins:damage_over_time",
+  "type": "apoli:damage_over_time",
   "interval": 20,
   "onset_delay": 1,
   "damage": 2,
@@ -12,9 +12,9 @@
   "protection_enchantment": "moborigins:heat_protection",
   "protection_effectiveness": 1.0,
   "condition": {
-    "type": "origins:biome",
+    "type": "apoli:biome",
     "condition": {
-      "type": "origins:temperature",
+      "type": "apoli:temperature",
       "comparison": ">",
       "compare_to": 1.0
     }

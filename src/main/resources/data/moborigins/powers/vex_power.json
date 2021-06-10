@@ -1,25 +1,25 @@
 {
-  "type": "origins:phasing",
+  "type": "apoli:phasing",
   "blacklist": true,
   "render_type": "blindness",
   "view_distance": 10,
   "block_condition": {
-    "type": "origins:in_tag",
-    "tag": "origins:unphasable"
+    "type": "apoli:in_tag",
+    "tag": "apoli:unphasable"
   },
   "phase_down_condition": {
-    "type": "origins:and",
+    "type": "apoli:and",
     "conditions": [
       {
-        "type": "origins:sneaking"
+        "type": "apoli:sneaking"
       },
       {
-        "type": "origins:on_block"
+        "type": "apoli:on_block"
       }
     ]
   },
   "condition": {
-    "type": "origins:status_effect",
+    "type": "apoli:status_effect",
     "effect": "moborigins:vexed"
   }
 }

@@ -1,7 +1,7 @@
 package io.github.ultrusbot.moborigins.power;
 
-import io.github.apace100.origins.power.Power;
-import io.github.apace100.origins.power.PowerType;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
 import net.minecraft.entity.player.PlayerEntity;
 
 public class TotemChancePower extends Power {

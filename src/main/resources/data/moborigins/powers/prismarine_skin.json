@@ -1,6 +1,6 @@
 
 {
-  "type": "origins:attribute",
+  "type": "apoli:attribute",
   "modifier": {
     "name": "Prismarine Skin Bonus",
     "attribute": "minecraft:generic.armor",

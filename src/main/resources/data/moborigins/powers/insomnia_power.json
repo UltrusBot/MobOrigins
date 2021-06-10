@@ -1,5 +1,5 @@
 {
-  "type": "origins:conditioned_attribute",
+  "type": "apoli:conditioned_attribute",
   "modifier": {
     "attribute": "generic.movement_speed",
     "operation": "addition",

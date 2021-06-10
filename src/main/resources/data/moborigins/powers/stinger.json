@@ -1,22 +1,12 @@
 {
-  "type": "origins:target_action_on_hit",
+  "type": "apoli:target_action_on_hit",
   "entity_action": {
-    "type": "origins:apply_effect",
+    "type": "apoli:apply_effect",
     "effect": {
       "effect": "minecraft:poison",
       "amplifier": 1,
       "duration": 60
     }
   },
-  "cooldown": 100,
-  "condition": {
-    "type": "origins:equipped_item",
-    "equipment_slot": "mainhand",
-    "item_condition": {
-      "type": "origins:ingredient",
-      "ingredient": {
-        "item": "minecraft:air"
-      }
-    }
-  }
+  "cooldown": 100
 }

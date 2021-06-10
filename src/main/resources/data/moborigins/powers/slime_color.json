@@ -1,5 +1,5 @@
 {
-  "type": "origins:model_color",
+  "type": "apoli:model_color",
   "hidden": true,
   "red": 0.60,
   "green": 1,

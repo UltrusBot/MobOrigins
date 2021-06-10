@@ -1,7 +1,7 @@
 {
-  "type": "origins:shaking",
+  "type": "apoli:shaking",
   "condition": {
-    "type": "origins:on_fire",
+    "type": "apoli:on_fire",
     "inverted": true
   },
   "hidden": true

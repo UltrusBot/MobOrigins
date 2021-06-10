@@ -1,6 +1,6 @@
 package io.github.ultrusbot.moborigins.mixin;
 
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.entity.PlayerEntityMixinInterface;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import io.github.ultrusbot.moborigins.power.SpikedPower;
@@ -65,8 +65,8 @@ public abstract class PlayerEntityMixin extends LivingEntity implements PlayerEn
     }
     @Inject(method = "damage", at = @At(value = "HEAD"))
     public void damage$MobOrigins(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        List<SpikedPower> spikedPowers = OriginComponent.getPowers(((PlayerEntity)(Object)this), SpikedPower.class);
-        if (source.getSource() instanceof LivingEntity && !source.getMagic() && !source.isExplosive() && spikedPowers.size() > 0) {
+        List<SpikedPower> spikedPowers = PowerHolderComponent.getPowers(((PlayerEntity)(Object)this), SpikedPower.class);
+        if (source.getSource() instanceof LivingEntity && !source.isMagic() && !source.isExplosive() && spikedPowers.size() > 0) {
             int damage = spikedPowers.stream().map(SpikedPower::getSpikeDamage).reduce(Integer::sum).get();
             System.out.println(damage);
             if (((PlayerEntity)(Object)this).getRandom().nextFloat() <= 0.75) {

@@ -1,6 +1,6 @@
 package io.github.ultrusbot.moborigins.mixin;
 
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.MobOriginsMod;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import io.github.ultrusbot.moborigins.power.TotemChancePower;
@@ -30,7 +30,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(method = "tryUseTotem", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"), locals = LocalCapture.CAPTURE_FAILSOFT)
     public void tryUseTotem$MobOrigins(DamageSource source, CallbackInfoReturnable<Boolean> cir, ItemStack itemStack, ItemStack itemStack2, Hand var4[], int var5, int var6, Hand hand) {
-        List<TotemChancePower> totemChancePowers = OriginComponent.getPowers((LivingEntity)(Object)this, TotemChancePower.class);
+        List<TotemChancePower> totemChancePowers = PowerHolderComponent.getPowers((LivingEntity)(Object)this, TotemChancePower.class);
         if (totemChancePowers.size() > 0) {
             float chance = totemChancePowers.stream().map(TotemChancePower::getBreakChance).reduce(Float::sum).get();
             if (((LivingEntity)(Object)this).getRandom().nextFloat() < chance) {
