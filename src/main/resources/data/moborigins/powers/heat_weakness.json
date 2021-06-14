@@ -12,11 +12,9 @@
   "protection_enchantment": "moborigins:heat_protection",
   "protection_effectiveness": 1.0,
   "condition": {
-    "type": "apoli:biome",
-    "condition": {
-      "type": "apoli:temperature",
-      "comparison": ">",
-      "compare_to": 1.0
-    }
+    "type": "apoli:resource",
+    "resource": "moborigins:temperature",
+    "comparison": ">=",
+    "compare_to": 99
   }
 }

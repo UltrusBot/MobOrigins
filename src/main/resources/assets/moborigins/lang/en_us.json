@@ -174,6 +174,10 @@
   "power.moborigins.zombie_hunger.description": "Your constant hunger for flesh makes you exhaust quicker than a human.",
 
   "power.moborigins.undead.name": "Undead",
-  "power.moborigins.undead.description": "You are undead, and burn in the daylight. You also take more damage from smite."
+  "power.moborigins.undead.description": "You are undead, and burn in the daylight. You also take more damage from smite.",
+
+  "power.moborigins.overheat.name": "Overheat",
+  "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes."
+
 
 }

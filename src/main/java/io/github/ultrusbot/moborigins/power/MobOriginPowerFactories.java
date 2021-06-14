@@ -14,7 +14,7 @@ public class MobOriginPowerFactories {
                 new SerializableData()
                         .add("chance", SerializableDataTypes.FLOAT, 0.1F),
                 data ->
-                        (type, player) -> new TotemChancePower(type, (PlayerEntity) player, data.getFloat("chance")))
+                        (type, livingEntity) -> new TotemChancePower(type, livingEntity, data.getFloat("chance")))
                 .allowCondition());
 
         register(new PowerFactory<>(new Identifier("moborigins", "spiked"),

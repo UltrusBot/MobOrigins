@@ -7,18 +7,18 @@ import net.minecraft.util.Identifier;
 
 public class MobOriginsPowers {
     public static final PowerType<Power> STRONGER_SNOWBALLS = new PowerTypeReference<>(new Identifier("moborigins", "stronger_snowballs"));
-    public static final PowerType<Power> SNOW_TRAIL = new PowerTypeReference(new Identifier("moborigins", "snow_trail"));
-    public static final PowerType<Power> PILLAGER_ALIGNED = new PowerTypeReference(new Identifier("moborigins", "pillager_aligned"));
-    public static final PowerType<Power> BETTER_POTIONS = new PowerTypeReference(new Identifier("moborigins", "better_potions"));
-    public static final PowerType<Power> RIDEABLE_CREATURE = new PowerTypeReference(new Identifier("moborigins", "rideable_creature"));
-    public static final PowerType<Power> BOUNCY = new PowerTypeReference(new Identifier("moborigins", "bouncy"));
-    public static final PowerType<Power> ALPHA_WOLF = new PowerTypeReference(new Identifier("moborigins", "alpha_wolf"));
-    public static final PowerType<Power> GUARDIAN_ALLY = new PowerTypeReference(new Identifier("moborigins", "guardian_ally"));
-    public static final PowerType<Power> QUEEN_BEE = new PowerTypeReference(new Identifier("moborigins", "queen_bee"));
-    public static final PowerType<Power> ITEM_COLLECTOR = new PowerTypeReference(new Identifier("moborigins", "item_collector"));
-    public static final PowerType<Power> CAREFUL_GATHERER = new PowerTypeReference(new Identifier("moborigins", "careful_gatherer"));
-    public static final PowerType<Power> SLIPPERY = new PowerTypeReference(new Identifier("moborigins", "slippery"));
-    public static final PowerType<Power> SEAS_STORM = new PowerTypeReference(new Identifier("moborigins", "seas_storm"));
+    public static final PowerType<Power> SNOW_TRAIL = new PowerTypeReference<>(new Identifier("moborigins", "snow_trail"));
+    public static final PowerType<Power> PILLAGER_ALIGNED = new PowerTypeReference<>(new Identifier("moborigins", "pillager_aligned"));
+    public static final PowerType<Power> BETTER_POTIONS = new PowerTypeReference<>(new Identifier("moborigins", "better_potions"));
+    public static final PowerType<Power> RIDEABLE_CREATURE = new PowerTypeReference<>(new Identifier("moborigins", "rideable_creature"));
+    public static final PowerType<Power> BOUNCY = new PowerTypeReference<>(new Identifier("moborigins", "bouncy"));
+    public static final PowerType<Power> ALPHA_WOLF = new PowerTypeReference<>(new Identifier("moborigins", "alpha_wolf"));
+    public static final PowerType<Power> GUARDIAN_ALLY = new PowerTypeReference<>(new Identifier("moborigins", "guardian_ally"));
+    public static final PowerType<Power> QUEEN_BEE = new PowerTypeReference<>(new Identifier("moborigins", "queen_bee"));
+    public static final PowerType<Power> ITEM_COLLECTOR = new PowerTypeReference<>(new Identifier("moborigins", "item_collector"));
+    public static final PowerType<Power> CAREFUL_GATHERER = new PowerTypeReference<>(new Identifier("moborigins", "careful_gatherer"));
+    public static final PowerType<Power> SLIPPERY = new PowerTypeReference<>(new Identifier("moborigins", "slippery"));
+    public static final PowerType<Power> SEAS_STORM = new PowerTypeReference<>(new Identifier("moborigins", "seas_storm"));
 
 
 //    public static final PowerType<CooldownPower> GUARDIAN_BEAM = new PowerTypeReference(new Identifier("moborigins", "guardian_beam"));

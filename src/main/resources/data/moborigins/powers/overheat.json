@@ -33,23 +33,6 @@
       },
       {
         "condition": {
-          "type": "apoli:resource",
-          "resource": "moborigins:temperature",
-          "comparison": ">=",
-          "compare_to": 99
-        },
-        "action": {
-          "type": "apoli:damage",
-          "amount": 3,
-          "source": {
-            "name": "onFire",
-            "unblockable": true,
-            "bypasses_armor": true
-          }
-        }
-      },
-      {
-        "condition": {
           "type": "apoli:biome",
           "condition": {
             "type": "apoli:temperature",
