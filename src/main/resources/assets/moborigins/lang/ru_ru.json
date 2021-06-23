@@ -1,14 +1,14 @@
 {
   "enchantment.moborigins.heat_protection": "Защита от жары",
-  "death.attack.split": "%1$s разделился на ничто.",
+  "enchantment.moborigins.ground_spikes": "Земляные шипы",
+  "death.attack.split": "%1$s попытался разделиться в ничто.",
   "death.attack.split.player": "%1$s разделился, пока пытался сбежать от %2$s.",
   "text.moborigins.become_elder": "Вы превратились в Древнего Стража!",
   "text.moborigins.mystery_meat": "Странное мясо",
-
   "origin.moborigins.snowgolem.name": "Снежный голем",
   "origin.moborigins.snowgolem.description": "Големы созданные из снега. Слабы ко всему, что может их растопить.",
 
-  "power.moborigins.heat_weakness.name": "Таяние",
+  "power.moborigins.heat_weakness.name": "Подтаявшее мороженое",
   "power.moborigins.heat_weakness.description": "Ты получаешь урон в жарких биомах.",
 
   "power.moborigins.greater_golems.name": "Усиленные големы",
@@ -59,17 +59,23 @@
   "origin.moborigins.guardian.name": "Страж",
   "origin.moborigins.guardian.description": "Стражи известны тем, что защищают свои крепости и драгоценные губки внутри. Некоторые известны тем, что превратились в Древних Стражей.",
 
-  "power.moborigins.guardian_spikes.name": "Шипы стража",
+  "power.moborigins.guardian_spikes.name": "Шипы",
   "power.moborigins.guardian_spikes.description": "Шипы, у которых есть шанс нанести урон атакующим!",
 
   "power.moborigins.guardian_ally.name": "Союзник стражей",
   "power.moborigins.guardian_ally.description": "Стражи не атакуют тебя!",
 
-  "power.moborigins.monument_spawn.name": "Крепость твой дом",
+  "power.moborigins.monument_spawn.name": "Крепость - твой дом",
   "power.moborigins.monument_spawn.description": "Ты появляешься в подводной крепости.",
   
-  "power.moborigins.land_slowness.name": "Зыбучая земля",
+  "power.moborigins.land_slowness.name": "Пресноводный",
   "power.moborigins.land_slowness.description": "Ты медленный, когда на земле.",
+  
+  "power.moborigins.prismarine_skin.name": "Призмариновая кожа",
+  "power.moborigins.prismarine_skin.description": "Твоя кожа состоит из призмарина, из-за чего ты получаешь естественную броню.",
+  
+  "power.moborigins.slippery.name": "Скользкий",
+  "power.moborigins.slippery.description": "Когда ты на земле, всё кажется скользким.",
 
   "origin.moborigins.elder_guardian.name": "Древний Страж",
   "origin.moborigins.elder_guardian.description": "Древние стражы - лидеры в крепостях. Они более могущественны, чем обычные сражи.",
@@ -77,10 +83,10 @@
   "power.moborigins.elder_magic.name": "Древняя магия",
   "power.moborigins.elder_magic.description": "Вызывайте облако с эффектом усталости.",
 
-  "power.moborigins.mining_fatigue_immune.name": "Иммунитет древних",
+  "power.moborigins.mining_fatigue_immune.name": "Всегда на страже",
   "power.moborigins.mining_fatigue_immune.description": "У тебя иммунитет к усталости.",
 
-  "power.moborigins.elder_spikes.name": "Шипы древних",
+  "power.moborigins.elder_spikes.name": "Заострённые шипы",
   "power.moborigins.elder_spikes.description": "Более сильные шипы, у которых есть шанс нанести урон атакующим!",
 
   "origin.moborigins.slime.name": "Слизень",
@@ -92,7 +98,7 @@
   "power.moborigins.split.name": "Способность разделения",
   "power.moborigins.split.description": "Обменивайте свои очки здоровья на призыв маленькой слизи, что защитит тебя!",
 
-  "power.moborigins.small_weak.name": "Слабость низких",
+  "power.moborigins.small_weak.name": "Слабость расщеплённости",
   "power.moborigins.small_weak.description": "Когда ты теряешь больше 2 сердец, ты больше не наносишь урона, но твои атаки сильнее отбрасывают!",
 
   "origin.moborigins.wolf.name": "Волк",
@@ -101,7 +107,7 @@
   "power.moborigins.alpha_wolf.name": "Вожак стаи",
   "power.moborigins.alpha_wolf.description": "Прирученные тобою волки более сильные!",
 
-  "power.moborigins.full_moon.name": "Подобие оборотня",
+  "power.moborigins.full_moon.name": "Оборотень",
   "power.moborigins.full_moon.description": "Когда восходит полная луна, ты становишся быстрее, сильнее и живучие.",
 
   "power.moborigins.wolf_body.name": "Волкоподобный",
@@ -113,7 +119,7 @@
   "power.moborigins.stinger.name": "Жало",
   "power.moborigins.stinger.description": "Ты способен отравлять кого-либо на несколько секунд, когда бьёшь рукой.",
 
-  "power.moborigins.flower_power.name": "Сила цветов",
+  "power.moborigins.flower_power.name": "Флорист",
   "power.moborigins.flower_power.description": "Когда рядом много цветов, ты регенируешь здоровье.",
 
   "power.moborigins.queen_bee.name": "Королева пчёл",
@@ -128,7 +134,7 @@
   "origin.moborigins.fox.name": "Лиса",
   "origin.moborigins.fox.description": "Милые и хитрые. Лисы - робкие существа, что любят поедать ягоды и воровать предметы.",
 
-  "power.moborigins.timid_creature.name": "Робкое существо",
+  "power.moborigins.timid_creature.name": "Робкий",
   "power.moborigins.timid_creature.description": "Твоя скорость увеличивается, когда вокруг тебя более 3 игроков.",
 
   "power.moborigins.better_berries.name": "Спелые ягоды",
@@ -148,4 +154,6 @@
 
 
  
+  
+  
 }
