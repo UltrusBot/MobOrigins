@@ -1,7 +1,7 @@
 {
   "enchantment.moborigins.heat_protection": "Heat Protection",
   "enchantment.moborigins.ground_spikes": "Ground Spikes",
-  "death.attack.split": "%1$s split himself into nothing.",
+  "death.attack.split": "%1$s split themself into nothing.",
   "death.attack.split.player": "%1$s split whilst trying to escape %2$s.",
   "text.moborigins.become_elder": "You have grown into an Elder Guardian!",
   "text.moborigins.mystery_meat": "Mystery Meat",
