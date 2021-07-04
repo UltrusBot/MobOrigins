@@ -28,7 +28,7 @@
             "action": {
               "type": "apoli:apply_effect",
               "effect": {
-                "effect": "minecraft:water_breathing",
+                "effect": "minecraft:slow_falling",
                 "duration": 200,
                 "amplifier": 0
               }
@@ -42,7 +42,7 @@
             "action": {
               "type": "apoli:apply_effect",
               "effect": {
-                "effect": "minecraft:slow_falling",
+                "effect": "minecraft:water_breathing",
                 "duration": 200,
                 "amplifier": 0
               }
