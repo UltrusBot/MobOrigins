@@ -177,7 +177,9 @@
   "power.moborigins.undead.description": "You are undead, and burn in the daylight. You also take more damage from smite.",
 
   "power.moborigins.overheat.name": "Overheat",
-  "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes."
+  "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes.",
 
+  "power.moborigins.melting.name": "Melting",
+  "power.moborigins.melting.description": "As your temperature bar fills up, you'll slowly begin to melt in hot biomes, losing health and speed."
 
 }
