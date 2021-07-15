@@ -1,0 +1,51 @@
+{
+  "type": "apoli:multiple",
+  "half": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": -5,
+        "name": "snowgolem health decrease half"
+      },
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "addition",
+        "value": -0.02,
+        "name": "snowgolem speed decrease half"
+      }
+    ],
+    "tick_rate": 20,
+    "condition": {
+      "type": "apoli:resource",
+      "resource": "moborigins:temperature",
+      "comparison": ">=",
+      "compare_to": 50
+    }
+  },
+  "full": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": -5,
+        "name": "snowgolem health decrease full"
+      },
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "addition",
+        "value": -0.02,
+        "name": "snowgolem speed decrease full"
+      }
+    ],
+    "tick_rate": 20,
+    "condition": {
+      "type": "apoli:resource",
+      "resource": "moborigins:temperature",
+      "comparison": ">=",
+      "compare_to": 99
+    }
+  }
+}
