@@ -1,7 +1,7 @@
 {
   "enchantment.moborigins.heat_protection": "Heat Protection",
   "enchantment.moborigins.ground_spikes": "Ground Spikes",
-  "death.attack.split": "%1$s split himself into nothing.",
+  "death.attack.split": "%1$s split themself into nothing.",
   "death.attack.split.player": "%1$s split whilst trying to escape %2$s.",
   "text.moborigins.become_elder": "You have grown into an Elder Guardian!",
   "text.moborigins.mystery_meat": "Mystery Meat",
@@ -177,7 +177,9 @@
   "power.moborigins.undead.description": "You are undead, and burn in the daylight. You also take more damage from smite.",
 
   "power.moborigins.overheat.name": "Overheat",
-  "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes."
+  "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes.",
 
+  "power.moborigins.melting.name": "Melting",
+  "power.moborigins.melting.description": "As your temperature bar fills up, you'll slowly begin to melt in hot biomes, losing health and speed."
 
 }
