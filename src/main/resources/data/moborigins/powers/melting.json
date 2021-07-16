@@ -6,7 +6,7 @@
       {
         "attribute": "minecraft:generic.max_health",
         "operation": "addition",
-        "value": -5,
+        "value": -4,
         "name": "snowgolem health decrease half"
       },
       {
@@ -30,7 +30,7 @@
       {
         "attribute": "minecraft:generic.max_health",
         "operation": "addition",
-        "value": -5,
+        "value": -4,
         "name": "snowgolem health decrease full"
       },
       {
