@@ -7,10 +7,13 @@
     "name": "strider lava bonus"
   },
   "condition": {
-    "type":"apoli:on_block",
-    "block_condition":{
-      "type":"apoli:block",
-      "block":"minecraft:lava"
+    "type": "apoli:in_block",
+    "block_condition": {
+      "type": "apoli:fluid",
+      "fluid_condition": {
+        "type": "apoli:in_tag",
+        "tag": "minecraft:lava"
+      }
     }
   }
 }
