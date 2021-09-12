@@ -16,6 +16,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(WolfEntity.class)
 public class WolfEntityMixin {
+    /*
+    TODO:
+    Turn this into a power called ActionOnTameMob which is called from TameableEntity#setOwner that lets you do a entity action on the tamed entity.
+     */
     @Inject(method = "interactMob", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/WolfEntity;setOwner(Lnet/minecraft/entity/player/PlayerEntity;)V", shift = At.Shift.AFTER))
     public void interactMob$MobOrigins(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         if (MobOriginsPowers.ALPHA_WOLF.isActive(player)) {

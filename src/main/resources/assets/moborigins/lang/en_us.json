@@ -183,6 +183,8 @@
   "power.moborigins.overheat.description": "You have a temperature bar that slowly begins to fill in hot biomes, and cool in other biomes.",
 
   "power.moborigins.melting.name": "Melting",
-  "power.moborigins.melting.description": "As your temperature bar fills up, you'll slowly begin to melt in hot biomes, losing health and speed."
+  "power.moborigins.melting.description": "As your temperature bar fills up, you'll slowly begin to melt in hot biomes, losing health and speed.",
+
+  "effect.moborigins.hero_of_the_illagers": "Illager Hero"
 
 }

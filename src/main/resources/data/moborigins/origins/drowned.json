@@ -1,0 +1,16 @@
+{
+  "powers": [
+    "moborigins:drowned_vision",
+    "moborigins:trident_expert",
+    "moborigins:seas_storm",
+    "origins:water_vision",
+    "moborigins:guardian_ally",
+    "moborigins:undead",
+    "moborigins:zombie_hunger",
+    "moborigins:surface_slowness",
+    "origins:carnivore"
+  ],
+  "icon": "minecraft:trident",
+  "order": 2,
+  "impact": 1
+}
