@@ -1,6 +1,8 @@
 package io.github.ultrusbot.moborigins.mixin;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
+import io.github.ultrusbot.moborigins.power.PreventVillagerInteractPower;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
@@ -37,7 +39,9 @@ public abstract class VillagerMixin extends Entity {
 
     @Inject(method = "interactMob", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;beginTradeWith(Lnet/minecraft/entity/player/PlayerEntity;)V"), cancellable = true)
     public void interactMob(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        if (MobOriginsPowers.PILLAGER_ALIGNED.isActive(player)) {
+        List<PreventVillagerInteractPower> preventVillagerInteractPowers = PowerHolderComponent.getPowers(player, PreventVillagerInteractPower.class);
+
+        if (preventVillagerInteractPowers.stream().anyMatch(PreventVillagerInteractPower::isActive)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

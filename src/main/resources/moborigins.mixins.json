@@ -7,7 +7,7 @@
     "BeehiveBlockEntityMixin",
     "BeehiveBlockMixin",
     "BlockMixin",
-    "GuardianMixin",
+    "FollowTargetGoalMixin",
     "IronGolemEntityMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",
@@ -17,7 +17,6 @@
     "SweetBerryBushBlockMixin",
     "TridentEntityMixin",
     "TridentItemMixin",
-    "VexEntityMixin",
     "VillagerMixin",
     "WolfEntityMixin"
   ],
