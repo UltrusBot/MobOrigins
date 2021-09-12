@@ -23,8 +23,6 @@ public class IronGolemEntityMixin extends GolemEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"), cancellable = true)
     protected void initGoals$MobOrigins(CallbackInfo ci) {
-        this.targetSelector.add(3, new FollowTargetGoal(this, LivingEntity.class, 5, true, false, (livingEntity) -> {
-            return MobOriginsPowers.PILLAGER_ALIGNED.isActive((Entity) livingEntity);
-        }));
+        this.targetSelector.add(3, new FollowTargetGoal(this, LivingEntity.class, 5, true, false, (livingEntity) -> MobOriginsPowers.PILLAGER_ALIGNED.isActive((Entity) livingEntity)));
     }
 }

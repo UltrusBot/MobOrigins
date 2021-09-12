@@ -1,3 +1,13 @@
 {
-  "type": "apoli:simple"
+  "type": "apoli:multiple",
+  "enemy_of_villagers": {
+    "type": "moborigins:prevent_villager_interact"
+  },
+  "neutral_illagers": {
+    "type": "moborigins:remove_mob_hostility",
+    "entity_condition": {
+      "type": "origins:in_tag",
+      "tag": "moborigins:illagers"
+    }
+  }
 }

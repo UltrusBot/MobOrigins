@@ -4,13 +4,9 @@
     "key": "key.origins.secondary_active"
   },
   "entity_action": {
-    "type": "apoli:spawn_effect_cloud",
-    "radius": 8.0,
-    "effect": {
-      "effect": "minecraft:mining_fatigue",
-      "amplifier": 1,
-      "duration": 600
-    }
+    "type": "apoli:execute_command",
+    "command": "function moborigins:elder_curse"
+
   },
   "cooldown": 600,
   "hud_render": {

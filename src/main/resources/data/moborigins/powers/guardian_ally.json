@@ -1,3 +1,7 @@
 {
-  "type": "apoli:simple"
+  "type": "moborigins:remove_mob_hostility",
+  "entity_condition": {
+    "type": "origins:in_tag",
+    "tag": "moborigins:guardians"
+  }
 }

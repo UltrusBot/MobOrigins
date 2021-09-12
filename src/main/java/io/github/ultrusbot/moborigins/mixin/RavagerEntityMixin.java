@@ -3,19 +3,23 @@ package io.github.ultrusbot.moborigins.mixin;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.FollowTargetGoal;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.GoalSelector;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.RavagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
@@ -26,6 +30,8 @@ public abstract class RavagerEntityMixin extends HostileEntity {
 
     @Shadow @Nullable public abstract Entity getPrimaryPassenger();
 
+    @Shadow public abstract boolean canBeControlledByRider();
+
     protected RavagerEntityMixin(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -34,15 +40,6 @@ public abstract class RavagerEntityMixin extends HostileEntity {
     private List<Entity> roar$MobOrigins(List<Entity> list) {
         list.removeIf(MobOriginsPowers.PILLAGER_ALIGNED::isActive);
         return list;
-    }
-    @Redirect(method = "initGoals", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/ai/goal/GoalSelector;add(ILnet/minecraft/entity/ai/goal/Goal;)V", ordinal = 6))
-    public void initGoalsFollow$MobOrigins(GoalSelector goalSelector, int priority, Goal goal) {
-        this.targetSelector.add(priority, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, (entity) -> !MobOriginsPowers.PILLAGER_ALIGNED.isActive(entity)));
-    }
-
-    @ModifyVariable(method = "updateGoalControls", at = @At("STORE"), ordinal = 0)
-    private boolean updateGoalControls$MobOrigins(boolean bl) {
-        return bl || !(MobOriginsPowers.PILLAGER_ALIGNED.isActive(getPrimaryPassenger()));
     }
 
 
@@ -58,5 +55,31 @@ public abstract class RavagerEntityMixin extends HostileEntity {
             return ActionResult.PASS;
         }
 
+    }
+
+    @Override
+    public void travel(Vec3d movementInput) {
+        if (this.isAlive()) {
+            LivingEntity livingEntity = (LivingEntity)this.getPrimaryPassenger();
+            if (this.hasPassengers() && this.canBeControlledByRider() && MobOriginsPowers.PILLAGER_ALIGNED.isActive(livingEntity)) {
+                this.setYaw(livingEntity.getYaw());
+                this.prevYaw = this.getYaw();
+                this.setPitch(livingEntity.getPitch() * 0.5F);
+                this.setRotation(this.getYaw(), this.getPitch());
+                this.bodyYaw = this.getYaw();
+                this.headYaw = this.bodyYaw;
+                float f = livingEntity.sidewaysSpeed * 0.5F;
+                float g = livingEntity.forwardSpeed;
+                this.flyingSpeed = this.getMovementSpeed() * 0.1F;
+                if (this.isLogicalSideForUpdatingMovement()) {
+                    this.setMovementSpeed((float)this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED) / 2.0F);
+                    super.travel(new Vec3d(f, movementInput.y, g));
+                } else if (livingEntity instanceof PlayerEntity) {
+                    this.setVelocity(Vec3d.ZERO);
+                }
+                this.updateLimbs(this, false);
+            }
+        }
+        super.travel(movementInput);
     }
 }
