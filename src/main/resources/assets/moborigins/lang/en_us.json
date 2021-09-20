@@ -42,10 +42,7 @@
   "origin.moborigins.strider.description": "Travel the vast oceans of lava with the speed of a strider",
 
   "power.moborigins.lava_walk.name": "Lava Walker",
-  "power.moborigins.lava_walk.description": "You have the ability to walk on lava source blocks!",
-
-  "power.moborigins.lava_speed.name": "Lava Adept",
-  "power.moborigins.lava_speed.description": "You are slower by default, but get a lot of more speed on lava",
+  "power.moborigins.lava_walk.description": "You have the ability to walk on lava source blocks! You are also quicker while walking on lava, and slower on land.",
 
   "power.moborigins.rideable_creature.name": "Rideable Creature",
   "power.moborigins.rideable_creature.description": "Other players can ride you!",
@@ -185,6 +182,8 @@
   "power.moborigins.melting.name": "Melting",
   "power.moborigins.melting.description": "As your temperature bar fills up, you'll slowly begin to melt in hot biomes, losing health and speed.",
 
-  "effect.moborigins.hero_of_the_illagers": "Illager Hero"
+  "effect.moborigins.hero_of_the_illagers": "Illager Hero",
 
+  "power.moborigins.warped_fungus_eater.name": "Fungus Hunger",
+  "power.moborigins.warped_fungus_eater.description": "You can eat warped fungus to recover some hunger, along with a small speed boost."
 }

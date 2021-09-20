@@ -1,0 +1,47 @@
+
+{
+  "type": "origins:active_self",
+  "key": {
+    "key": "key.use"
+  },
+  "hud_render": {
+    "should_render": false
+  },
+  "cooldown": 10,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:feed",
+        "food": 1.0,
+        "saturation": 1.0
+      },
+      {
+        "type": "origins:apply_effect",
+        "effect": {
+          "effect": "minecraft:speed",
+          "duration": 200,
+          "amplifier": 0
+        }
+      },
+      {
+        "type": "origins:equipped_item_action",
+        "equipment_slot": "mainhand",
+        "action": {
+          "type": "origins:consume",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "condition": {
+    "type": "origins:equipped_item",
+    "equipment_slot": "mainhand",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "minecraft:warped_fungus"
+      }
+    }
+  }
+}
