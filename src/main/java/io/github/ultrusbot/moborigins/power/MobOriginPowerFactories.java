@@ -6,10 +6,14 @@ import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Pair;
 import net.minecraft.util.registry.Registry;
+
+import java.util.function.Consumer;
 
 public class MobOriginPowerFactories {
     public static void register() {
@@ -35,19 +39,28 @@ public class MobOriginPowerFactories {
                                 new RiptideOverridePower(type, (PlayerEntity) player, data.getInt("trident_damage")))
         .allowCondition());
 
-        register(new PowerFactory<>(new Identifier("moborigins", "prevent_villager_interact"),
-                new SerializableData(),
-                data ->
-                        (type, player) ->
-                                new PreventVillagerInteractPower(type, player))
-                .allowCondition());
-
         register(new PowerFactory<>(new Identifier("moborigins", "remove_mob_hostility"),
                 new SerializableData()
                         .add("entity_condition", ApoliDataTypes.ENTITY_CONDITION, null),
                 data ->
                         (type, player) -> new RemoveMobHostilityPower(type, player, (ConditionFactory<LivingEntity>.Instance)data.get("entity_condition")))
                 .allowCondition());
+        register(new PowerFactory<>(new Identifier("moborigins", "action_on_entity_tame"),
+                new SerializableData()
+                        .add("bientity_action", ApoliDataTypes.BIENTITY_ACTION, null)
+                        .add("bientity_condition", ApoliDataTypes.BIENTITY_CONDITION, null),
+                data ->
+                        (type, player) -> new ActionOnEntityTamePower(type, player, (Consumer<Pair<Entity, Entity>>) data.get("bientity_action"), (ConditionFactory<Pair<Entity, Entity>>.Instance)data.get("bientity_condition")))
+                .allowCondition());
+
+        register(new PowerFactory<>(new Identifier("moborigins", "action_on_breed_animal"),
+                new SerializableData()
+                        .add("bientity_action", ApoliDataTypes.BIENTITY_ACTION, null)
+                        .add("bientity_condition", ApoliDataTypes.BIENTITY_CONDITION, null),
+                data ->
+                        (type, player) -> new ActionOnBreedAnimal(type, player, (Consumer<Pair<Entity, Entity>>) data.get("bientity_action"), (ConditionFactory<Pair<Entity, Entity>>.Instance)data.get("bientity_condition")))
+                .allowCondition());
+
 
     }
 

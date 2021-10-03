@@ -4,6 +4,7 @@
   "package": "io.github.ultrusbot.moborigins.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "AnimalEntityMixin",
     "BeehiveBlockEntityMixin",
     "BeehiveBlockMixin",
     "BlockMixin",
@@ -15,10 +16,10 @@
     "RavagerEntityMixin",
     "SnowBallEntityMixin",
     "SweetBerryBushBlockMixin",
+    "TameableEntityMixin",
     "TridentEntityMixin",
     "TridentItemMixin",
-    "VillagerMixin",
-    "WolfEntityMixin"
+    "VillagerMixin"
   ],
   "client": [
   ],

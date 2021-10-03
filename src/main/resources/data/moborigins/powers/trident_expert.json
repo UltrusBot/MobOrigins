@@ -28,10 +28,52 @@
       "name": "Extra Trident Damage",
       "operation": "addition",
       "value": 2.0
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:trident_expert_power",
+      "comparison": ">",
+      "compare_to": 0
     }
   },
-  "riptide_power": {
+  "riptide": {
     "type": "moborigins:riptide_override",
-    "trident_damage": "10"
+    "trident_damage": "10",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:trident_expert_power",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "active": {
+    "type": "origins:active_self",
+    "cooldown": 1200,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:trident_expert_power",
+      "change": 20
+    },
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "power": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 20,
+    "hud_render": {
+      "sprite_location": "moborigins:textures/gui/ability_bars.png",
+      "bar_index": 7
+    }
+  },
+  "drain": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:trident_expert_power",
+      "change": -1
+    }
   }
 }

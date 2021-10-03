@@ -29,7 +29,7 @@ public class CustomEntityActions {
                     OriginSlimeEntity originSlimeEntity = new OriginSlimeEntity(entity.world, entity.getX(), entity.getY(), entity.getZ());
                     originSlimeEntity.setOwner((PlayerEntity)entity);
                     originSlimeEntity.setSize(2, true);
-                    originSlimeEntity.setCustomName(((PlayerEntity)entity).getDisplayName());
+                    originSlimeEntity.setCustomName(entity.getDisplayName());
                     entity.world.spawnEntity(originSlimeEntity);
 
                 }));

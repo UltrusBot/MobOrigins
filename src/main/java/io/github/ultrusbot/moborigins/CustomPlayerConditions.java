@@ -6,8 +6,8 @@ import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.apoli.util.Comparison;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Identifier;
@@ -32,9 +32,7 @@ public class CustomPlayerConditions {
                 (data, player) -> {
                     EntityType<?> entityType = (EntityType<?>)data.get("entity_type");
                     Float playerBoxMultiplier = (Float)data.get("player_box_multiplier");
-                    int amount = player.world.getOtherEntities(player, player.getBoundingBox().expand(playerBoxMultiplier), entity -> {
-                        return entity.getType() == entityType;
-                    }).size();
+                    int amount = player.world.getOtherEntities(player, player.getBoundingBox().expand(playerBoxMultiplier), entity -> entity.getType() == entityType).size();
                     Comparison comparison = ((Comparison)data.get("comparison"));
                     int compareTo = data.getInt("compare_to");
 
@@ -45,7 +43,7 @@ public class CustomPlayerConditions {
     }
 
 
-    private static void register(ConditionFactory<LivingEntity> conditionFactory) {
+    private static void register(ConditionFactory<Entity> conditionFactory) {
         Registry.register(ApoliRegistries.ENTITY_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
     }
     

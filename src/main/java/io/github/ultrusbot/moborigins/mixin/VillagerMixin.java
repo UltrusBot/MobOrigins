@@ -1,8 +1,6 @@
 package io.github.ultrusbot.moborigins.mixin;
 
-import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
-import io.github.ultrusbot.moborigins.power.PreventVillagerInteractPower;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
@@ -14,8 +12,6 @@ import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerData;
 import net.minecraft.world.World;
@@ -24,7 +20,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 
@@ -37,14 +32,6 @@ public abstract class VillagerMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(method = "interactMob", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;beginTradeWith(Lnet/minecraft/entity/player/PlayerEntity;)V"), cancellable = true)
-    public void interactMob(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        List<PreventVillagerInteractPower> preventVillagerInteractPowers = PowerHolderComponent.getPowers(player, PreventVillagerInteractPower.class);
-
-        if (preventVillagerInteractPowers.stream().anyMatch(PreventVillagerInteractPower::isActive)) {
-            cir.setReturnValue(ActionResult.FAIL);
-        }
-    }
     @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;releaseAllTickets()V"), cancellable = true)
     public void onDeath(DamageSource source, CallbackInfo ci) {
         if (source.getAttacker() instanceof PlayerEntity && MobOriginsPowers.PILLAGER_ALIGNED.isActive(source.getAttacker())) {
