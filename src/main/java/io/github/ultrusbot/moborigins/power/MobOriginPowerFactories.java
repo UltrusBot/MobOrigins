@@ -60,7 +60,11 @@ public class MobOriginPowerFactories {
                 data ->
                         (type, player) -> new ActionOnBreedAnimal(type, player, (Consumer<Pair<Entity, Entity>>) data.get("bientity_action"), (ConditionFactory<Pair<Entity, Entity>>.Instance)data.get("bientity_condition")))
                 .allowCondition());
-
+        register(new PowerFactory<>(new Identifier("moborigins", "snow_trail"),
+                new SerializableData(),
+                data ->
+                        SnowTrailPower::new)
+                .allowCondition());
 
     }
 

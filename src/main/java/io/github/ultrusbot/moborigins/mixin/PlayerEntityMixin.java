@@ -3,6 +3,7 @@ package io.github.ultrusbot.moborigins.mixin;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.entity.PlayerEntityMixinInterface;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
+import io.github.ultrusbot.moborigins.power.SnowTrailPower;
 import io.github.ultrusbot.moborigins.power.SpikedPower;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -35,20 +36,9 @@ public abstract class PlayerEntityMixin extends LivingEntity implements PlayerEn
         super(entityType, world);
     }
 
-    @Inject(method = "tick", at = @At(value = "TAIL"), cancellable = true)
+    @Inject(method = "tick", at = @At(value = "TAIL"))
     public void tick(CallbackInfo ci) {
-        if (MobOriginsPowers.SNOW_TRAIL.isActive((PlayerEntity)(Object)this)) {
-            BlockState blockState = Blocks.SNOW.getDefaultState();
-            for(int l = 0; l < 4; ++l) {
-                int i = MathHelper.floor(this.getX() + (double)((float)(l % 2 * 2 - 1) * 0.25F));
-                int j = MathHelper.floor(this.getY());
-                int k = MathHelper.floor(this.getZ() + (double)((float)(l / 2 % 2 * 2 - 1) * 0.25F));
-                BlockPos blockPos = new BlockPos(i, j, k);
-                if (this.world.getBlockState(blockPos).isAir() && this.world.getBiome(blockPos).getTemperature(blockPos) < 0.8F && blockState.canPlaceAt(this.world, blockPos)) {
-                    this.world.setBlockState(blockPos, blockState);
-                }
-            }
-        }
+        PowerHolderComponent.getPowers(this, SnowTrailPower.class).stream().findFirst().ifPresent(SnowTrailPower::tickTrail);
     }
     @Inject(method = "interact", at = @At(value = "HEAD"), cancellable = true)
     public void interact(Entity entity, Hand hand, CallbackInfoReturnable<ActionResult> cir) {

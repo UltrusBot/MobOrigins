@@ -1,3 +1,13 @@
 {
-  "type": "apoli:simple"
+  "type": "apoli:multiple",
+  "toggle": {
+    "type": "apoli:toggle"
+  },
+  "trail": {
+    "type": "moborigins:snow_trail",
+    "condition": {
+      "type": "apoli:power_active",
+      "power": "*:*_toggle"
+    }
+  }
 }
