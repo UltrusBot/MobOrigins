@@ -2,10 +2,12 @@ package io.github.ultrusbot.moborigins.power;
 
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.factory.PowerFactory;
+import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
+import net.minecraft.block.pattern.CachedBlockPosition;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -38,6 +40,13 @@ public class MobOriginPowerFactories {
                         (type, player) ->
                                 new RiptideOverridePower(type, (PlayerEntity) player, data.getInt("trident_damage")))
         .allowCondition());
+        register(new PowerFactory<>(new Identifier("moborigins", "channeling_override"),
+                new SerializableData()
+                    .add("entity_action", ApoliDataTypes.ENTITY_ACTION, null),
+                data ->
+                        (type, player) ->
+                                new ChannelingOverridePower(type, player, (ActionFactory<Entity>.Instance)data.get("entity_action")))
+                .allowCondition());
 
         register(new PowerFactory<>(new Identifier("moborigins", "remove_mob_hostility"),
                 new SerializableData()
@@ -65,6 +74,23 @@ public class MobOriginPowerFactories {
                 data ->
                         SnowTrailPower::new)
                 .allowCondition());
+        register(new PowerFactory<>(new Identifier("moborigins", "modify_block_slipperiness"),
+                new SerializableData()
+                .add("block_condition", ApoliDataTypes.BLOCK_CONDITION, null)
+                .add("slipperiness", SerializableDataTypes.FLOAT),
+                data ->
+                        (type, player) -> new ModifyBlockSlipperinessPower(type, player,  (ConditionFactory<CachedBlockPosition>.Instance)data.get("block_condition"), data.getFloat("slipperiness")))
+                .allowCondition());
+
+        //TODO: Add next update
+//        register(new PowerFactory<>(new Identifier("moborigins", "modify_block_bounciness"),
+//                new SerializableData()
+//                        .add("block_condition", ApoliDataTypes.BLOCK_CONDITION, null)
+//                        .add("bounciness", SerializableDataTypes.FLOAT),
+//                data ->
+//                        (type, player) -> new ModifyBlockBouncinessPower(type, player,  (ConditionFactory<CachedBlockPosition>.Instance)data.get("block_condition"), data.getFloat("bounciness")))
+//                .allowCondition());
+
 
     }
 

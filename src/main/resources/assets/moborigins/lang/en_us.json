@@ -185,5 +185,8 @@
   "effect.moborigins.hero_of_the_illagers": "Illager Hero",
 
   "power.moborigins.warped_fungus_eater.name": "Fungus Hunger",
-  "power.moborigins.warped_fungus_eater.description": "You can eat warped fungus to recover some hunger, along with a small speed boost."
+  "power.moborigins.warped_fungus_eater.description": "You can eat warped fungus to recover some hunger, along with a small speed boost.",
+
+  "power.moborigins.water_combatant.name": "Water Combatant",
+  "power.moborigins.water_combatant.description": "You deal more damage while in water."
 }

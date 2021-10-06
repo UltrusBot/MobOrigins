@@ -1,5 +1,7 @@
 package io.github.ultrusbot.moborigins.mixin;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import io.github.ultrusbot.moborigins.power.ChannelingOverridePower;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -32,16 +34,21 @@ public abstract class TridentEntityMixin extends PersistentProjectileEntity {
     @Inject(method = "onEntityHit", at = @At("TAIL"))
     public void onEntityHit$MobOrigins(EntityHitResult entityHitResult, CallbackInfo ci) {
         Entity tridentThrower = this.getOwner();
-
-        if (this.world instanceof ServerWorld && MobOriginsPowers.SEAS_STORM.isActive(tridentThrower) && !this.world.isThundering() && EnchantmentHelper.hasChanneling(this.tridentStack)) {
-            Entity entity = entityHitResult.getEntity();
-            BlockPos blockPos = entity.getBlockPos();
-            if (this.world.isSkyVisible(blockPos)) {
-                LightningEntity lightningEntity = (LightningEntity)EntityType.LIGHTNING_BOLT.create(this.world);
-                lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
-                lightningEntity.setChanneler(tridentThrower instanceof ServerPlayerEntity ? (ServerPlayerEntity)tridentThrower : null);
-                this.world.spawnEntity(lightningEntity);
+        PowerHolderComponent.getPowers(tridentThrower, ChannelingOverridePower.class).forEach(channelingOverridePower -> {
+            if (channelingOverridePower.isActive()) {
+                channelingOverridePower.executeAction(tridentThrower);
+                if (this.world instanceof ServerWorld && !this.world.isThundering() && EnchantmentHelper.hasChanneling(this.tridentStack)) {
+                    Entity entity = entityHitResult.getEntity();
+                    BlockPos blockPos = entity.getBlockPos();
+                    if (this.world.isSkyVisible(blockPos)) {
+                        LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(this.world);
+                        lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
+                        lightningEntity.setChanneler(tridentThrower instanceof ServerPlayerEntity ? (ServerPlayerEntity)tridentThrower : null);
+                        this.world.spawnEntity(lightningEntity);
+                    }
+                }
             }
-        }
+        });
+
     }
 }

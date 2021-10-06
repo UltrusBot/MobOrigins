@@ -46,6 +46,15 @@
       "compare_to": 0
     }
   },
+  "channeling": {
+    "type": "moborigins:channeling_override",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:trident_expert_power",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
   "active": {
     "type": "origins:active_self",
     "cooldown": 1200,

@@ -1,18 +1,18 @@
 package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.apace100.apoli.component.PowerHolderComponent;
-import io.github.ultrusbot.moborigins.MobOriginsMod;
-import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
+import io.github.ultrusbot.moborigins.power.ModifyBlockSlipperinessPower;
 import io.github.ultrusbot.moborigins.power.TotemChancePower;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -43,12 +43,14 @@ public abstract class LivingEntityMixin extends Entity {
             at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/block/Block;getSlipperiness()F")
     )
     public float changeSlipperiness$MobOrigins(float t) {
-        int level = EnchantmentHelper.getEquipmentLevel(MobOriginsMod.GROUND_SPIKES, (LivingEntity) (Object)this);
-
-        if (MobOriginsPowers.SLIPPERY.isActive(this) && level == 0) {
-            return 0.98f;
-        } else {
-            return t;
+        BlockPos blockPos = this.getVelocityAffectingPos();
+        float slipperiness = t;
+        List<ModifyBlockSlipperinessPower> slippinessPowers = PowerHolderComponent.getPowers(this, ModifyBlockSlipperinessPower.class).stream().filter(ModifyBlockSlipperinessPower::isActive).toList();
+        for (ModifyBlockSlipperinessPower modifyBlockSlippinessPower : slippinessPowers) {
+            if (modifyBlockSlippinessPower.doesApply(blockPos)) {
+                slipperiness = modifyBlockSlippinessPower.getSlipperiness();
+            }
         }
+        return slipperiness;
     }
 }

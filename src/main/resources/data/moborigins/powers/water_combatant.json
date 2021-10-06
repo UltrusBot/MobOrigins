@@ -1,0 +1,17 @@
+{
+  "type": "apoli:modify_damage_dealt",
+  "modifier": {
+    "name": "Water combatant damage",
+    "operation": "addition",
+    "value": 3.0
+  },
+  "condition": {
+    "type": "apoli:in_block_anywhere",
+    "block_condition": {
+      "type": "origins:block",
+      "block": "minecraft:water"
+    },
+    "comparison": ">=",
+    "compare_to": 1
+  }
+}
