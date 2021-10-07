@@ -8,7 +8,8 @@
     "Ultra"
   ],
   "contact": {
-    "repo": "https://github.com/UltrusBot/MobOrigins"
+    "repo": "https://github.com/UltrusBot/MobOrigins",
+    "issues": "https://github.com/UltrusBot/MobOrigins/issues"
   },
   "license": "MIT",
   "icon": "assets/moborigins/icon.png",
@@ -28,6 +29,6 @@
     "fabricloader": ">=0.11.1",
     "fabric": ">=0.29.4",
     "minecraft": "1.17.x",
-    "origins": ">=1.0.3"
+    "origins": ">=1.1.0"
   }
 }
