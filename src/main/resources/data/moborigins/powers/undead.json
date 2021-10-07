@@ -30,7 +30,7 @@
       "equipment_slot": "head",
         "amount": 1
     },
-    "interval": 20,
+    "interval": 40,
     "condition": {
       "type": "apoli:exposed_to_sun"
     }
