@@ -31,6 +31,10 @@
           "type": "origins:consume",
           "amount": 1
         }
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:entity.player.burp"
       }
     ]
   },
