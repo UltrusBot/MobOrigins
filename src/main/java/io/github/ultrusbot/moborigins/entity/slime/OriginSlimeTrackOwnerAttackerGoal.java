@@ -2,7 +2,6 @@ package io.github.ultrusbot.moborigins.entity.slime;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;
-import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.TrackTargetGoal;
 
 import java.util.EnumSet;
@@ -15,7 +14,7 @@ public class OriginSlimeTrackOwnerAttackerGoal extends TrackTargetGoal {
     public OriginSlimeTrackOwnerAttackerGoal(OriginSlimeEntity tameable) {
         super(tameable, false);
         this.tameable = tameable;
-        this.setControls(EnumSet.of(Goal.Control.TARGET));
+        this.setControls(EnumSet.of(Control.TARGET));
     }
 
     public boolean canStart() {

@@ -8,7 +8,7 @@
     "BeehiveBlockEntityMixin",
     "BeehiveBlockMixin",
     "BlockMixin",
-    "FollowTargetGoalMixin",
+    "TargetGoalMixin",
     "IronGolemEntityMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",

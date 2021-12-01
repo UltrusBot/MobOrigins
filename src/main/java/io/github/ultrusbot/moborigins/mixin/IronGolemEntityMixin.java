@@ -1,10 +1,9 @@
 package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.goal.FollowTargetGoal;
+import net.minecraft.entity.ai.goal.TargetGoal;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.world.World;
@@ -23,6 +22,6 @@ public class IronGolemEntityMixin extends GolemEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"), cancellable = true)
     protected void initGoals$MobOrigins(CallbackInfo ci) {
-        this.targetSelector.add(3, new FollowTargetGoal(this, LivingEntity.class, 5, true, false, (livingEntity) -> MobOriginsPowers.PILLAGER_ALIGNED.isActive((Entity) livingEntity)));
+        this.targetSelector.add(3, new TargetGoal<>(this, LivingEntity.class, 5, true, false, MobOriginsPowers.PILLAGER_ALIGNED::isActive));
     }
 }

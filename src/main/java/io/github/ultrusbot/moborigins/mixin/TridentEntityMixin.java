@@ -2,7 +2,6 @@ package io.github.ultrusbot.moborigins.mixin;
 
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.ultrusbot.moborigins.power.ChannelingOverridePower;
-import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

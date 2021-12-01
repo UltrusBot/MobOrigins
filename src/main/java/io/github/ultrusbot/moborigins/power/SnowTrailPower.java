@@ -20,7 +20,7 @@ public class SnowTrailPower extends Power {
             int j = MathHelper.floor(this.entity.getY());
             int k = MathHelper.floor(this.entity.getZ() + (double)((float)(l / 2 % 2 * 2 - 1) * 0.25F));
             BlockPos blockPos = new BlockPos(i, j, k);
-            if (this.entity.world.getBlockState(blockPos).isAir() && this.entity.world.getBiome(blockPos).getTemperature(blockPos) < 0.8F && blockState.canPlaceAt(this.entity.world, blockPos)) {
+            if (this.entity.world.getBlockState(blockPos).isAir() && this.entity.world.getBiome(blockPos).getTemperature() < 0.8F && blockState.canPlaceAt(this.entity.world, blockPos)) {
                 this.entity.world.setBlockState(blockPos, blockState);
             }
         }

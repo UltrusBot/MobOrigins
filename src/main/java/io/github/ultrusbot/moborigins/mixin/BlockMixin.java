@@ -3,7 +3,6 @@ package io.github.ultrusbot.moborigins.mixin;
 import io.github.ultrusbot.moborigins.power.MobOriginsPowers;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BlockView;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

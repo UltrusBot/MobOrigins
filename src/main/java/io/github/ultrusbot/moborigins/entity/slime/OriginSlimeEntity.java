@@ -51,17 +51,17 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
     public OriginSlimeEntity(EntityType<? extends OriginSlimeEntity> entityType, World world) {
         super(EntityRegistry.ORIGIN_SLIME, world);
-        this.moveControl = new OriginSlimeEntity.SlimeMoveControl(this);
+        this.moveControl = new SlimeMoveControl(this);
     }
     public OriginSlimeEntity(World world, double x, double y, double z) {
         this(EntityRegistry.ORIGIN_SLIME, world);
         this.updatePosition(x, y, z);
     }
     protected void initGoals() {
-        this.goalSelector.add(1, new OriginSlimeEntity.SwimmingGoal(this));
-        this.goalSelector.add(2, new OriginSlimeEntity.FaceTowardTargetGoal(this));
-        this.goalSelector.add(3, new OriginSlimeEntity.RandomLookGoal(this));
-        this.goalSelector.add(5, new OriginSlimeEntity.MoveGoal(this));
+        this.goalSelector.add(1, new SwimmingGoal(this));
+        this.goalSelector.add(2, new FaceTowardTargetGoal(this));
+        this.goalSelector.add(3, new RandomLookGoal(this));
+        this.goalSelector.add(5, new MoveGoal(this));
         this.goalSelector.add(6, new OriginSlimeFollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
         this.targetSelector.add(1, new OriginSlimeTrackOwnerAttackerGoal(this));
         this.targetSelector.add(2, new OriginSlimeAttackWithOwnerGoal(this));
@@ -387,7 +387,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public MoveGoal(OriginSlimeEntity slime) {
             this.slime = slime;
-            this.setControls(EnumSet.of(Goal.Control.JUMP, Goal.Control.MOVE));
+            this.setControls(EnumSet.of(Control.JUMP, Control.MOVE));
         }
 
         public boolean canStart() {
@@ -395,7 +395,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
         }
 
         public void tick() {
-            ((OriginSlimeEntity.SlimeMoveControl)this.slime.getMoveControl()).move(1.0D);
+            ((SlimeMoveControl)this.slime.getMoveControl()).move(1.0D);
         }
     }
 
@@ -404,12 +404,12 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public SwimmingGoal(OriginSlimeEntity slime) {
             this.slime = slime;
-            this.setControls(EnumSet.of(Goal.Control.JUMP, Goal.Control.MOVE));
+            this.setControls(EnumSet.of(Control.JUMP, Control.MOVE));
             slime.getNavigation().setCanSwim(true);
         }
 
         public boolean canStart() {
-            return (this.slime.isTouchingWater() || this.slime.isInLava()) && this.slime.getMoveControl() instanceof OriginSlimeEntity.SlimeMoveControl;
+            return (this.slime.isTouchingWater() || this.slime.isInLava()) && this.slime.getMoveControl() instanceof SlimeMoveControl;
         }
 
         public void tick() {
@@ -417,7 +417,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
                 this.slime.getJumpControl().setActive();
             }
 
-            ((OriginSlimeEntity.SlimeMoveControl)this.slime.getMoveControl()).move(1.2D);
+            ((SlimeMoveControl)this.slime.getMoveControl()).move(1.2D);
         }
     }
 
@@ -428,11 +428,11 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public RandomLookGoal(OriginSlimeEntity slime) {
             this.slime = slime;
-            this.setControls(EnumSet.of(Goal.Control.LOOK));
+            this.setControls(EnumSet.of(Control.LOOK));
         }
 
         public boolean canStart() {
-            return this.slime.getTarget() == null && (this.slime.onGround || this.slime.isTouchingWater() || this.slime.isInLava() || this.slime.hasStatusEffect(StatusEffects.LEVITATION)) && this.slime.getMoveControl() instanceof OriginSlimeEntity.SlimeMoveControl;
+            return this.slime.getTarget() == null && (this.slime.onGround || this.slime.isTouchingWater() || this.slime.isInLava() || this.slime.hasStatusEffect(StatusEffects.LEVITATION)) && this.slime.getMoveControl() instanceof SlimeMoveControl;
         }
 
         public void tick() {
@@ -441,7 +441,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
                 this.targetYaw = (float)this.slime.getRandom().nextInt(360);
             }
 
-            ((OriginSlimeEntity.SlimeMoveControl)this.slime.getMoveControl()).look(this.targetYaw, false);
+            ((SlimeMoveControl)this.slime.getMoveControl()).look(this.targetYaw, false);
         }
     }
 
@@ -451,7 +451,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public FaceTowardTargetGoal(OriginSlimeEntity slime) {
             this.slime = slime;
-            this.setControls(EnumSet.of(Goal.Control.LOOK));
+            this.setControls(EnumSet.of(Control.LOOK));
         }
 
         public boolean canStart() {
@@ -485,7 +485,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public void tick() {
             this.slime.lookAtEntity(this.slime.getTarget(), 10.0F, 10.0F);
-            ((OriginSlimeEntity.SlimeMoveControl)this.slime.getMoveControl()).look(this.slime.getYaw(), this.slime.canAttack());
+            ((SlimeMoveControl)this.slime.getMoveControl()).look(this.slime.getYaw(), this.slime.canAttack());
         }
     }
 
@@ -508,17 +508,17 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
         public void move(double speed) {
             this.speed = speed;
-            this.state = MoveControl.State.MOVE_TO;
+            this.state = State.MOVE_TO;
         }
 
         public void tick() {
             this.entity.setYaw(this.wrapDegrees(this.entity.getYaw(), this.targetYaw, 90.0F));
             this.entity.headYaw = this.entity.getYaw();
             this.entity.bodyYaw = this.entity.getYaw();
-            if (this.state != MoveControl.State.MOVE_TO) {
+            if (this.state != State.MOVE_TO) {
                 this.entity.setForwardSpeed(0.0F);
             } else {
-                this.state = MoveControl.State.WAIT;
+                this.state = State.WAIT;
                 if (this.entity.isOnGround()) {
                     this.entity.setMovementSpeed((float)(this.speed * this.entity.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED)));
                     if (this.ticksUntilJump-- <= 0) {
