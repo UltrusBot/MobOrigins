@@ -6,5 +6,5 @@
 <p><a href="https://discord.gg/zUFbbVVjbB"><img src="https://github.com/UltrusBot/MobOrigins/blob/1.17/images/discord.png?raw=true" alt="discord.gg/zUFbbVVjbB" width="229" height="80" /></a><a href="https://www.youtube.com/c/UltrusBot"><img src="https://github.com/UltrusBot/MobOrigins/blob/1.17/images/youtube.png?raw=true" alt="https://www.youtube.com/c/UltrusBot" width="229" height="80" /></a></p>
 <p></p>
 <h2>Server Hosting</h2>
-<p><a href="https://www.youtube.com/c/UltrusBot"><img src="https://www.bisecthosting.com/partners/custom-banners/7449d2cd-79d2-497d-a042-90ca3033de5d.png" alt="BisectHostingCode: Ultrus" width="597" height="399" /></a></p>
+<p><a href="https://bisecthosting.com/Ultrus"><img src="https://www.bisecthosting.com/partners/custom-banners/7449d2cd-79d2-497d-a042-90ca3033de5d.png" alt="BisectHostingCode: Ultrus" width="597" height="399" /></a></p>
 <p></p>
