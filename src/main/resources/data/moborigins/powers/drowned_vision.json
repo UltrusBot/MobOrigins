@@ -1,9 +1,0 @@
-{
-  "type": "apoli:shader",
-  "shader": "minecraft:shaders/post/drowned_vision.json",
-  "condition": {
-    "type": "apoli:submerged_in",
-    "inverted": true,
-    "fluid": "minecraft:water"
-  }
-}

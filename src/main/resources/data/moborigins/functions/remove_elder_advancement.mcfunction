@@ -1,1 +1,0 @@
-advancement revoke @p only moborigins:killed_elder
