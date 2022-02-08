@@ -6,6 +6,7 @@ import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
 public class MobOriginsClient implements ClientModInitializer {
+
     @Override
     public void onInitializeClient() {
 
