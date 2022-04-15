@@ -56,7 +56,7 @@ public class TridentItemMixin {
             k *= n / m;
             l *= n / m;
             playerEntity.addVelocity(h, k, l);
-            playerEntity.setRiptideTicks(20);
+            playerEntity.method_40126(20);
             if (playerEntity.isOnGround()) {
                 float o = 1.1999999F;
                 playerEntity.move(MovementType.SELF, new Vec3d(0.0D, 1.1999999284744263D, 0.0D));
