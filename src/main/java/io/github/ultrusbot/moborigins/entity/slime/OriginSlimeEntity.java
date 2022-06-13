@@ -1,5 +1,6 @@
 package io.github.ultrusbot.moborigins.entity.slime;
 
+import io.github.ultrusbot.moborigins.MobOriginsMod;
 import io.github.ultrusbot.moborigins.entity.EntityRegistry;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.control.MoveControl;
@@ -41,7 +42,7 @@ import java.util.EnumSet;
 import java.util.Optional;
 import java.util.UUID;
 
-public class OriginSlimeEntity extends MobEntity implements Monster {
+public class OriginSlimeEntity extends MobEntity {
     private static final TrackedData<Integer> SLIME_SIZE;
     protected static final TrackedData<Optional<UUID>> OWNER_UUID;
     public float targetStretch;
@@ -92,7 +93,8 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
         return (Integer)this.dataTracker.get(SLIME_SIZE);
     }
 
-    public void writeCustomDataToTag(NbtCompound tag) {
+    @Override
+    public void writeCustomDataToNbt(NbtCompound tag) {
         super.writeCustomDataToNbt(tag);
         tag.putInt("Size", this.getSize() - 1);
         tag.putBoolean("wasOnGround", this.onGroundLastTick);
@@ -102,7 +104,8 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
     }
 
-    public void readCustomDataFromTag(NbtCompound tag) {
+    @Override
+    public void readCustomDataFromNbt(NbtCompound tag) {
         int i = tag.getInt("Size");
         if (i < 0) {
             i = 0;
@@ -168,13 +171,13 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
     @Nullable
     public UUID getOwnerUuid() {
-        return (UUID)((Optional)this.dataTracker.get(OWNER_UUID)).orElse((Object)null);
+        return (UUID)((Optional)this.dataTracker.get(OWNER_UUID)).orElse(null);
     }
 
     @Override
     public void onDeath(DamageSource source) {
         if (!this.world.isClient && this.world.getGameRules().getBoolean(GameRules.SHOW_DEATH_MESSAGES) && this.getOwner() instanceof ServerPlayerEntity) {
-            this.getOwner().sendSystemMessage(this.getDamageTracker().getDeathMessage(), Util.NIL_UUID);
+            this.getOwner().sendSystemMessage(this.getDamageTracker().getDeathMessage());
         }
 
         super.onDeath(source);
@@ -262,7 +265,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
             for(int l = 0; l < k; ++l) {
                 float g = ((float)(l % 2) - 0.5F) * f;
                 float h = ((float)(l / 2) - 0.5F) * f;
-                OriginSlimeEntity slimeEntity = (OriginSlimeEntity)this.getType().create(this.world);
+                OriginSlimeEntity slimeEntity = this.getType().create(this.world);
                 if (this.isPersistent()) {
                     slimeEntity.setPersistent();
                 }
@@ -290,8 +293,12 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
         this.setSize(j, true);
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     }
+
     public void pushAwayFrom(Entity entity) {
         super.pushAwayFrom(entity);
+        if (entity.isLiving() && isOwner((LivingEntity) entity)) {
+            return;
+        }
 
         if (canAttackWithOwner((LivingEntity) entity, getOwner()) && this.canAttack() && !(entity instanceof OriginSlimeEntity)) {
             this.damage((LivingEntity)entity);
@@ -360,7 +367,7 @@ public class OriginSlimeEntity extends MobEntity implements Monster {
 
     protected void jump() {
         Vec3d vec3d = this.getVelocity();
-        this.setVelocity(vec3d.x, (double)this.getJumpVelocity(), vec3d.z);
+        this.setVelocity(vec3d.x, this.getJumpVelocity(), vec3d.z);
         this.velocityDirty = true;
     }
 

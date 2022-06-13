@@ -54,7 +54,6 @@ public abstract class PlayerEntityMixin extends LivingEntity implements PlayerEn
         List<SpikedPower> spikedPowers = PowerHolderComponent.getPowers(((PlayerEntity)(Object)this), SpikedPower.class);
         if (source.getSource() instanceof LivingEntity && !source.isMagic() && !source.isExplosive() && spikedPowers.size() > 0) {
             int damage = spikedPowers.stream().map(SpikedPower::getSpikeDamage).reduce(Integer::sum).get();
-            System.out.println(damage);
             if (((PlayerEntity)(Object)this).getRandom().nextFloat() <= 0.75) {
                 source.getSource().damage(DamageSource.thorns(((PlayerEntity)(Object)this)), damage);
             }
