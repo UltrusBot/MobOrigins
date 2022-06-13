@@ -23,9 +23,8 @@ import java.util.List;
 @Mixin(RavagerEntity.class)
 public abstract class RavagerEntityMixin extends HostileEntity {
 
-    @Shadow @Nullable public abstract Entity getPrimaryPassenger();
 
-    @Shadow public abstract boolean canBeControlledByRider();
+    @Shadow @Nullable public abstract Entity getPrimaryPassenger();
 
     protected RavagerEntityMixin(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
@@ -55,8 +54,8 @@ public abstract class RavagerEntityMixin extends HostileEntity {
     @Override
     public void travel(Vec3d movementInput) {
         if (this.isAlive()) {
-            LivingEntity livingEntity = (LivingEntity)this.getPrimaryPassenger();
-            if (this.hasPassengers() && this.canBeControlledByRider() && MobOriginsPowers.PILLAGER_ALIGNED.isActive(livingEntity)) {
+            Entity entity = this.getPrimaryPassenger();
+            if (this.hasPassengers() && entity instanceof LivingEntity livingEntity && MobOriginsPowers.PILLAGER_ALIGNED.isActive(livingEntity)) {
                 this.setYaw(livingEntity.getYaw());
                 this.prevYaw = this.getYaw();
                 this.setPitch(livingEntity.getPitch() * 0.5F);
