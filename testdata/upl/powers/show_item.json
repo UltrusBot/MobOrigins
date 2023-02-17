@@ -1,0 +1,13 @@
+{
+  "type": "apoli:target_action_on_hit",
+  "entity_action": {
+    "type": "moborigins:show_floating_item",
+    "item_stack": {
+      "item": "minecraft:creeper_head"
+    }
+  },
+  "cooldown": 1,
+  "hud_render": {
+    "should_render": false
+  }
+}

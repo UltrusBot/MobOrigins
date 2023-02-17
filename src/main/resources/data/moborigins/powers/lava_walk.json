@@ -1,0 +1,49 @@
+{
+  "type": "apoli:multiple",
+  "lava_walking": {
+    "type": "apoli:walk_on_fluid",
+    "fluid": "minecraft:lava",
+    "condition": {
+      "type": "apoli:fluid_height",
+      "fluid": "minecraft:lava",
+      "comparison": "<=",
+      "compare_to": 0.4
+    }
+  },
+  "no_lava_fall_damage": {
+    "type": "apoli:invulnerability",
+    "damage_condition": {
+      "type": "apoli:name",
+      "name": "fall"
+    },
+    "condition": {
+      "type": "apoli:in_block",
+      "block_condition": {
+        "type": "apoli:fluid",
+        "fluid_condition": {
+          "type": "apoli:in_tag",
+          "tag": "minecraft:lava"
+        }
+      }
+    }
+  },
+  "speed": {
+    "type": "apoli:conditioned_attribute",
+    "modifier": {
+      "attribute": "generic.movement_speed",
+      "operation": "addition",
+      "value": 0.145,
+      "name": "strider lava bonus"
+    },
+    "condition": {
+      "type": "apoli:in_block",
+      "block_condition": {
+        "type": "apoli:fluid",
+        "fluid_condition": {
+          "type": "apoli:in_tag",
+          "tag": "minecraft:lava"
+        }
+      }
+    }
+  }
+}

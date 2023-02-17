@@ -1,0 +1,12 @@
+{
+  "type": "moborigins:fog",
+  "red": 1,
+  "green": 1,
+  "blue": 1,
+  "start": -1,
+  "end": 30,
+  "condition": {
+    "type": "apoli:sneaking",
+    "inverted": true
+  }
+}

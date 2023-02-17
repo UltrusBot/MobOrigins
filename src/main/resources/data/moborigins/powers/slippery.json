@@ -1,0 +1,15 @@
+{
+  "type": "origins:modify_slipperiness",
+  "modifier": {
+    "operation": "set_base",
+    "value": 0.98
+  },
+  "condition": {
+    "type": "apoli:enchantment",
+    "inverted": true,
+    "enchantment": "moborigins:ground_spikes",
+    "calculation": "sum",
+    "comparison": ">=",
+    "compare_to": "1"
+  }
+}

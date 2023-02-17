@@ -1,27 +1,33 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "io.github.ultrusbot.moborigins.mixin",
+  "package": "me.ultrusmods.moborigins.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "AnimalEntityMixin",
+    "AxolotlAttackablesSensorMixin",
     "BeehiveBlockEntityMixin",
     "BeehiveBlockMixin",
     "BlockMixin",
-    "TargetGoalMixin",
+    "EnchantmentHelperMixin",
+    "ExperienceOrbEntityMixin",
     "IronGolemEntityMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "PotionItemMixin",
+    "PowderSnowBlockMixin",
     "RavagerEntityMixin",
-    "SnowBallEntityMixin",
+    "SnowballEntityMixin",
     "SweetBerryBushBlockMixin",
     "TameableEntityMixin",
+    "TargetGoalMixin",
     "TridentEntityMixin",
     "TridentItemMixin",
-    "VillagerMixin"
+    "VillagerEntityMixin"
   ],
   "client": [
+    "client.BackgroundRendererMixin",
+    "client.EntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

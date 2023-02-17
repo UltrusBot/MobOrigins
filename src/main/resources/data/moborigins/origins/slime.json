@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "moborigins:bouncy",
+    "moborigins:split",
+    "moborigins:small_weak",
+    "origins:fall_immunity",
+    "moborigins:slimy_color",
+    "moborigins:dyeable"
+  ],
+  "icon": "minecraft:slime_ball",
+  "impact": 1,
+  "order": 3
+}

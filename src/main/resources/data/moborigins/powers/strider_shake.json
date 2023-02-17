@@ -1,0 +1,8 @@
+{
+  "type": "apoli:shaking",
+  "condition": {
+    "type": "apoli:on_fire",
+    "inverted": true
+  },
+  "hidden": true
+}

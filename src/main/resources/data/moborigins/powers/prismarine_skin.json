@@ -1,0 +1,10 @@
+
+{
+  "type": "apoli:attribute",
+  "modifier": {
+    "name": "Prismarine Skin Bonus",
+    "attribute": "minecraft:generic.armor",
+    "value": 2.0,
+    "operation": "addition"
+  }
+}

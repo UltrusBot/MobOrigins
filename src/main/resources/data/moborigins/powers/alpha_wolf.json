@@ -1,0 +1,37 @@
+{
+  "type": "apoli:multiple",
+  "tame": {
+    "type": "moborigins:action_on_entity_tame",
+    "bientity_condition": {
+      "type": "apoli:target_condition",
+      "condition": {
+        "type": "apoli:entity_type",
+        "entity_type": "minecraft:wolf"
+      }
+    },
+    "bientity_action": {
+      "type": "apoli:target_action",
+      "action": {
+        "type": "apoli:execute_command",
+        "command": "power grant @s moborigins:powerful_wolf"
+      }
+    }
+  },
+  "breed": {
+    "type": "moborigins:action_on_breed_animal",
+    "bientity_condition": {
+      "type": "apoli:target_condition",
+      "condition": {
+        "type": "apoli:entity_type",
+        "entity_type": "minecraft:wolf"
+      }
+    },
+    "bientity_action": {
+      "type": "apoli:target_action",
+      "action": {
+        "type": "apoli:execute_command",
+        "command": "power grant @s moborigins:powerful_wolf"
+      }
+    }
+  }
+}

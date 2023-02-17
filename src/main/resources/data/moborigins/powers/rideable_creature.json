@@ -1,0 +1,18 @@
+{
+  "type": "origins:multiple",
+  "riding": {
+    "type": "origins:simple"
+  },
+  "render": {
+    "type": "origins:prevent_entity_render",
+    "bientity_condition": {
+      "type": "origins:invert",
+      "condition": {
+        "type": "origins:riding"
+      }
+    },
+    "condition": {
+      "type": "moborigins:is_first_person"
+    }
+  }
+}

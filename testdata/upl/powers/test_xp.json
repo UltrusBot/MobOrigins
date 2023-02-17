@@ -1,0 +1,16 @@
+{
+  "type": "apoli:multiple",
+  "energy": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+      "bar_index": 3
+    }
+  },
+  "exp": {
+    "type": "moborigins:add_experience_to_resource",
+    "resource": "*:*_energy"
+  }
+}

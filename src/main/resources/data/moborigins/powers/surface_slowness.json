@@ -1,0 +1,10 @@
+{
+  "type": "apoli:attribute",
+  "hidden": true,
+  "modifier": {
+    "attribute": "generic.movement_speed",
+    "operation": "multiply_total",
+    "value": -0.4,
+    "name": "strider land penalty"
+  }
+}

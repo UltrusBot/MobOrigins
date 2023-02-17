@@ -1,0 +1,5 @@
+{
+  "type": "moborigins:fall_sounds",
+  "big_fall_sound": "minecraft:entity.slime.squish",
+  "small_fall_sound": "minecraft:entity.slime.squish_small"
+}

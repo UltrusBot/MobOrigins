@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "killedelder": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:elder_guardian"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "moborigins:remove_elder_advancement"
+  }
+}

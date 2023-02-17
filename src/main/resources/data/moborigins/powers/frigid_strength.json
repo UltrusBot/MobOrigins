@@ -1,0 +1,30 @@
+{
+  "type": "apoli:multiple",
+  "strength": {
+    "type": "apoli:modify_damage_dealt",
+    "condition": {
+      "type": "apoli:biome",
+      "condition": {
+        "type": "apoli:temperature",
+        "comparison": "<",
+        "compare_to": 0.15
+      }
+    },
+    "modifier": {
+      "value": 3,
+      "operation": "addition"
+    }
+  },
+  "resistance": {
+    "type": "apoli:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "freeze"
+    },
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -1
+    }
+  }
+
+}

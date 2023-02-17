@@ -1,0 +1,26 @@
+{
+  "type": "origins:action_when_hit",
+  "bientity_action": {
+    "type": "origins:chance",
+    "chance": 0.75,
+    "action": {
+      "type": "origins:damage",
+      "amount": 4,
+      "source": {
+        "name": "thorns"
+      }
+    }
+  },
+  "damage_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "moborigins:is_magic",
+        "inverted": true
+      },
+      {
+        "type": "origins:explosive"
+      }
+    ]
+  }
+}

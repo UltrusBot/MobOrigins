@@ -1,0 +1,18 @@
+{
+  "type": "moborigins:action_on_entity_tame",
+  "bientity_condition": {
+    "type": "origins:target_condition",
+    "condition": {
+      "type": "origins:entity_type",
+      "entity_type": "minecraft:pig"
+    }
+  },
+  "bientity_action": {
+    "type": "origins:target_action",
+    "action": {
+      "type": "origins:spawn_entity",
+      "entity_type": "minecraft:pig",
+      "tag": "{Age:-24000}"
+    }
+  }
+}

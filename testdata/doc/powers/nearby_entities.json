@@ -1,0 +1,20 @@
+{
+  "type": "origins:self_glow",
+  "use_teams": false,
+  "red": 1.0,
+  "green": 0.0,
+  "blue": 0.0,
+  "condition": {
+    "type": "moborigins:nearby_entities",
+    "multiplier": 3,
+    "comparison": ">=",
+    "compare_to": 3,
+    "bientity_condition": {
+      "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:entity_group",
+        "group": "undead"
+      }
+    }
+  }
+}

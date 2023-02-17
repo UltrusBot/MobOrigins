@@ -1,0 +1,22 @@
+{
+  "type": "origins:multiple",
+  "resource": {
+    "type": "origins:resource",
+    "hud_render": {
+      "should_render": true,
+      "bar_index": 3
+    },
+    "min": 0,
+    "max": 20
+  },
+  "bar": {
+    "type": "moborigins:resource_boss_bar",
+    "color": "white",
+    "style": "notched_20",
+    "text": "Power Meter",
+    "darken_sky": false,
+    "thicken_fog": false,
+    "visible_to_all": true,
+    "resource": "*:*_resource"
+  }
+}

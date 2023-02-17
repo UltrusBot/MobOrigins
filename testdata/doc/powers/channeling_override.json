@@ -1,0 +1,11 @@
+{
+  "type": "moborigins:channeling_override",
+  "entity_action": {
+    "type": "origins:explode",
+    "power": 4
+  },
+  "hit_entity_action": {
+    "type": "origins:add_velocity",
+    "y": 2
+  }
+}

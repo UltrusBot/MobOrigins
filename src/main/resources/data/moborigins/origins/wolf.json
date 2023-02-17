@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "moborigins:wolf_body",
+    "moborigins:full_moon",
+    "moborigins:alpha_wolf",
+    "moborigins:wolf_howl",
+    "moborigins:wolf_pack",
+    "origins:carnivore"
+  ],
+  "icon": "minecraft:bone",
+  "order": 2,
+  "impact": 1
+}

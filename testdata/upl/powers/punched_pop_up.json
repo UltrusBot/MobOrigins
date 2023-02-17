@@ -1,0 +1,10 @@
+{
+  "type": "apoli:attacker_action_when_hit",
+  "entity_action": {
+    "type": "moborigins:show_floating_item",
+    "item_stack": {
+      "item": "minecraft:iron_sword"
+    }
+  },
+  "cooldown": 20
+}

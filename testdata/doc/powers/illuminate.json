@@ -1,0 +1,8 @@
+{
+  "type": "moborigins:illuminate",
+  "light": 15,
+  "condition": {
+    "type": "origins:exposed_to_sun",
+    "inverted": true
+  }
+}

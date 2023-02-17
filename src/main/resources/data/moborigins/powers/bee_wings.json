@@ -1,0 +1,25 @@
+{
+  "type": "apoli:active_self",
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "apoli:apply_effect",
+        "effect": {
+          "effect": "minecraft:slow_falling",
+          "duration": 100,
+          "amplifier": 0
+        }
+      },
+      {
+        "type": "apoli:exhaust",
+        "amount": 2
+      }
+    ]
+  },
+  "cooldown": 300,
+  "hud_render": {
+    "sprite_location": "moborigins:textures/gui/ability_bars.png",
+    "bar_index": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "apoli:night_vision",
+  "hidden": true,
+  "strength": 1.0,
+  "condition": {
+    "type": "origins:submerged_in",
+    "fluid": "minecraft:water"
+  }
+}

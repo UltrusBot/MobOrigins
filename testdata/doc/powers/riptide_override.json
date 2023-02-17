@@ -1,0 +1,8 @@
+{
+  "type": "moborigins:riptide_override",
+  "trident_damage": 10,
+  "condition": {
+    "type": "origins:daytime",
+    "inverted": true
+  }
+}

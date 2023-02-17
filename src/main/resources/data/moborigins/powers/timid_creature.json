@@ -1,0 +1,22 @@
+{
+  "type": "apoli:conditioned_attribute",
+  "modifier": {
+    "attribute": "generic.movement_speed",
+    "operation": "addition",
+    "value": 0.1,
+    "name": "fox timid creature"
+  },
+  "condition": {
+    "type": "moborigins:nearby_entities",
+    "bientity_condition": {
+      "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:player"
+      }
+    },
+    "multiplier": 3.0,
+    "comparison": ">=",
+    "compare_to": 3
+  }
+}

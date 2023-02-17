@@ -1,0 +1,24 @@
+{
+  "type": "apoli:active_self",
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "moborigins:summon_slime"
+      },
+      {
+        "type": "apoli:damage",
+        "amount": 8,
+        "source": {
+          "name": "split",
+          "bypasses_armor": true
+        }
+      }
+    ]
+  },
+  "cooldown": 600,
+  "hud_render": {
+    "sprite_location": "moborigins:textures/gui/ability_bars.png",
+    "bar_index": 2
+  }
+}

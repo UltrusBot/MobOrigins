@@ -1,0 +1,44 @@
+{
+  "type": "origins:multiple",
+  "resource1": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+      "bar_index": 2
+    }
+  },
+  "resource2": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+      "bar_index": 3
+    }
+  },
+  "active1": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "moborigins:resource_math",
+      "to_resource": "*:*_resource1",
+      "from_resource": "*:*_resource2",
+      "operator": "add"
+    }
+  },
+  "active2": {
+    "type": "origins:active_self",
+    "key": {
+      "key": "key.origins.secondary_active"
+    },
+    "entity_action": {
+      "type": "moborigins:resource_math",
+      "to_resource": "*:*_resource2",
+      "from_resource": "*:*_resource1",
+      "operator": "add"
+    }
+  }
+}

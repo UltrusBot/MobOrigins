@@ -1,0 +1,7 @@
+{
+  "type": "moborigins:health_boss_bar",
+  "color": "red",
+  "style": "notched_6",
+  "darkenSky": "true",
+  "thickenFog": "true"
+}

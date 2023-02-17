@@ -1,5 +1,16 @@
 {
   "replace": false,
   "origins": [
+    "moborigins:snowgolem",
+    "moborigins:witch",
+    "moborigins:strider",
+    "moborigins:evoker",
+    "moborigins:guardian",
+    "moborigins:slime",
+    "moborigins:wolf",
+    "moborigins:elder_guardian",
+    "moborigins:bee",
+    "moborigins:fox",
+    "moborigins:drowned"
   ]
 }

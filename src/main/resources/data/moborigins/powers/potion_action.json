@@ -1,0 +1,79 @@
+{
+  "type": "apoli:active_self",
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "apoli:if_else_list",
+        "actions": [
+          {
+            "condition": {
+              "type": "apoli:on_fire"
+            },
+            "action": {
+              "type": "apoli:apply_effect",
+              "effect": {
+                "effect": "minecraft:fire_resistance",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "apoli:fall_distance",
+              "comparison": ">=",
+              "compare_to": 4
+            },
+            "action": {
+              "type": "apoli:apply_effect",
+              "effect": {
+                "effect": "minecraft:slow_falling",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "apoli:submerged_in",
+              "fluid": "minecraft:water"
+            },
+            "action": {
+              "type": "apoli:apply_effect",
+              "effect": {
+                "effect": "minecraft:water_breathing",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "apoli:constant",
+              "value": true
+            },
+            "action": {
+              "type": "apoli:apply_effect",
+              "effect": {
+                "effect": "minecraft:speed",
+                "duration": 200,
+                "amplifier": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "apoli:execute_command",
+        "command": "playsound minecraft:entity.witch.drink voice @s",
+        "permission_level": 4
+      }
+    ]
+  },
+  "cooldown": 400,
+  "hud_render": {
+    "sprite_location": "moborigins:textures/gui/ability_bars.png",
+    "bar_index": 0
+  }
+}

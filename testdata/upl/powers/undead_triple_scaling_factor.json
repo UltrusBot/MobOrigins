@@ -1,0 +1,14 @@
+{
+  "type": "moborigins:modify_attack_distance_scale",
+  "modifier": {
+    "operation": "multiply_total",
+    "value": 5
+  },
+  "bientity_condition": {
+    "type": "origins:actor_condition",
+    "condition": {
+      "type": "origins:entity_group",
+      "group": "undead"
+    }
+  }
+}
