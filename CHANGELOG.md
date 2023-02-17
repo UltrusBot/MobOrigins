@@ -1,4 +1,4 @@
-# Mob Origins v1.10.0
+# Mob Origins v1.10.0-beta
 ## Changes and General Additions
 - **Slime Origin**
   - Can now dye themselves, by right clicking while holding a dye. This tints them, blending the color like leather armor.
