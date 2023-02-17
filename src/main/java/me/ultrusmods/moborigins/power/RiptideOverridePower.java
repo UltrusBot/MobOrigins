@@ -44,6 +44,7 @@ public class RiptideOverridePower extends Power {
                         .add("trident_damage", SerializableDataTypes.INT, 1),
                 data ->
                         (type, player) ->
-                                new RiptideOverridePower(type, player, data.getInt("trident_damage")));
+                                new RiptideOverridePower(type, player, data.getInt("trident_damage")))
+                .allowCondition();
     }
 }

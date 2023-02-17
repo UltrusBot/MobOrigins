@@ -24,6 +24,7 @@ import net.minecraft.util.math.MathHelper;
 public class SnowTrailPower extends Power {
     public SnowTrailPower(PowerType<Power> type, LivingEntity livingEntity) {
         super(type, livingEntity);
+        setTicking(false);
     }
 
     @Override
@@ -42,7 +43,7 @@ public class SnowTrailPower extends Power {
 
     public static PowerFactory createFactory() {
         return new PowerFactory<>(MobOriginsMod.id("snow_trail"), new SerializableData(),
-                data -> SnowTrailPower::new);
+                data -> SnowTrailPower::new).allowCondition();
     }
 
 }

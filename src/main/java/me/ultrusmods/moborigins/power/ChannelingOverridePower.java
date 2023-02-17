@@ -57,6 +57,7 @@ public class ChannelingOverridePower extends Power {
                         .add("hit_entity_action", ApoliDataTypes.ENTITY_ACTION, null),
                 data ->
                         (type, player) ->
-                                new ChannelingOverridePower(type, player, data.get("entity_action"), data.get("hit_entity_action")));
+                                new ChannelingOverridePower(type, player, data.get("entity_action"), data.get("hit_entity_action")))
+                .allowCondition();
     }
 }
