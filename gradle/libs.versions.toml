@@ -1,10 +1,10 @@
 [versions]
-minecraft = "1.19.2"
-quilt_mappings = "1.19.2+build.21"
+minecraft = "1.19.3"
+quilt_mappings = "1.19.3+build.26"
 fabric_loader = "0.14.13"
-fabric_api = "0.73.2+1.19.2"
-modmenu = "4.1.2"
-origins = "1.7.1"
+fabric_api = "0.75.1+1.19.3"
+modmenu = "5.0.2"
+origins = "v1.8.1"
 mixinextras = "0.0.11"
 
 [libraries]
@@ -14,7 +14,7 @@ quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_m
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
 fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
-origins = { module = "com.github.eggohito:origins-fabric", version.ref = "origins" }
+origins = { module = "com.github.apace100:origins-fabric", version.ref = "origins" }
 mixinextras = { module = "com.github.LlamaLad7:MixinExtras", version.ref = "mixinextras" }
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".

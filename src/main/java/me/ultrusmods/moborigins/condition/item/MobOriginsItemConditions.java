@@ -6,7 +6,7 @@ import io.github.apace100.calio.data.SerializableData;
 import me.ultrusmods.moborigins.MobOriginsMod;
 import net.minecraft.item.DyeItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class MobOriginsItemConditions {
     public static void register() {

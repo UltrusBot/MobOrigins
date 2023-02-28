@@ -4,7 +4,7 @@ import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import me.ultrusmods.moborigins.condition.entity.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class MobOriginsEntityConditionFactories {
 

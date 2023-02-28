@@ -4,7 +4,7 @@ import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import me.ultrusmods.moborigins.action.entity.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class MobOriginsEntityActionFactories {
 

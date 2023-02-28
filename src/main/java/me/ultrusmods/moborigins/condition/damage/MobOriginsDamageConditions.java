@@ -6,7 +6,7 @@ import io.github.apace100.calio.data.SerializableData;
 import me.ultrusmods.moborigins.MobOriginsMod;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.util.Pair;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class MobOriginsDamageConditions {
     public static void register() {

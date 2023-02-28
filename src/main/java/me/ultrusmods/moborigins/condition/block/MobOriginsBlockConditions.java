@@ -5,7 +5,7 @@ import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
 import me.ultrusmods.moborigins.MobOriginsMod;
 import net.minecraft.block.pattern.CachedBlockPosition;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class MobOriginsBlockConditions {
     public static void register() {
