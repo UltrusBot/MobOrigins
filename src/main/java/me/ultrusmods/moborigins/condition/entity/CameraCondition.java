@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 /** {DOCS}
     NAME: Is First Person
     DESC: Checks if the player is in first person.
+    PARAMS:
     EXAMPLE:
 {
     "entity_condition": {

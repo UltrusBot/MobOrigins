@@ -30,9 +30,9 @@ originMarkdownTemplate = """# {name}
 | Name | ID | Description |
 | ----- | ---- | ------------- |
 """
-docFolders = ["docs", "docs/power_types", "docs/origins", "docs/conditions", "docs/conditions/entity",
+docFolders = ["docs", "docs/power_types", "docs/conditions", "docs/conditions/entity",
               "docs/conditions/item", "docs/conditions/block", "docs/actions", "docs/actions/entity",
-              "docs/conditions/damage", "docs/actions/bientity", "docs/actions/block", "docs/misc"]
+              "docs/conditions/damage", "docs/actions/bientity", "docs/actions/block", "docs/misc", "docs/misc/origins"]
 for folder in docFolders:
     if not os.path.exists(folder):
         os.mkdir(folder)
@@ -54,7 +54,7 @@ for root, dirs, files in os.walk("src/main/resources/data/moborigins/origins"):
                 originName = lang["origin.moborigins." + file.split(".")[0] + ".name"]
                 originDesc = lang["origin.moborigins." + file.split(".")[0] + ".description"]
                 originMarkdown = originMarkdownTemplate.replace("{name}", originName).replace("{desc}", originDesc)
-                origins.append("[" + originName + "](/origins/" + file.split('.')[0] + ")")
+                origins.append("[" + originName + "](./" + file.split('.')[0] + ")")
                 for power in origin["powers"]:
                     powerInfo = power.split(":")
                     try:
@@ -69,7 +69,7 @@ for root, dirs, files in os.walk("src/main/resources/data/moborigins/origins"):
                     except KeyError:
                         originMarkdown += f"| *hidden* | `{power}` | *No description available* |\n"
 
-                with open(f"docs/origins/{file.split('.')[0]}.md", "w") as f:
+                with open(f"docs/misc/origins/{file.split('.')[0]}.md", "w") as f:
                     f.write(originMarkdown)
 with open(f"docs/misc/origins.md", "w") as f:
     markdown = "# Origins\n\n"

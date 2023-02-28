@@ -188,5 +188,8 @@
   "power.moborigins.warped_fungus_eater.description": "You can eat warped fungus to recover some hunger, along with a small speed boost.",
 
   "power.moborigins.water_combatant.name": "Water Combatant",
-  "power.moborigins.water_combatant.description": "You deal more damage while in water."
+  "power.moborigins.water_combatant.description": "You deal more damage while in water.",
+
+  "power.moborigins.dyeable.name": "Dyeable",
+    "power.moborigins.dyeable.description": "You can click with dye to change the tint of yourself."
 }

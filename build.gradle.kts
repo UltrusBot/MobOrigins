@@ -2,9 +2,7 @@ plugins {
     id("fabric-loom") version "0.11.+"
     id("maven-publish")
     id("io.github.juuxel.loom-quiltflower") version "1.6.0"
-//    id("com.github.breadmoirai.github-release") version "2.4.1"
-//    id("com.modrinth.minotaur") version "2.+"
-//    id("com.matthewprenger.cursegradle") version "1.4.0"
+    id("io.github.p03w.machete") version "2.0.0"
 }
 
 val archives_base_name: String by project
