@@ -1,192 +1,195 @@
 {
     "enchantment.moborigins.heat_protection": "Isı Koruması",
-    "enchantment.moborigins.ground_spikes": "Sivri Zemin",
-    "enchantment.moborigins.heat_protection.desc": "Belirli originleri aşırı ısınmaktan korur",
-    "enchantment.moborigins.ground_spikes.desc": "Belirli originlerin karada kaymasını engeller",
+    "enchantment.moborigins.ground_spikes": "Tutunma",
+    "enchantment.moborigins.heat_protection.desc": "Bazı originlerin aşırı ısınmasını engeller",
+    "enchantment.moborigins.ground_spikes.desc": "Bazı originlerin karada kaymasını engeller",
   
-    "death.attack.split": "%1$s kendini hiçbir şeye böldü.",
-    "death.attack.split.player": "%1$s, %2$s'dan kaçmaya çalışırken bölündü.",
+    "death.attack.split": "%1$s kendisini hiçbir şeye böldü.",
+    "death.attack.split.player": "%1$s, %2$sden kaçmaya çalışırken bölündü.",
     "text.moborigins.become_elder": "Büyüyüp Yaşlı Gardiyan oldun!",
-    "text.moborigins.mystery_meat": "Gizem Eti",
+    "text.moborigins.mystery_meat": "Gizemli Et",
     "origin.moborigins.snowgolem.name": "Kar Golemi",
-    "origin.moborigins.snowgolem.description": "Kardan yapılmış ve onları eritebilecek herşeye zayıf olan golemler",
+    "origin.moborigins.snowgolem.description": "Kardan yapılmış ve kendilerini eritebilcek herhangi şeye zayıf olan golemler",
   
-    "power.moborigins.heat_weakness.name": "Isı Zayıflığı",
-    "power.moborigins.heat_weakness.description": "Sıcak biyomlarda zamanla hasar alırsınız",
+    "power.moborigins.heat_weakness.name": "Isıya Zayıflık",
+    "power.moborigins.heat_weakness.description": "Sıcak biyomlarda zaman geçirdikte hasar alırsın",
   
-    "power.moborigins.greater_golems.name": "Daha İyi Golemler",
-    "power.moborigins.greater_golems.description": "Sizin yaptığınız Kar Golemleri daha güçlüdür",
+    "power.moborigins.greater_golems.name": "Kuvvetli Golemler",
+    "power.moborigins.greater_golems.description": "Yaptığın Kar Golemleri daha güçlüdür",
   
-    "power.moborigins.stronger_snowballs.name": "Güçlü Kar Topları",
-    "power.moborigins.stronger_snowballs.description": "Sizin attığınız kartopları buzlu ve 1 hasar verir",
+    "power.moborigins.stronger_snowballs.name": "Kuvvetli Kar Topları",
+    "power.moborigins.stronger_snowballs.description": "Senin attığın kar topları buz ile dolu ve 1 hasar verir!",
   
-    "power.moborigins.snow_trail.name": "Kardan İz",
-    "power.moborigins.snow_trail.description": "Kardan bir iz bırakırsınız.",
+    "power.moborigins.snow_trail.name": "Kar İzi",
+    "power.moborigins.snow_trail.description": "Arkandan kar bir iz bırakırsın.",
   
-    "power.moborigins.frigid_strength.name": "Buz Gibi Güç",
-    "power.moborigins.frigid_strength.description": "Soğuk bölgelerde daha fazla hasar verirsiniz.",
+    "power.moborigins.frigid_strength.name": "Buz Kuvveti",
+    "power.moborigins.frigid_strength.description": "Deal more damage in cold areas.",
   
     "origin.moborigins.witch.name": "Cadı",
-    "origin.moborigins.witch.description": "Zalim ve kıkırdayan, Cadılar iksir yapımında usta ve büyüde iyilerdir",
+    "origin.moborigins.witch.description": "Zalim ve kıkırdayan Cadılar iksircilikte uzman ve büyüde iyilerdir",
   
     "power.moborigins.potion_action.name": "Mükemmel İksir",
-    "power.moborigins.potion_action.description": "Şuanki durumunuza uygun rastgele bir iksir efekti alın.",
+    "power.moborigins.potion_action.description": "İçinde olduğun duruma göre rastgele bir iksir etkisi al.",
   
     "power.moborigins.pillager_aligned.name": "Yağmacı Dostu",
-    "power.moborigins.pillager_aligned.description": "Köylüler sizi sevmez ama yağmacılar sizi sever!",
+    "power.moborigins.pillager_aligned.description": "Köylülerin aksine Yağmacılar seni sever!",
   
-    "power.moborigins.better_potions.name": "Daha İyi İksirler",
-    "power.moborigins.better_potions.description": "Çoğunluktan iyi iksir tüketirsiniz, Sizin içtiğiniz iksirlerin süresi daha uzun olacak.",
+    "power.moborigins.better_potions.name": "İksir Uzmanı",
+    "power.moborigins.better_potions.description": "Çoğu kişiden daha iyi iksir içersin, senin içtiğin iksirlerin etkisi daha uzundur.",
   
     "origin.moborigins.strider.name": "Lavgezer",
-    "origin.moborigins.strider.description": "Geniş lav okyanuslarını bir lavgezerin hızıyla gez",
+    "origin.moborigins.strider.description": "Lavgezer hızıyla geniş lav okyanuslarında seyahat et",
   
-    "power.moborigins.lava_walk.name": "Lav Yürüyücüsü",
-    "power.moborigins.lava_walk.description": "Lav kaynak blokları üzerinde yürüme yeteneğiniz var! Ayrıca lavda yürürken daha çeviksiniz ama karada yürürken daha yavaşsınız.",
+    "power.moborigins.lava_walk.name": "Lavda Gezer",
+    "power.moborigins.lava_walk.description": "Kaynak lav bloklarında yürüme yeteneğin var! Ayrıca lavda yürürken hızlı, karada yürürken yavaşsın.",
   
-    "power.moborigins.rideable_creature.name": "Sürülebilir Yaratık",
-    "power.moborigins.rideable_creature.description": "Diğer oyuncular seni sürebilir!",
+    "power.moborigins.rideable_creature.name": "Binek",
+    "power.moborigins.rideable_creature.description": "Diğer oyuncular sana binebilir!",
   
     "origin.moborigins.evoker.name": "Uyandırıcı",
-    "origin.moborigins.evoker.description": "Büyü Ustası ve bir Totem toplayıcısı.",
+    "origin.moborigins.evoker.description": "Büyünün ustası ve totemlerin toplayıcısı.",
   
-    "power.moborigins.summon_fangs.name": "Kapanlar Çağır",
-    "power.moborigins.summon_fangs.description": "Kapan çağırma özelliği kazanırsınız!",
+    "power.moborigins.summon_fangs.name": "Kapan Çağır",
+    "power.moborigins.summon_fangs.description": "Kapan çağırma özelliğin var!",
   
-    "power.moborigins.lower_totem_chance.name": "Sağlam Totemler",
-    "power.moborigins.lower_totem_chance.description": "Totemlerinizin kullanımda 10% kırılmama şansı vardır",
+    "power.moborigins.lower_totem_chance.name": "Sadık Totemler",
+    "power.moborigins.lower_totem_chance.description": "Totemlerinin kullanımda %10 kırılmama şansı var",
   
     "origin.moborigins.guardian.name": "Gardiyan",
-    "origin.moborigins.guardian.description": "Gardiyanlar Anıtlarını ve içerisindeki süngerlerini korumalarıyla bilinirler. Bazıları ise Yaşlı Gardiyana everim geçirmeleriyle bilinir.",
+    "origin.moborigins.guardian.description": "Gardiyanlar anıtlarını ve içindeki süngerlerini korumalarıyla bilinir. Bazılarıda Yaşlı Gardiyan'a evrim geçirmeleriyle.",
   
-    "power.moborigins.guardian_spikes.name": "Gardiyan Dikenleri",
-    "power.moborigins.guardian_spikes.description": "Saldıran kişiye hasar verme şansı olan dikenler!",
+    "power.moborigins.guardian_spikes.name": "Gardiyan Dikenler",
+    "power.moborigins.guardian_spikes.description": "Saldıranlara hasar verme ihtimali olan dikenler!",
   
-    "power.moborigins.guardian_ally.name": "Gardiyan Dostu",
-    "power.moborigins.guardian_ally.description": "Gardiyanlar size saldırmaz!",
+    "power.moborigins.guardian_ally.name": "Gardiyan Dostlar",
+    "power.moborigins.guardian_ally.description": "Gardiyanlar sana saldırmaz!",
   
-    "power.moborigins.monument_spawn.name": "Anıt Evi",
-    "power.moborigins.monument_spawn.description": "Bir Okyanus Anıtında doğarsınız",
+    "power.moborigins.monument_spawn.name": "Anıt Yerlisi",
+    "power.moborigins.monument_spawn.description": "Bir Okyanus Anıtında doğarsın",
   
-    "power.moborigins.surface_weakness.name": "Yeryüzü Zayıflığı",
-    "power.moborigins.surface_weakness.description": "Karadayken zayıflarsın",
+    "power.moborigins.surface_weakness.name": "Yeryüzüne Zayıflık",
+    "power.moborigins.surface_weakness.description": "Karadayken zayıfsın",
   
     "power.moborigins.prismarine_skin.name": "Prizmarin Deri",
-    "power.moborigins.prismarine_skin.description": "Derin prizmarinden olduğundan için doğal zırh kazanırsın.",
+    "power.moborigins.prismarine_skin.description": "Cildin prizmarinden yapılma, bu sana doğal koruma sağlar.",
   
     "power.moborigins.slippery.name": "Kaygan",
-    "power.moborigins.slippery.description": "Karadayken herşeyi kaygan hissedersiniz.",
+    "power.moborigins.slippery.description": "Karadayken herşey kaygan gibidir.",
   
     "origin.moborigins.elder_guardian.name": "Yaşlı Gardiyan",
-    "origin.moborigins.elder_guardian.description": "Yaşlı Gardiyanlar anıtların liderleridir ve normal gardiyanlardan daha fazla güce sahiplerdir",
+    "origin.moborigins.elder_guardian.description": "Yaşlı Gardiyanlar Anıtların liderleridir ve normal gardiyanlara göre güçlüdürler",
   
     "power.moborigins.elder_magic.name": "Kıdemli Büyü",
-    "power.moborigins.elder_magic.description": "Bir madenci yorgunluğu bulutu çağır",
+    "power.moborigins.elder_magic.description": "Bir madenci yorgunluğu efekt bulutu oluştur",
   
-    "power.moborigins.mining_fatigue_immune.name": "Kıdemli Bağışıklık",
-    "power.moborigins.mining_fatigue_immune.description": "Madenci Yorgunluğundan etkilenmezsiniz",
+    "power.moborigins.mining_fatigue_immune.name": "Kıdemli Dayanıklılık",
+    "power.moborigins.mining_fatigue_immune.description": "Madenci Yorguluğu sana işlemez",
   
     "power.moborigins.elder_spikes.name": "Kıdemli Dikenler",
-    "power.moborigins.elder_spikes.description": "Saldıran kişiye hasar verme şansı olan güçlü dikenler!",
+    "power.moborigins.elder_spikes.description": "Saldıranlara hasar verme ihtimali olan güçlü dikenler!",
   
     "origin.moborigins.slime.name": "Balçık",
-    "origin.moborigins.slime.description": "Her yerde zıplayan yeşil jöle damlaları!",
+    "origin.moborigins.slime.description": "Her tarafta zıplayan yeşil jöle yığınları!",
   
     "power.moborigins.bouncy.name": "Zıpzıp",
-    "power.moborigins.bouncy.description": "Bütün bloklar size balçık bloğuymuş gibi davranır",
+    "power.moborigins.bouncy.description": "Bütün bloklar balçık bloğu gibi davranır",
   
-    "power.moborigins.split.name": "Bölünme Kabiliyeti",
-    "power.moborigins.split.description": "Açlık puanlarınızı sizi savunacak küçük bir balçığa çevirin!",
+    "power.moborigins.split.name": "Bölünme özelliği",
+    "power.moborigins.split.description": "Açlığını seni savunan küçük bir balçığa dönüştür!",
   
     "power.moborigins.small_weak.name": "Küçük Zayıflık",
-    "power.moborigins.small_weak.description": "İki kalpten daha az kalbiniz varken neredeyse hiç hasar vermezsiniz ama saldırılarınızın savurması daha güçlüdür!",
+    "power.moborigins.small_weak.description": "2 Kalpten az canın var iken neredeyse hiç hasar veremezsin ve rakiplerin seni daha uzağa savurabilir!",
   
     "origin.moborigins.wolf.name": "Kurt",
-    "origin.moborigins.wolf.description": "Güçlü ve Hızlı, Kurtlar sayılarıyla avantajlı olan varlıklardır.",
+    "origin.moborigins.wolf.description": "Güçlü ve Hızlı, Kurtlar sayılarıyla güçlü olan varlıklardır.",
   
     "power.moborigins.alpha_wolf.name": "Alfa Kurt",
-    "power.moborigins.alpha_wolf.description": "Sizin evcilleştirdiğiniz kurtlar daha güçlüdür!",
+    "power.moborigins.alpha_wolf.description": "Evcilleştirdiğin kurtlar daha kuvvetli!",
   
-    "power.moborigins.full_moon.name": "Kurtadam-gibi",
-    "power.moborigins.full_moon.description": "Dolunayda daha Hızlı, Güçlü ve Sağlıklı olursun",
+    "power.moborigins.full_moon.name": "Kurtadamımsı",
+    "power.moborigins.full_moon.description": "Dolunayda, hızın, gücün, ve canın artar",
   
-    "power.moborigins.wolf_body.name": "Kurt Bedeni",
-    "power.moborigins.wolf_body.description": "İnsanlara göre iki daha az kalbiniz var.",
+    "power.moborigins.wolf_body.name": "Kurt Beden",
+    "power.moborigins.wolf_body.description": "İnsanlardan 2 kalp daha az canınız var.",
   
     "origin.moborigins.bee.name": "Arı",
-    "origin.moborigins.bee.description": "Dünyaya çicek ve polen şaçan uçan bir böcek.",
+    "origin.moborigins.bee.description": "Dünyaya polen şaçarak etrafa çicek ve bal şaçan bir böcek.",
   
     "power.moborigins.stinger.name": "İğne",
-    "power.moborigins.stinger.description": "Birine yumruk attığınızda onu birkaç saniyeliğine zehirlersiniz",
+    "power.moborigins.stinger.description": "Birini yumrukladığında onu bir kaç saniyeliğine zehirlersin",
   
     "power.moborigins.flower_power.name": "Çicek Gücü",
-    "power.moborigins.flower_power.description": "Birden fazla çiçeğin yanındayken yenilenme kazanırsınız.",
+    "power.moborigins.flower_power.description": "Birden fazla çiçeğe yakınken yenilenme elde edersin.",
   
     "power.moborigins.queen_bee.name": "Kraliçe Arı",
-    "power.moborigins.queen_bee.description": "Bal topladığınızda arılar size saldırmaya çalışmayacak.",
+    "power.moborigins.queen_bee.description": "Arı topladığında arılar sana saldırmaya çalışmaz.",
   
     "power.moborigins.small_bug.name": "Küçük Böcek",
-    "power.moborigins.small_bug.description": "İnsanlara göre iki daha az kalbiniz var.",
+    "power.moborigins.small_bug.description": "You have 2 less hearts of health than humans.",
   
-    "power.moborigins.bee_wings.name": "Arı Kanatları",
-    "power.moborigins.bee_wings.description": "Küçük arı kanatlarınızı yavaşça alçalmak için kullanabilirsiniz",
+    "power.moborigins.bee_wings.name": "Bee Wings",
+    "power.moborigins.bee_wings.description": "Küçük kanatlarını kullanarak bir özellik olarak yavaşça alçalabilirsin",
   
     "origin.moborigins.fox.name": "Tilki",
-    "origin.moborigins.fox.description": "Kurnaz ve Uyanık, Tilkiler orman meyvesi yemeyi ve eşya çalmayı seven çekingen canlılardır.",
+    "origin.moborigins.fox.description": "Kurnaz ve ürker tilkiler orman meyvesi yemeyi ve eşya çalmayı severler.",
   
-    "power.moborigins.timid_creature.name": "Çekingen Yaratık",
-    "power.moborigins.timid_creature.description": "Yakınınızda 3 kişiden daha fazla varsa hızınız artar.",
+    "power.moborigins.timid_creature.name": "Ürkek",
+    "power.moborigins.timid_creature.description": "Yakınında 3 oyuncu varsa hızlanırsın.",
   
-    "power.moborigins.better_berries.name": "Daha İyi Orman Meyvesi",
-    "power.moborigins.better_berries.description": "Tatlı Orman Meyveleri sizin için ekstra tatlılardır!",
+    "power.moborigins.better_berries.name": "Doyurucu Orman Meyveleri",
+    "power.moborigins.better_berries.description": "Orman Meyveleri senin için ekstra lezzetli!",
   
     "power.moborigins.careful_gatherer.name": "Dikkatli Toplayıcı",
-    "power.moborigins.careful_gatherer.description": "Tatlı Orman Meyvesi Çalıları sizi acıtmaz.",
+    "power.moborigins.careful_gatherer.description": "Orman meyvesi çalıları seni incitmez.",
   
     "power.moborigins.item_collector.name": "Eşya Toplayıcısı",
-    "power.moborigins.item_collector.description": "Daha büyük bir eşya alma çapınız var.",
+    "power.moborigins.item_collector.description": "Daha büyük bir eşya toplama alanın var.",
   
     "power.moborigins.sly.name": "Kurnaz",
-    "power.moborigins.sly.description": "Çeviksiniz.",
+    "power.moborigins.sly.description": "Daha hızlısın.",
   
     "power.moborigins.small_fox.name": "Küçük Tilki",
-    "power.moborigins.small_fox.description": "İnsanlara göre iki daha az kalbiniz var.",
+    "power.moborigins.small_fox.description": "İnsanlardan 2 kalp daha az canınız var.",
   
-    "power.moborigins.wolf_howl.name": "Uluma",
-    "power.moborigins.wolf_howl.description": "Aktif özellik tuşunuzu ulumak için kullanabilirsiniz, bu sayede kendiniz ve yakındaki kurtlara hız ve güç verebilirsiniz.",
+    "power.moborigins.wolf_howl.name": "Ulu",
+    "power.moborigins.wolf_howl.description": "Yakındaki kurtlara ve kendine güç vermek için uluyabilirsin.",
   
     "power.moborigins.wolf_pack.name": "Kurt Sürüsü",
-    "power.moborigins.wolf_pack.description": "En az 4 kurta yakınken hızınız ve hasarınız artar.",
+    "power.moborigins.wolf_pack.description": "En az 4 kurta yakın olduğununda hızın ve hasarın artar.",
   
     "origin.moborigins.drowned.name": "Boğuk",
-    "origin.moborigins.drowned.description": "Derin okyanus sakinleri, Üçlü Mızraklarını kullanır ve okyanusu geçmeye cürret eden ölümlülere saldırırlar.",
+    "origin.moborigins.drowned.description": "Okyanusu geçmeye cürret eden yaşama mızraklarıyla saldıran derin okyanus sakinleri.",
   
     "power.moborigins.drowned_vision.name": "Islak Gözler",
-    "power.moborigins.drowned_vision.description": "Gözleriniz suya adapte, bu yüzden suyun dışındayken herşeyi mavi görürsünüz.",
+    "power.moborigins.drowned_vision.description": "Gözlerin suya göre gelişmiş bu sebeble suyun dışındayken her şey mavimsi gözükür.",
   
-    "power.moborigins.trident_expert.name": "Mızrak ustası",
-    "power.moborigins.trident_expert.description": "Bir üçlü mızrak ustasısınız, üçlü mızrağı attınızda ya da onunla saldırdığınızda +2 hasar verirsiniz. Ayrıca Yıldırım Yönlendirmesini ve Girdabı özel şartlara ihtiyaç kalmadan daha fazla dayanıklılık uğruna kullanabilirsiniz.",
+    "power.moborigins.trident_expert.name": "Mızrak Ustası",
+    "power.moborigins.trident_expert.description": "Mızrağın ustasısın, attığında veya savurduğunda +2 hasar verirsin. Ayrıca mızrağın canını ekstra azaltsada su veya yağmur olmadan Girdap kullanabilirsin.",
   
     "power.moborigins.seas_storm.name": "Denizlerin Fırtınası",
-    "power.moborigins.seas_storm.description": "Üçlü Mızraklarla hava durumu ne olursa olsun yıldırım yönlendirmesi büyüsünü kullanabilirsiniz.",
+    "power.moborigins.seas_storm.description": "Yıldırım Yönlendirmesi büyüsünü hava durumuna bağlı olmadan kullanabilirsin.",
   
     "power.moborigins.zombie_hunger.name": "Zombi Açlığı",
-    "power.moborigins.zombie_hunger.description": "Et için sürekli açlığınız sizin bir insandan daha hızlı acıkmanızı sağlar.",
+    "power.moborigins.zombie_hunger.description": "Et aşerliğin seni bir insana göre daha hızlı yorar.",
   
     "power.moborigins.undead.name": "Ölü",
-    "power.moborigins.undead.description": "Ölüsünüz ve güneş ışığındayken yanarsınız. Ayrıca Darbe büyüsünden daha fazla hasar alırsınız.",
+    "power.moborigins.undead.description": "Sen ölüsün, gün ışığında yanar ve Darbe büyüsünden daha fazla hasar alırsın.",
   
     "power.moborigins.overheat.name": "Aşırı Isınma",
-    "power.moborigins.overheat.description": "Sıcak biyomlarda artan ve diğer biyomlarda azalan bir sıcaklık metreniz var.",
+    "power.moborigins.overheat.description": "Sıcak biyomlarda yavaşça artan ve diğer biyomlarda azalan bir sıcaklık barın var.",
   
-    "power.moborigins.melting.name": "Eriyen",
-    "power.moborigins.melting.description": "Sıcaklık metreniz doldukça sıcak biyomlarda erimeye başlar ve can ve hız kaybedersiniz.",
+    "power.moborigins.melting.name": "Erime",
+    "power.moborigins.melting.description": "Sıcaklık barın doldukça sıcak biyomlarda yavaşca erimeye başlarsın, bu senin hızına ve kalplerine mâl olur.",
   
     "effect.moborigins.hero_of_the_illagers": "Yağmacı Kahramanı",
   
     "power.moborigins.warped_fungus_eater.name": "Mantar Açlığı",
-    "power.moborigins.warped_fungus_eater.description": "Biraz açlık yinelemek için mantar yiyebilirsin, bu küçük bir hız artışıyla gelir.",
+    "power.moborigins.warped_fungus_eater.description": "Biraz doymak için çarpık mantar yiyebilirsin, bu ayrıca seni hızlandırır.",
   
-    "power.moborigins.water_combatant.name": "Su Yiğidi",
-    "power.moborigins.water_combatant.description": "Sudayken daha fazla hasar verirsin."
+    "power.moborigins.water_combatant.name": "Su Savaşçısı",
+    "power.moborigins.water_combatant.description": "Sudayken daha fazla hasar verirsin.",
+  
+    "power.moborigins.dyeable.name": "Boyanabilir",
+      "power.moborigins.dyeable.description": "Boya ile tıklayarak boyunu değiştirebilirsin."
   }
