@@ -30,7 +30,7 @@
     "origin.moborigins.witch.description": "Zalim ve kıkırdayan Cadılar iksircilikte uzman ve büyüde iyilerdir",
   
     "power.moborigins.potion_action.name": "Mükemmel İksir",
-    "power.moborigins.potion_action.description": "İçinde olduğun duruma göre rastgele bir iksir etkisi al.",
+    "power.moborigins.potion_action.description": "İçinde bulunduğun duruma göre rastgele bir iksir etkisi al.",
   
     "power.moborigins.pillager_aligned.name": "Yağmacı Dostu",
     "power.moborigins.pillager_aligned.description": "Köylülerin aksine Yağmacılar seni sever!",
@@ -57,7 +57,7 @@
     "power.moborigins.lower_totem_chance.description": "Totemlerinin kullanımda %10 kırılmama şansı var",
   
     "origin.moborigins.guardian.name": "Gardiyan",
-    "origin.moborigins.guardian.description": "Gardiyanlar anıtlarını ve içindeki süngerlerini korumalarıyla bilinir. Bazılarıda Yaşlı Gardiyan'a evrim geçirmeleriyle.",
+    "origin.moborigins.guardian.description": "Gardiyanlar anıtlarını ve içindeki süngerleri korumalarıyla bilinir. Bazılarıda Yaşlı Gardiyan'a evrim geçirmeleriyle.",
   
     "power.moborigins.guardian_spikes.name": "Gardiyan Dikenler",
     "power.moborigins.guardian_spikes.description": "Saldıranlara hasar verme ihtimali olan dikenler!",
@@ -81,7 +81,7 @@
     "origin.moborigins.elder_guardian.description": "Yaşlı Gardiyanlar Anıtların liderleridir ve normal gardiyanlara göre güçlüdürler",
   
     "power.moborigins.elder_magic.name": "Kıdemli Büyü",
-    "power.moborigins.elder_magic.description": "Bir madenci yorgunluğu efekt bulutu oluştur",
+    "power.moborigins.elder_magic.description": "Bir madenci yorgunluğu efekt bulutu oluşturabilirsin",
   
     "power.moborigins.mining_fatigue_immune.name": "Kıdemli Dayanıklılık",
     "power.moborigins.mining_fatigue_immune.description": "Madenci Yorguluğu sana işlemez",
@@ -95,11 +95,11 @@
     "power.moborigins.bouncy.name": "Zıpzıp",
     "power.moborigins.bouncy.description": "Bütün bloklar balçık bloğu gibi davranır",
   
-    "power.moborigins.split.name": "Bölünme özelliği",
+    "power.moborigins.split.name": "Bölünme",
     "power.moborigins.split.description": "Açlığını seni savunan küçük bir balçığa dönüştür!",
   
     "power.moborigins.small_weak.name": "Küçük Zayıflık",
-    "power.moborigins.small_weak.description": "2 Kalpten az canın var iken neredeyse hiç hasar veremezsin ve rakiplerin seni daha uzağa savurabilir!",
+    "power.moborigins.small_weak.description": "2 Kalpten az canın varken neredeyse hiç hasar veremezsin ve rakiplerin seni daha uzağa savurabilir!",
   
     "origin.moborigins.wolf.name": "Kurt",
     "origin.moborigins.wolf.description": "Güçlü ve Hızlı, Kurtlar sayılarıyla güçlü olan varlıklardır.",
@@ -111,7 +111,7 @@
     "power.moborigins.full_moon.description": "Dolunayda, hızın, gücün, ve canın artar",
   
     "power.moborigins.wolf_body.name": "Kurt Beden",
-    "power.moborigins.wolf_body.description": "İnsanlardan 2 kalp daha az canınız var.",
+    "power.moborigins.wolf_body.description": "İnsanlardan 2 kalp daha az canın var.",
   
     "origin.moborigins.bee.name": "Arı",
     "origin.moborigins.bee.description": "Dünyaya polen şaçarak etrafa çicek ve bal şaçan bir böcek.",
@@ -123,16 +123,16 @@
     "power.moborigins.flower_power.description": "Birden fazla çiçeğe yakınken yenilenme elde edersin.",
   
     "power.moborigins.queen_bee.name": "Kraliçe Arı",
-    "power.moborigins.queen_bee.description": "Arı topladığında arılar sana saldırmaya çalışmaz.",
+    "power.moborigins.queen_bee.description": "Bal topladığında arılar sana saldırmaya çalışmaz.",
   
     "power.moborigins.small_bug.name": "Küçük Böcek",
-    "power.moborigins.small_bug.description": "You have 2 less hearts of health than humans.",
+    "power.moborigins.small_bug.description": "İnsanlardan 2 kalp daha az canın var.",
   
-    "power.moborigins.bee_wings.name": "Bee Wings",
+    "power.moborigins.bee_wings.name": "Arı Kanatları",
     "power.moborigins.bee_wings.description": "Küçük kanatlarını kullanarak bir özellik olarak yavaşça alçalabilirsin",
   
     "origin.moborigins.fox.name": "Tilki",
-    "origin.moborigins.fox.description": "Kurnaz ve ürker tilkiler orman meyvesi yemeyi ve eşya çalmayı severler.",
+    "origin.moborigins.fox.description": "Kurnaz ve ürkek Tilkiler orman meyvesi yemeyi ve hırsızlık yapmayı severler.",
   
     "power.moborigins.timid_creature.name": "Ürkek",
     "power.moborigins.timid_creature.description": "Yakınında 3 oyuncu varsa hızlanırsın.",
@@ -150,31 +150,31 @@
     "power.moborigins.sly.description": "Daha hızlısın.",
   
     "power.moborigins.small_fox.name": "Küçük Tilki",
-    "power.moborigins.small_fox.description": "İnsanlardan 2 kalp daha az canınız var.",
+    "power.moborigins.small_fox.description": "İnsanlardan 2 kalp daha az canın var.",
   
     "power.moborigins.wolf_howl.name": "Ulu",
     "power.moborigins.wolf_howl.description": "Yakındaki kurtlara ve kendine güç vermek için uluyabilirsin.",
   
     "power.moborigins.wolf_pack.name": "Kurt Sürüsü",
-    "power.moborigins.wolf_pack.description": "En az 4 kurta yakın olduğununda hızın ve hasarın artar.",
+    "power.moborigins.wolf_pack.description": "En az 4 kurta yakın olduğunda hızın ve hasarın artar.",
   
     "origin.moborigins.drowned.name": "Boğuk",
-    "origin.moborigins.drowned.description": "Okyanusu geçmeye cürret eden yaşama mızraklarıyla saldıran derin okyanus sakinleri.",
+    "origin.moborigins.drowned.description": "Okyanusu geçmeye cürret edenlere mızraklarıyla saldıran derin okyanus sakinleri.",
   
     "power.moborigins.drowned_vision.name": "Islak Gözler",
-    "power.moborigins.drowned_vision.description": "Gözlerin suya göre gelişmiş bu sebeble suyun dışındayken her şey mavimsi gözükür.",
+    "power.moborigins.drowned_vision.description": "Gözlerin suya göre gelişmiş, bu sebeble suyun dışındayken her şey mavimsi gözükür.",
   
     "power.moborigins.trident_expert.name": "Mızrak Ustası",
-    "power.moborigins.trident_expert.description": "Mızrağın ustasısın, attığında veya savurduğunda +2 hasar verirsin. Ayrıca mızrağın canını ekstra azaltsada su veya yağmur olmadan Girdap kullanabilirsin.",
+    "power.moborigins.trident_expert.description": "Mızrağın ustasısın, attığında veya savurduğunda +2 hasar verirsin. Ayrıca mızrağın dayanıklılığnı azaltsada su veya yağmur olmadan Girdap kullanabilirsin.",
   
     "power.moborigins.seas_storm.name": "Denizlerin Fırtınası",
     "power.moborigins.seas_storm.description": "Yıldırım Yönlendirmesi büyüsünü hava durumuna bağlı olmadan kullanabilirsin.",
   
     "power.moborigins.zombie_hunger.name": "Zombi Açlığı",
-    "power.moborigins.zombie_hunger.description": "Et aşerliğin seni bir insana göre daha hızlı yorar.",
+    "power.moborigins.zombie_hunger.description": "Et aşerliğin bir insana göre daha hızlı yorulmana sebep olur.",
   
     "power.moborigins.undead.name": "Ölü",
-    "power.moborigins.undead.description": "Sen ölüsün, gün ışığında yanar ve Darbe büyüsünden daha fazla hasar alırsın.",
+    "power.moborigins.undead.description": "Ölüsün, gün ışığında yanar ve Darbe büyüsünden daha fazla hasar alırsın.",
   
     "power.moborigins.overheat.name": "Aşırı Isınma",
     "power.moborigins.overheat.description": "Sıcak biyomlarda yavaşça artan ve diğer biyomlarda azalan bir sıcaklık barın var.",
@@ -185,11 +185,11 @@
     "effect.moborigins.hero_of_the_illagers": "Yağmacı Kahramanı",
   
     "power.moborigins.warped_fungus_eater.name": "Mantar Açlığı",
-    "power.moborigins.warped_fungus_eater.description": "Biraz doymak için çarpık mantar yiyebilirsin, bu ayrıca seni hızlandırır.",
+    "power.moborigins.warped_fungus_eater.description": "Çarpık mantar atıştırabilirsin, ayrıca bu seni hızlandırır.",
   
     "power.moborigins.water_combatant.name": "Su Savaşçısı",
     "power.moborigins.water_combatant.description": "Sudayken daha fazla hasar verirsin.",
   
     "power.moborigins.dyeable.name": "Boyanabilir",
-      "power.moborigins.dyeable.description": "Boya ile tıklayarak boyunu değiştirebilirsin."
+      "power.moborigins.dyeable.description": "Boya ile tıklayarak tonunu değiştirebilirsin."
   }
