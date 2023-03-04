@@ -4,7 +4,7 @@
     "enchantment.moborigins.heat_protection.desc": "Bazı originlerin aşırı ısınmasını engeller",
     "enchantment.moborigins.ground_spikes.desc": "Bazı originlerin karada kaymasını engeller",
   
-    "death.attack.split": "%1$s kendisini hiçbir şeye böldü.",
+    "death.attack.split": "%1$s kendini hiçbir şeye böldü.",
     "death.attack.split.player": "%1$s, %2$sden kaçmaya çalışırken bölündü.",
     "text.moborigins.become_elder": "Büyüyüp Yaşlı Gardiyan oldun!",
     "text.moborigins.mystery_meat": "Gizemli Et",
