@@ -188,5 +188,8 @@
     "power.moborigins.warped_fungus_eater.description": "Biraz açlık yinelemek için mantar yiyebilirsin, bu küçük bir hız artışıyla gelir.",
   
     "power.moborigins.water_combatant.name": "Su Yiğidi",
-    "power.moborigins.water_combatant.description": "Sudayken daha fazla hasar verirsin."
+    "power.moborigins.water_combatant.description": "Sudayken daha fazla hasar verirsin.",
+    
+    "power.moborigins.dyeable.name": "Boyanabilir",
+    "power.moborigins.dyeable.description": "Boya ile tıklayarak tonunu değiştirebilirsin."
   }
