@@ -5,7 +5,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.network.packet.s2c.play.EntityPassengersSetS2CPacket;
+import net.minecraft.network.packet.s2c.play.EntityPassengersUpdateS2CPacket;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -33,7 +33,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 this.startRiding(entity);
                 cir.setReturnValue(ActionResult.success(this.world.isClient));
                 if (!entity.world.isClient && entity instanceof ServerPlayerEntity) {
-                    ((ServerPlayerEntity)entity).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(entity));
+                    ((ServerPlayerEntity)entity).networkHandler.sendPacket(new EntityPassengersUpdateS2CPacket(entity));
                 }
             } else {
                 cir.setReturnValue(ActionResult.FAIL);

@@ -56,15 +56,13 @@ public class SummonFangsAction {
         }
     }
     private static void conjureFangs(Entity entity, double x, double z, double maxY, double y, float yaw, int warmup) {
-        BlockPos blockPos = new BlockPos(x, y, z);
+        BlockPos blockPos = BlockPos.create(x, y, z);
         boolean bl = false;
         double d = 0.0D;
 
         while (blockPos.getY() >= MathHelper.floor(maxY) - 1) {
             BlockPos blockPos2 = blockPos.down();
             BlockState blockState = entity.world.getBlockState(blockPos2);
-            blockPos2 = blockPos.down();
-            blockState = entity.world.getBlockState(blockPos2);
             if (blockState.isSideSolidFullSquare(entity.world, blockPos2, Direction.UP)) {
                 if (!entity.world.isAir(blockPos)) {
                     BlockState blockState2 = entity.world.getBlockState(blockPos);

@@ -254,7 +254,8 @@ public class OriginSlimeEntity extends MobEntity {
         this.updatePosition(d, e, f);
     }
 
-    public void onTrackedDataSet(TrackedData<?> data) {
+    @Override
+    public void onTrackedDataUpdate(TrackedData<?> data) {
         if (SLIME_SIZE.equals(data)) {
             this.calculateDimensions();
             this.setYaw(this.headYaw);
@@ -264,7 +265,7 @@ public class OriginSlimeEntity extends MobEntity {
             }
         }
 
-        super.onTrackedDataSet(data);
+        super.onTrackedDataUpdate(data);
     }
 
     public void remove(RemovalReason reason) {
@@ -324,7 +325,7 @@ public class OriginSlimeEntity extends MobEntity {
     protected void damage(LivingEntity target) {
         if (this.isAlive()) {
             int i = this.getSize();
-            if (this.squaredDistanceTo(target) < 0.6D * (double)i * 0.6D * (double)i && this.canSee(target) && target.damage(DamageSource.mob(this), this.getDamageAmount())) {
+            if (this.squaredDistanceTo(target) < 0.6D * (double)i * 0.6D * (double)i && this.canSee(target) && target.damage(this.getDamageSources().mobAttack(this), this.getDamageAmount())) {
                 this.playSound(SoundEvents.ENTITY_SLIME_ATTACK, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
                 this.applyDamageEffects(this, target);
             }

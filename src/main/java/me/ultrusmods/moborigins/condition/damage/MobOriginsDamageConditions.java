@@ -5,6 +5,8 @@ import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
 import me.ultrusmods.moborigins.MobOriginsMod;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageTypes;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.util.Pair;
 import net.minecraft.registry.Registry;
 
@@ -23,7 +25,7 @@ public class MobOriginsDamageConditions {
             POWER_DESC: Checks if the damage source is magic.
          */
         register(new ConditionFactory<>(MobOriginsMod.id("is_magic"), new SerializableData(),
-                (data, pair) -> pair.getLeft().isMagic()));
+                (data, pair) -> pair.getLeft().isType(DamageTypes.MAGIC)));
 
     }
 

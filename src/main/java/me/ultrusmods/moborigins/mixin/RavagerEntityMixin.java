@@ -25,7 +25,6 @@ import java.util.List;
 public abstract class RavagerEntityMixin extends HostileEntity {
 
 
-    @Shadow @Nullable public abstract Entity getPrimaryPassenger();
 
     protected RavagerEntityMixin(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
@@ -65,14 +64,13 @@ public abstract class RavagerEntityMixin extends HostileEntity {
                 this.headYaw = this.bodyYaw;
                 float f = livingEntity.sidewaysSpeed * 0.5F;
                 float g = livingEntity.forwardSpeed;
-                this.flyingSpeed = this.getMovementSpeed() * 0.1F;
                 if (this.isLogicalSideForUpdatingMovement()) {
                     this.setMovementSpeed((float)this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED) / 2.0F);
                     super.travel(new Vec3d(f, movementInput.y, g));
                 } else if (livingEntity instanceof PlayerEntity) {
                     this.setVelocity(Vec3d.ZERO);
                 }
-                this.updateLimbs(this, false);
+                this.updateLimbs(false);
             }
         }
         super.travel(movementInput);

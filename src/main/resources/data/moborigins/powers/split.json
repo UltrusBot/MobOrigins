@@ -9,10 +9,7 @@
       {
         "type": "apoli:damage",
         "amount": 8,
-        "source": {
-          "name": "split",
-          "bypasses_armor": true
-        }
+        "damage_type": "moborigins:split"
       }
     ]
   },

@@ -1,10 +1,10 @@
 [versions]
-minecraft = "1.19.3"
-quilt_mappings = "1.19.3+build.26"
-fabric_loader = "0.14.13"
-fabric_api = "0.75.1+1.19.3"
-modmenu = "5.0.2"
-origins = "v1.8.1"
+minecraft = "1.19.4"
+quilt_mappings = "1.19.4+build.10"
+fabric_loader = "0.14.21"
+fabric_api = "0.83.0+1.19.4"
+modmenu = "6.2.3"
+origins = "v1.9.0"
 mixinextras = "0.0.11"
 
 [libraries]

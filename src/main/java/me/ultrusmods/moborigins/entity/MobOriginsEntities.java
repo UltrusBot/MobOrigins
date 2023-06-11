@@ -22,6 +22,6 @@ public class MobOriginsEntities {
                     .build()
     );
     public static void init() {
-        FabricDefaultAttributeRegistry.register(MobOriginsEntities.ORIGIN_SLIME, HostileEntity.createHostileAttributes());
+        FabricDefaultAttributeRegistry.register(MobOriginsEntities.ORIGIN_SLIME, HostileEntity.createAttributes());
     }
 }

@@ -1,2 +1,3 @@
-# Mob Origins v1.10.1
-- Direct port of v1.10.0 from 1.19.2 to 1.19.3
+- Updated to Minecraft 1.19.4
+- Fixed guardian origin spikes not proccing.
+- #45: Updated ru translation (Thank you @Koteyko)
