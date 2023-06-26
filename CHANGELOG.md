@@ -1,3 +1,1 @@
-- Updated to Minecraft 1.19.4
-- Fixed guardian origin spikes not proccing.
-- #45: Updated ru translation (Thank you @Koteyko)
+- Updated to 1.20.1
