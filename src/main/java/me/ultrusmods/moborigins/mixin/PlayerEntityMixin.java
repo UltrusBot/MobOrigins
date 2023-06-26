@@ -31,8 +31,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (entity instanceof PlayerEntity && MobOriginsPowers.RIDEABLE_CREATURE.isActive(entity)) {
             if (!this.hasPassengers() && !((PlayerEntity)(Object)this).shouldCancelInteraction()) {
                 this.startRiding(entity);
-                cir.setReturnValue(ActionResult.success(this.world.isClient));
-                if (!entity.world.isClient && entity instanceof ServerPlayerEntity) {
+                cir.setReturnValue(ActionResult.success(this.getWorld().isClient));
+                if (!entity.getWorld().isClient && entity instanceof ServerPlayerEntity) {
                     ((ServerPlayerEntity)entity).networkHandler.sendPacket(new EntityPassengersUpdateS2CPacket(entity));
                 }
             } else {

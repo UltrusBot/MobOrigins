@@ -38,8 +38,8 @@ public class GrowBlockAction {
         BlockPos blockPos = block.getMiddle();
         BlockState blockState = block.getLeft().getBlockState(blockPos);
         if (blockState.getBlock() instanceof Fertilizable fertilizable) {
-            if (fertilizable.isFertilizable(world, blockPos, blockState, world.isClient) && world instanceof ServerWorld && fertilizable.canGrow(world, world.random, blockPos, blockState)) {
-                fertilizable.grow((ServerWorld) world, world.random, blockPos, blockState);
+            if (fertilizable.isFertilizable(world, blockPos, blockState, world.isClient) && world instanceof ServerWorld && fertilizable.canFertilize(world, world.random, blockPos, blockState)) {
+                fertilizable.fertilize((ServerWorld) world, world.random, blockPos, blockState);
             }
         }
     }

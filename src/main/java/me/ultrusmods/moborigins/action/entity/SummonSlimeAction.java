@@ -30,7 +30,7 @@ public class SummonSlimeAction {
     }
 
     private static void summonSlime(SerializableData.Instance data, Entity entity) {
-        OriginSlimeEntity originSlimeEntity = new OriginSlimeEntity(entity.world, entity.getX(), entity.getY(), entity.getZ());
+        OriginSlimeEntity originSlimeEntity = new OriginSlimeEntity(entity.getWorld(), entity.getX(), entity.getY(), entity.getZ());
         if (entity instanceof PlayerEntity playerEntity) {
             originSlimeEntity.setOwner(playerEntity);
         }
@@ -40,6 +40,6 @@ public class SummonSlimeAction {
             DyeableModelColorPower power = PowerHolderComponent.KEY.get(entity).getPowers(DyeableModelColorPower.class).get(0);
             originSlimeEntity.setColor(power.getRed(), power.getGreen(), power.getBlue());
         }
-        entity.world.spawnEntity(originSlimeEntity);
+        entity.getWorld().spawnEntity(originSlimeEntity);
     }
 }

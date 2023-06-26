@@ -29,7 +29,7 @@ public class BiomeModelColorPower extends ModelColorPower {
 
     @Override
     public float getRed() {
-           if (entity.world.isClient()) {
+           if (entity.getWorld().isClient()) {
                return (float)(MinecraftClient.getInstance().world.getColor(entity.getBlockPos(), BiomeColors.GRASS_COLOR) >> 16 & 0xFF)/255F;
            } else {
                 return super.getRed();
@@ -38,7 +38,7 @@ public class BiomeModelColorPower extends ModelColorPower {
 
     @Override
     public float getGreen() {
-        if (entity.world.isClient()) {
+        if (entity.getWorld().isClient()) {
             return (float)(MinecraftClient.getInstance().world.getColor(entity.getBlockPos(), BiomeColors.GRASS_COLOR) >> 8 & 0xFF)/255F;
         } else {
             return super.getGreen();
@@ -47,7 +47,7 @@ public class BiomeModelColorPower extends ModelColorPower {
 
     @Override
     public float getBlue() {
-        if (entity.world.isClient()) {
+        if (entity.getWorld().isClient()) {
             return (float)((MinecraftClient.getInstance().world.getColor(entity.getBlockPos(), BiomeColors.GRASS_COLOR)) & 0xFF)/255F;
         } else {
             return super.getBlue();

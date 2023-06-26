@@ -174,7 +174,7 @@ public class OriginSlimeEntity extends MobEntity {
     public LivingEntity getOwner() {
         try {
             UUID uUID = this.getOwnerUuid();
-            return uUID == null ? null : this.world.getPlayerByUuid(uUID);
+            return uUID == null ? null : this.getWorld().getPlayerByUuid(uUID);
         } catch (IllegalArgumentException var2) {
             return null;
         }
@@ -189,12 +189,12 @@ public class OriginSlimeEntity extends MobEntity {
 
     @Nullable
     public UUID getOwnerUuid() {
-        return (UUID)((Optional)this.dataTracker.get(OWNER_UUID)).orElse(null);
+        return (UUID)((Optional)this.getDataTracker().get(OWNER_UUID)).orElse(null);
     }
 
     @Override
     public void onDeath(DamageSource source) {
-        if (!this.world.isClient && this.world.getGameRules().getBoolean(GameRules.SHOW_DEATH_MESSAGES) && this.getOwner() instanceof ServerPlayerEntity) {
+        if (!this.getWorld().isClient && this.getWorld().getGameRules().getBoolean(GameRules.SHOW_DEATH_MESSAGES) && this.getOwner() instanceof ServerPlayerEntity) {
             this.getOwner().sendSystemMessage(this.getDamageTracker().getDeathMessage());
         }
 
@@ -217,7 +217,7 @@ public class OriginSlimeEntity extends MobEntity {
         this.stretch += (this.targetStretch - this.stretch) * 0.5F;
         this.lastStretch = this.stretch;
         super.tick();
-        if (this.onGround && !this.onGroundLastTick) {
+        if (this.isOnGround() && !this.onGroundLastTick) {
             int i = this.getSize();
 
             for(int j = 0; j < i * 8; ++j) {
@@ -225,16 +225,16 @@ public class OriginSlimeEntity extends MobEntity {
                 float g = this.random.nextFloat() * 0.5F + 0.5F;
                 float h = MathHelper.sin(f) * (float)i * 0.5F * g;
                 float k = MathHelper.cos(f) * (float)i * 0.5F * g;
-                this.world.addParticle(this.getParticles(), this.getX() + (double)h, this.getY(), this.getZ() + (double)k, 0.0D, 0.0D, 0.0D);
+                this.getWorld().addParticle(this.getParticles(), this.getX() + (double)h, this.getY(), this.getZ() + (double)k, 0.0D, 0.0D, 0.0D);
             }
 
             this.playSound(this.getSquishSound(), this.getSoundVolume(), ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) / 0.8F);
             this.targetStretch = -0.5F;
-        } else if (!this.onGround && this.onGroundLastTick) {
+        } else if (!this.isOnGround() && this.onGroundLastTick) {
             this.targetStretch = 1.0F;
         }
 
-        this.onGroundLastTick = this.onGround;
+        this.onGroundLastTick = this.isOnGround();
         this.updateStretch();
     }
 
@@ -270,7 +270,7 @@ public class OriginSlimeEntity extends MobEntity {
 
     public void remove(RemovalReason reason) {
         int i = this.getSize();
-        if (!this.world.isClient && i > 1 && this.isDead()) {
+        if (!this.getWorld().isClient && i > 1 && this.isDead()) {
             Text text = this.getCustomName();
             boolean bl = this.isAiDisabled();
             float f = (float)i / 4.0F;
@@ -280,7 +280,7 @@ public class OriginSlimeEntity extends MobEntity {
             for(int l = 0; l < k; ++l) {
                 float g = ((float)(l % 2) - 0.5F) * f;
                 float h = ((float)(l / 2) - 0.5F) * f;
-                OriginSlimeEntity slimeEntity = MobOriginsEntities.ORIGIN_SLIME.create(this.world);
+                OriginSlimeEntity slimeEntity = MobOriginsEntities.ORIGIN_SLIME.create(this.getWorld());
                 if (this.isPersistent()) {
                     slimeEntity.setPersistent();
                 }
@@ -292,7 +292,7 @@ public class OriginSlimeEntity extends MobEntity {
                 slimeEntity.setSize(j, true);
                 slimeEntity.setColor(getRed(), getGreen(), getBlue());
                 slimeEntity.refreshPositionAndAngles(this.getX() + (double)g, this.getY() + 0.5D, this.getZ() + (double)h, this.random.nextFloat() * 360.0F, 0.0F);
-                this.world.spawnEntity(slimeEntity);
+                this.getWorld().spawnEntity(slimeEntity);
             }
         }
 
@@ -455,7 +455,7 @@ public class OriginSlimeEntity extends MobEntity {
         }
 
         public boolean canStart() {
-            return this.slime.getTarget() == null && (this.slime.onGround || this.slime.isTouchingWater() || this.slime.isInLava() || this.slime.hasStatusEffect(StatusEffects.LEVITATION)) && this.slime.getMoveControl() instanceof SlimeMoveControl;
+            return this.slime.getTarget() == null && (this.slime.isOnGround() || this.slime.isTouchingWater() || this.slime.isInLava() || this.slime.hasStatusEffect(StatusEffects.LEVITATION)) && this.slime.getMoveControl() instanceof SlimeMoveControl;
         }
 
         public void tick() {

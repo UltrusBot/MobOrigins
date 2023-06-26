@@ -32,7 +32,7 @@ public abstract class BossBarPower extends Power {
 
     @Override
     public void tick() {
-        if (!entity.world.isClient()) {
+        if (!entity.getWorld().isClient()) {
             if (bossBar.getPercent() != getPercent()) {
                 bossBar.setPercent(getPercent());
             }

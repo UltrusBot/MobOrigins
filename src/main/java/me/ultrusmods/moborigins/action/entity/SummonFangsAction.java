@@ -62,11 +62,11 @@ public class SummonFangsAction {
 
         while (blockPos.getY() >= MathHelper.floor(maxY) - 1) {
             BlockPos blockPos2 = blockPos.down();
-            BlockState blockState = entity.world.getBlockState(blockPos2);
-            if (blockState.isSideSolidFullSquare(entity.world, blockPos2, Direction.UP)) {
-                if (!entity.world.isAir(blockPos)) {
-                    BlockState blockState2 = entity.world.getBlockState(blockPos);
-                    VoxelShape voxelShape = blockState2.getCollisionShape(entity.world, blockPos);
+            BlockState blockState = entity.getWorld().getBlockState(blockPos2);
+            if (blockState.isSideSolidFullSquare(entity.getWorld(), blockPos2, Direction.UP)) {
+                if (!entity.getWorld().isAir(blockPos)) {
+                    BlockState blockState2 = entity.getWorld().getBlockState(blockPos);
+                    VoxelShape voxelShape = blockState2.getCollisionShape(entity.getWorld(), blockPos);
                     if (!voxelShape.isEmpty()) {
                         d = voxelShape.getMax(Direction.Axis.Y);
                     }
@@ -80,7 +80,7 @@ public class SummonFangsAction {
         }
 
         if (bl) {
-            entity.world.spawnEntity(new EvokerFangsEntity(entity.world, x, (double)blockPos.getY() + d, z, yaw, warmup, (LivingEntity) entity));
+            entity.getWorld().spawnEntity(new EvokerFangsEntity(entity.getWorld(), x, (double)blockPos.getY() + d, z, yaw, warmup, (LivingEntity) entity));
         }
 
     }

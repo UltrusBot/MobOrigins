@@ -13,9 +13,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
@@ -23,8 +21,6 @@ import java.util.List;
 
 @Mixin(RavagerEntity.class)
 public abstract class RavagerEntityMixin extends HostileEntity {
-
-
 
     protected RavagerEntityMixin(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
@@ -40,11 +36,11 @@ public abstract class RavagerEntityMixin extends HostileEntity {
     @Override
     protected ActionResult interactMob(PlayerEntity player, Hand hand) {
         if (!this.hasPassengers() && !player.shouldCancelInteraction() && MobOriginsPowers.PILLAGER_ALIGNED.isActive(player)) {
-            if (!this.world.isClient) {
+            if (!this.getWorld().isClient) {
                 player.startRiding(this);
             }
 
-            return ActionResult.success(this.world.isClient);
+            return ActionResult.success(this.getWorld().isClient);
         } else {
             return ActionResult.PASS;
         }

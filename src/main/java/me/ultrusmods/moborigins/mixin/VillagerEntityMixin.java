@@ -13,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -42,12 +43,19 @@ public abstract class VillagerEntityMixin extends Entity {
 
     @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;releaseAllTickets()V"), cancellable = true)
     public void onDeath(DamageSource source, CallbackInfo ci) {
-        if (source.getAttacker() instanceof PlayerEntity && MobOriginsPowers.PILLAGER_ALIGNED.isActive(source.getAttacker())) {
-            PlayerEntity player = (PlayerEntity) source.getAttacker();
+        if (source.getAttacker() instanceof PlayerEntity player && MobOriginsPowers.PILLAGER_ALIGNED.isActive(source.getAttacker())) {
             String villagerProfession = this.getVillagerData().getProfession().toString();
             VillagerEntity villager = (VillagerEntity)(Object)this;
-            LootTable lootTable = this.getServer().getLootManager().getTable(new Identifier("moborigins", "illager/" + villagerProfession ));
-            List<ItemStack> loot = lootTable.generateLoot(new LootContext.Builder((ServerWorld) this.world).parameter(LootContextParameters.LAST_DAMAGE_PLAYER, player).parameter(LootContextParameters.THIS_ENTITY, villager).parameter(LootContextParameters.ORIGIN, this.getPos()).parameter(LootContextParameters.DAMAGE_SOURCE, source).build(LootContextTypes.ENTITY));
+            LootTable lootTable = this.getServer().getLootManager().getLootTable(new Identifier("moborigins", "illager/" + villagerProfession ));
+//            List<ItemStack> loot = lootTable.generateLoot(new LootContext.Builder((ServerWorld) this.world).parameter(LootContextParameters.LAST_DAMAGE_PLAYER, player).parameter(LootContextParameters.THIS_ENTITY, villager).parameter(LootContextParameters.ORIGIN, this.getPos()).parameter(LootContextParameters.DAMAGE_SOURCE, source).build(LootContextTypes.ENTITY));
+            List<ItemStack> loot = lootTable.generateLoot(
+                    new LootContextParameterSet.Builder((ServerWorld) this.getWorld())
+                            .add(LootContextParameters.THIS_ENTITY, villager)
+                            .add(LootContextParameters.LAST_DAMAGE_PLAYER, player)
+                            .add(LootContextParameters.ORIGIN, villager.getPos())
+                            .add(LootContextParameters.DAMAGE_SOURCE, source)
+                            .build(LootContextTypes.ENTITY)
+                    );
             for (ItemStack stack : loot) {
                 this.dropStack(stack);
             }

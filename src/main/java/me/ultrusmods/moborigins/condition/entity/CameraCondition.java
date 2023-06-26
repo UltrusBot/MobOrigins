@@ -23,7 +23,7 @@ public class CameraCondition {
     public static ConditionFactory<Entity> createFactory() {
         return new ConditionFactory<>(MobOriginsMod.id("is_first_person"), new SerializableData(),
                 (data, entity) -> {
-                    if (entity.world.isClient) {
+                    if (entity.getWorld().isClient) {
                         return MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
                     } else {
                         return false;

@@ -20,6 +20,6 @@ import net.minecraft.entity.Entity;
 public class IsFullMoonCondition {
     public static ConditionFactory<Entity> createFactory() {
         return new ConditionFactory<>(MobOriginsMod.id("is_full_moon"), new SerializableData(),
-                (data, entity) -> entity.world.getMoonSize() == 1.0F);
+                (data, entity) -> entity.getWorld().getMoonSize() == 1.0F);
     }
 }

@@ -37,7 +37,7 @@ public class SleepEvents {
                 List<CustomSleepPower> powers = PowerHolderComponent.getPowers(playerEntity, CustomSleepPower.class);
                 if (powers.size() > 0) {
                     for (CustomSleepPower customSleepPower : powers) {
-                        if (customSleepPower.doesApply(playerEntity.world, sleepingPos)) {
+                        if (customSleepPower.doesApply(playerEntity.getWorld(), sleepingPos)) {
                             return Direction.NORTH;
                         }
                     }
@@ -50,7 +50,7 @@ public class SleepEvents {
                 List<CustomSleepPower> powers = PowerHolderComponent.getPowers(playerEntity, CustomSleepPower.class);
                 if (powers.size() > 0) {
                     for (CustomSleepPower customSleepPower : powers) {
-                        if (customSleepPower.doesApply(playerEntity.world, sleepingPos)) {
+                        if (customSleepPower.doesApply(playerEntity.getWorld(), sleepingPos)) {
                             return ActionResult.SUCCESS;
                         }
                     }
@@ -64,11 +64,11 @@ public class SleepEvents {
             if (sleepPos.isPresent()) {
                 List<CustomSleepPower> powers = PowerHolderComponent.getPowers(player, CustomSleepPower.class);
                 if (powers.size() > 0) {
-                    if (player.world.isDay()) {
+                    if (player.getWorld().isDay()) {
                         return false;
                     }
                     for (CustomSleepPower customSleepPower : powers) {
-                        if (customSleepPower.doesApply(player.world, sleepPos.get())) {
+                        if (customSleepPower.doesApply(player.getWorld(), sleepPos.get())) {
                             return true;
                         }
                     }
@@ -94,8 +94,8 @@ public class SleepEvents {
             List<CustomSleepPower> powers = PowerHolderComponent.getPowers(entity, CustomSleepPower.class);
             if (powers.size() > 0) {
                 for (CustomSleepPower customSleepPower : powers) {
-                    if (customSleepPower.doesApply(entity.world, sleepingPos)) {
-                        return Dismounting.findRespawnPos(entity.getType(), entity.world, sleepingPos, true);
+                    if (customSleepPower.doesApply(entity.getWorld(), sleepingPos)) {
+                        return Dismounting.findRespawnPos(entity.getType(), entity.getWorld(), sleepingPos, true);
                     }
                 }
             }

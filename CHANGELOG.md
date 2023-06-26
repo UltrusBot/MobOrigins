@@ -1,1 +1,2 @@
 - Updated to 1.20.1
+- Fix #47 - Crash when camera entity is not a LivingEntity

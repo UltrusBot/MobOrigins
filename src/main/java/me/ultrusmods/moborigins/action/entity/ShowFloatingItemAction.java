@@ -34,7 +34,7 @@ public class ShowFloatingItemAction {
         return new ActionFactory<>(MobOriginsMod.id("show_floating_item"), new SerializableData()
                 .add("item_stack", SerializableDataTypes.ITEM_STACK),
                 ((instance, entity) -> {
-                    if (entity.world.isClient() && entity instanceof PlayerEntity playerEntity && playerEntity.getUuid() == MinecraftClient.getInstance().player.getUuid()) {
+                    if (entity.getWorld().isClient() && entity instanceof PlayerEntity playerEntity && playerEntity.getUuid() == MinecraftClient.getInstance().player.getUuid()) {
                         MinecraftClient.getInstance().gameRenderer.showFloatingItem(instance.get("item_stack"));
                     } else if (entity instanceof ServerPlayerEntity playerEntity) {
                         ServerPlayNetworking.send(playerEntity, MobOriginsMod.id("floating_item"), PacketByteBufs.create().writeItemStack(instance.get("item_stack")));

@@ -58,6 +58,7 @@ repositories {
     maven(url = "https://maven.shedaniel.me/")
     maven(url = "https://maven.terraformersmc.com/")
     maven(url = "https://ladysnake.jfrog.io/artifactory/mods")
+    mavenLocal()
 }
 
 java {

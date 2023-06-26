@@ -33,7 +33,7 @@ public class InRaidAreaCondition {
     public static ConditionFactory<Entity> createFactory() {
         return new ConditionFactory<>(MobOriginsMod.id("in_raid_area"), new SerializableData(),
                 (data, entity) -> {
-                    if (!entity.getWorld().isClient() && entity.world instanceof ServerWorld) {
+                    if (!entity.getWorld().isClient() && entity.getWorld() instanceof ServerWorld) {
                         return ((ServerWorld)(entity.getWorld())).getRaidAt(entity.getBlockPos()) != null;
                     } else {
                         return false;

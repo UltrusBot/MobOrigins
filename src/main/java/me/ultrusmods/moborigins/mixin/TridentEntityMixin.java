@@ -28,20 +28,20 @@ public abstract class TridentEntityMixin extends PersistentProjectileEntity {
     @Inject(method = "onEntityHit", at = @At("TAIL"))
     public void onEntityHit$MobOrigins(EntityHitResult entityHitResult, CallbackInfo ci) {
         Entity tridentThrower = this.getOwner();
-        if (this.world.isThundering()) { return; } // Regular channeling behavior if thundering
+        if (this.getWorld().isThundering()) { return; } // Regular channeling behavior if thundering
 
         PowerHolderComponent.getPowers(tridentThrower, ChannelingOverridePower.class).forEach(channelingOverridePower -> {
             if (channelingOverridePower.isActive()) {
                 channelingOverridePower.executeAction(tridentThrower);
-                if (this.world instanceof ServerWorld) {
+                if (this.getWorld() instanceof ServerWorld) {
                     Entity entity = entityHitResult.getEntity();
                     channelingOverridePower.executeHitAction(entity);
                     BlockPos blockPos = entity.getBlockPos();
-                    if (this.world.isSkyVisible(blockPos)) {
-                        LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(this.world);
+                    if (this.getWorld().isSkyVisible(blockPos)) {
+                        LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(this.getWorld());
                         lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(blockPos));
                         lightningEntity.setChanneler(tridentThrower instanceof ServerPlayerEntity ? (ServerPlayerEntity)tridentThrower : null);
-                        this.world.spawnEntity(lightningEntity);
+                        this.getWorld().spawnEntity(lightningEntity);
                     }
                 }
             }
