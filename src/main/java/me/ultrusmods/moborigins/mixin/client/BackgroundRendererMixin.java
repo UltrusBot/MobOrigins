@@ -20,8 +20,6 @@ import java.util.List;
 public class BackgroundRendererMixin {
 
 
-
-
 //    @ModifyArgs(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;clearColor(FFFF)V", ordinal = 1))
 //    private static void ChangeColors$UPL(Args args, Camera camera, float tickDelta, ClientWorld world, int i2, float f) {
 //        LivingEntity livingEntity = (LivingEntity) (camera.getFocusedEntity());
@@ -51,26 +49,29 @@ public class BackgroundRendererMixin {
 //    }
     @Inject(method = "applyFog", at = @At("TAIL"))
     private static void changeFogDistance$UPL(Camera camera, BackgroundRenderer.FogType fogType, float viewDistance, boolean thickFog, float tickDelta, CallbackInfo ci) {
-        LivingEntity livingEntity = (LivingEntity) (camera.getFocusedEntity());
-        List<FogPower> fogPowers = PowerHolderComponent.getPowers(livingEntity, FogPower.class);
-        if (!fogPowers.isEmpty()) {
-            int start = fogPowers.stream().map(FogPower::getStart).reduce(Integer::sum).get();
-            int end = fogPowers.stream().map(FogPower::getEnd).reduce(Integer::sum).get();
-            RenderSystem.setShaderFogStart(start);
-            RenderSystem.setShaderFogEnd(end);
-
+        if (camera.getFocusedEntity() instanceof LivingEntity livingEntity) {
+            List<FogPower> fogPowers = PowerHolderComponent.getPowers(livingEntity, FogPower.class);
+            if (!fogPowers.isEmpty()) {
+                int start = fogPowers.stream().map(FogPower::getStart).reduce(Integer::sum).get();
+                int end = fogPowers.stream().map(FogPower::getEnd).reduce(Integer::sum).get();
+                RenderSystem.setShaderFogStart(start);
+                RenderSystem.setShaderFogEnd(end);
+            }
         }
     }
 
     @ModifyVariable(method = "render", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/client/world/ClientWorld;getSkyColor(Lnet/minecraft/util/math/Vec3d;F)Lnet/minecraft/util/math/Vec3d;"))
     private static Vec3d changeSkyColor$UPL(Vec3d vec3d) {
-        LivingEntity livingEntity = (LivingEntity) (MinecraftClient.getInstance().getCameraEntity());
-        List<FogPower> fogPowers = PowerHolderComponent.getPowers(livingEntity, FogPower.class);
-        if (!fogPowers.isEmpty()) {
-            float red = fogPowers.stream().map(FogPower::getRed).reduce((a, b) -> a * b).get();
-            float green = fogPowers.stream().map(FogPower::getGreen).reduce((a, b) -> a * b).get();
-            float blue = fogPowers.stream().map(FogPower::getBlue).reduce((a, b) -> a * b).get();
-            return new Vec3d(red, green, blue);
+        if (MinecraftClient.getInstance().getCameraEntity() instanceof LivingEntity livingEntity) {
+            List<FogPower> fogPowers = PowerHolderComponent.getPowers(livingEntity, FogPower.class);
+            if (!fogPowers.isEmpty()) {
+                float red = fogPowers.stream().map(FogPower::getRed).reduce((a, b) -> a * b).get();
+                float green = fogPowers.stream().map(FogPower::getGreen).reduce((a, b) -> a * b).get();
+                float blue = fogPowers.stream().map(FogPower::getBlue).reduce((a, b) -> a * b).get();
+                return new Vec3d(red, green, blue);
+            }
+            return vec3d;
+
         }
         return vec3d;
     }
