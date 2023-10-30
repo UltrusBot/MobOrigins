@@ -194,7 +194,7 @@ public class OriginSlimeEntity extends MobEntity {
 
     @Override
     public void onDeath(DamageSource source) {
-        if (!this.getWorld().isClient && this.getWorld().getGameRules().getBoolean(GameRules.SHOW_DEATH_MESSAGES) && this.getOwner() instanceof ServerPlayerEntity) {
+        if (!this.getWorld().isClient && this.getWorld().getGameRules().getBooleanValue(GameRules.SHOW_DEATH_MESSAGES) && this.getOwner() instanceof ServerPlayerEntity) {
             this.getOwner().sendSystemMessage(this.getDamageTracker().getDeathMessage());
         }
 

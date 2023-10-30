@@ -4,7 +4,7 @@ import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import me.ultrusmods.moborigins.MobOriginsMod;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LeveledCauldronBlock;
+import net.minecraft.block.cauldron.LeveledCauldronBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;

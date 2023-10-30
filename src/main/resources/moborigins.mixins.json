@@ -9,7 +9,6 @@
     "BeehiveBlockEntityMixin",
     "BeehiveBlockMixin",
     "BlockMixin",
-    "EnchantmentHelperMixin",
     "ExperienceOrbEntityMixin",
     "IronGolemEntityMixin",
     "LivingEntityMixin",

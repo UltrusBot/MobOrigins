@@ -1,2 +1,3 @@
-- Updated to 1.20.1
-- Fix #47 - Crash when camera entity is not a LivingEntity
+- update zh_cn lang (Thanks @Annijang)
+- Update to 1.20.2
+- Removed the `mimic_enchant` power type in favor of the new `origins:modify_enchantment_level` power type.

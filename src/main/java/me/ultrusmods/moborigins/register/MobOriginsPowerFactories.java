@@ -21,7 +21,6 @@ public class MobOriginsPowerFactories {
 //        register(HealthBossBarPower::createFactory);
 //        register(ResourceBossBarPower::createFactory);
         register(IlluminatePower::createFactory);
-        register(MimicEnchantPower::createFactory);
         register(PowderSnowPower::createFactory);
         register(RemoveMobHostilityPower::createFactory);
         register(RiptideOverridePower::createFactory);

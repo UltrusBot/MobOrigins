@@ -33,7 +33,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 this.startRiding(entity);
                 cir.setReturnValue(ActionResult.success(this.getWorld().isClient));
                 if (!entity.getWorld().isClient && entity instanceof ServerPlayerEntity) {
-                    ((ServerPlayerEntity)entity).networkHandler.sendPacket(new EntityPassengersUpdateS2CPacket(entity));
+                    ((ServerPlayerEntity)entity).networkHandler.send(new EntityPassengersUpdateS2CPacket(entity));
                 }
             } else {
                 cir.setReturnValue(ActionResult.FAIL);
